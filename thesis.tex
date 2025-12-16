@@ -17,7 +17,6 @@
     final
 ]{scrbook}
 
-
 % details about your thesis
 \newcommand{\titel}{Analyse des "Vendor-Lock-In"-Risikos bei führenden Cloud-Computing-Anbietern unter Berücksichtigung der Besonderheiten im GKV-Markt am Beispiel der kubus IT eGbR}
 \newcommand{\artderarbeit}{Bachelorarbeit}  % {Bachelorarbeit,Masterarbeit}
@@ -52,7 +51,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,relsize,textcomp,csquotes}
 \usepackage{amsmath,amsfonts}
-\usepackage[ngerman,english]{babel}  % flip for German thesis
+\usepackage[english,ngerman]{babel}  % flip for German thesis
 \usepackage[final]{graphicx}
 \usepackage{setspace,geometry,xcolor}
 \usepackage{makeidx}
@@ -133,11 +132,12 @@
 \makenoidxglossaries
 \loadglsentries{glossary}
 
-\begin{document}
+
 
 \setcounter{secnumdepth}{3}  % numerate subsections
 \setcounter{tocdepth}{2}  % ...but don't include them in toc
 
+\begin{document}
 \frontmatter
 \include{cover}\cleardoublepage
 
@@ -150,11 +150,11 @@
 \tableofcontents
 
 \mainmatter
-\include{content/1_intro}
-\include{content/2_data}
-\include{content/3_method}
-\include{content/4_experiments}
-\include{content/5_outlook}
+\include{content/1_einleitung}
+\include{content/2_problemstellung}
+\include{content/3_loesungsansatz}
+\include{content/4_experimente}
+\include{content/5_ausblick}
 \include{content/6_summary}
 
 % remove if not needed
