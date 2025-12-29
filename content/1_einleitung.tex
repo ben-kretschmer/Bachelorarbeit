@@ -1,10 +1,101 @@
 \chapter{Einleitung}\label{ch:einleitung}
 
 \section{Heranführung}
-\subsection{Einleitung in das Cloud Computing}
-Das Schlagwort Cloud fällt sowohl im Heim-IT-Umfeld als auch in den Besprechungen und Büros der großen deutschen und internationalen Unternehmen regelmäßig. Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der IT-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend feststellt. \cite{Hennrich2023}
 
-Laut der entsprechenden ISO-Norm ist Cloud Computing ein "Paradigma,einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen. \cite{ISO22123}
+\subsection{Einleitung in das Cloud Computing}
+Das Schlagwort Cloud fällt sowohl im Heim-IT-Umfeld als auch in den Besprechungen und Büros der großen deutschen und internationalen Unternehmen regelmäßig. 
+Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der IT-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend feststellte. \cite{Hennrich2023}
+
+Weniger eindrucksvoll klingt die ISO Norm, nach der Cloud Computing ein Paradigma,um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen. \cite{ISO22123}
+
+Diese übersetze Definiton jedoch gibt einen Einblick in das vermeintliches Potential der Technologie.
+Zu den Vorzügen zählen daher Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte, die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
+
+Mit der Popularität ist klar, dass diese Vorteile schon beim Auflisten verlockend sind. 
+Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit vergleichen.
+Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
+Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen. 
+
+\subsection{Cloud als Produkt}
+
+Aus dem Konzept der Cloud wird durch die Anbieter ein Produkt oder ein Katalogs mit Produkten. 
+Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
+Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
+
+Es gibt viele verschiedene Konfigurationen der Cloud.
+
+Wie auch bei eigenen Rechenzentren aus einer Vielzahl von Architekturen und Marken gewählt werden kann,
+so gibt es bei der Wahl der Cloud Liefermodelle und Produktbausteine, 
+die nach den Bedürftnissen des Kunden eingekauft werden können.
+Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. Die entsprechenden Stufen hierzu sind ebenfalls in der ISO-Norm beschrieben und lauten (sortiert nach aufsteigender Kompetenzen des Anbieters):
+\begin{itemize}
+\item[-] Infrastructure as a Service
+\item[-] Platform as a Service
+\item[-] Software as a Service
+\end{itemize} \cite{ISO22123}
+
+\subsection{Überblick über die Nachteile der Cloud}
+Die Herausvorderungen und Nachteile der Cloud werden im späteren Kapitel 3.6 "Der organisatorische Einfluss von Cloud-Computing" des Buches "Cloud Governance" aufgelistet:
+\begin{itemize}
+\item[-] Sicherheit (gegen Cyber-Angriffe)
+\item[-] Kosten(-regulierung)
+\item[-] (Integration von) Alt-Anwendungen
+\item[-] Ausfälle
+\item[-] Anbieterbindung
+\item[-] (Verlust von) technischem Fachwissen
+\end{itemize}
+Die Aufzählung wurde aus dem Englischen übersetzt und es wurde Kontext ergänzt. \cite{Mezzio2023}
+Die konkreten Punkte stammen aus einem Blog-Artikel der IT-Sicherheitsfirma Conosco. \cite{Conosco2020}
+
+Der Fokus dieser Arbeit ist die Anbieterbindung.
+Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service möglich.
+
+\subsection{Grundlagen der Anbieterbindung}
+Vendor-Lock-In (dt. Anbieterbindung) ist ein Umstand in der Beziehung zu einem Anbieter aus Kundensicht. Dieser Umstand wird beim Beenden der Beziehung problematisch.
+Denn möchte ein Unternehmen den Anbieter wechseln, so ist eine Anbietermigration nötig.
+
+Grundsätzlich ist die Migration von einem Anbieter zu einem Konkurrenten immer mit Aufwand verbunden, wenn beispielsweise die Daten einer CRM-Anwendung des einen Anbieters zum Anderen gesendet werden müssen.
+Problematisch wird es dann, wenn die Daten in unterschiedlichen Formaten abgespeichert sind. 
+Hilfreich sind dann Werkzeuge zur Migration, welche bei branchenüblichen CRM-Anwendungen leicht erhältlich sind. 
+Waren beim ursprünglichen Anbieter jedoch Anbieter-eigene Lösungen im Einsatz, steigert sich der Migrationsaufwand über das zu erwartende Pensum hinaus.
+
+Ein besonders schwerwiegender Vendor-Lock-In liegt vor, wenn Bausteine des Produkts gar nicht vom neuen Anbieter abgebildet werden können.
+
+\subsection{Anbieterbindung in niedrigeren Liefermodellen}
+In niedrigeren Liefermodellen wie Platform as a Service, wo die Anwendungen und Daten in der Hand des Kunden liegen, ist Anbieterbindung generell kein Problem.
+Dadurch, dass die Anwendungen bei allen Anbietern gleichermaßen durch den Kunden gewählt und betrieben werden, können diese Anwendungen zum neuen Anbieter einfach migriert werden.
+
+Dies ist ebenfalls aufwendig, vor allem wenn die Umgebung beim neuen Anbieter anders ist. Jedoch ist eine Migration pauschal immer möglich.
+
+Die Kunden habe dazu das technische Fachwissen im Hause, um die Anwendungen entsprechen zu modifzieren oder umzukonfigurieren, damit diese in der neuen Umgebung funktionieren.
+
+\section{Motiviation}
+
+\subsection{Generelle Gründe für die Beschäftigung mit Anbieterbindung}
+Die Beschäftigung mit Anbietern ist spannend und hat strategische und politische Komponenten.
+Die Wahl eines Anbieters für ein bestimmten Bereich ist elementar und Anbieterbeziehungen durchlaufen wie deren Produkte und generell Software einen Lebenszyklus.
+Obwohl es Diskrepanzen zwischen der Praxis unter der Theorie gibt, so ist eigentlich schon bei der Schließung einer neuen Geschäftsbeziehung deren Ende und Wechsel-Strategie festgelegt.
+Trotzdem handelt es sich bei der Anbieterbindung um eine interessante Herausforderung der Cloud-Bewegung, da diese nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt.
+
+\subsection{Enden von Anbieterbeziehungen}
+Zentral ist, wann das Ende der Lebenszeit des Produktes in einem Unternehmen erreicht ist.
+Bei alleinstehenden Anwendungen wird die Lebenszeit überlicherweise auf eine gewisse Jahreszahl begrenzt. Allerdings können wie auch bei den klassischen einzelnen Anwendungen bei einem Software-as-a-Service-Anbieter Bedingungen eintreffen, die einen früheren Wechsel verlangen.
+
+Diese Bedingungen können finanzieller Art sein. So könnte etwa der aktuelle Anbieter in Anbetracht seiner Leistungen nicht mehr wirtschaftlich sein.
+
+Nicht nur finanzielle Aspekte können zu einem Wechselwunsch beim Kunden führen.
+
+Durch Anpassungen am Leistungskatalog und die vertragliche Möglichkeit manche Leistungen nicht mehr anzubieten, kann es dazu kommen, dass notwenige Bausteine nicht mehr vom Cloud-Computing-Anbieter unterstützt werden.
+Solche Anpassungen sind aufgrund der festen Vertragsregeln zwar nie plötzlich, meistens aber ein Argument für einen Wechsel.
+
+Außerdem kann es dazu kommen, 
+dass Kunden von mehreren Anbietern ihre benötigten Leistungen auf einen einzigen konsolidieren wollen oder im Gegenbeispiel ihre Anforderungen auf mehrere Anbieter verteilen wollen,
+um die unterschiedlichen Alleinstellungsmerkmale mehrerer Anbieter gleichzeitig zu nutzen.
+
+Zuletzt kann es auch durch äußere Faktoren wie gesetzliche Vorgaben,
+denen das Produkt des aktuellen Anbieters nicht mehr folgt, dazu kommen,
+dass ein Wechsel unbedingt notwendig wird.
+Auch geopolitische Änderungen wie Zölle oder Gesetze zählen zu den Gründen für das frühzeitige Ende der Geschäftsbeziehung
 
 \section{Abgrenzungen}
 
@@ -33,51 +124,5 @@ Darüberhinaus werden folgende Anbieter aufgrund ihrer Relevanz auf dem internat
 \item[-] Alibaba Cloud (China)
 \item[-] IONOS Cloud (Deutschland)
 \end{itemize}
-
-\section{Motiviation}
-
-\subsection{Einordnung der Thematik in das aktuelle Geschehen}
-Grundlegend sind die Argumente für das Cloud-Computing stärker geworden.
-Der Grund hierfür sind die veränderten Anfordungen an IT-Infrastruktur.
-Diese Infrastruktur muss immer widerstandsfähiger gegen Angriffe sein.
-Außerdem muss diese leistungsfähiger sein, um die steigenden Datenmengen und deren Verabeitung durch künstliche Intelligenz zu ermöglichen.
-Zuletzt steigt die Dezentralisierung der Arbeitswelt mit mobiler Arbeit und international zerstreuten Unternehmen.
-
-Durch diese Gegebenheiten benötigt die Infrastruktur jeder Firma größer angelegte Sicherheitsmechnanismen, höhere Kapizitäten, mehr Flexibilität und Standortunabhänigkeit.
-
-Um diese Anforderungen mit On-Premise-Lösungen zu erfüllen, sind erhebliche initale und fortlaufende Invetitionen notwendig.
-
-Um diese Kosten zu vermeiden, die Risiken zu vermindern und um die Energie anderweitig zu fokussieren, setzten Unternehmen generell auf Cloud-Computing-Anbieter.
-Diese Nutzen Spezialisierung und Skalierung, um die oben genannten Anforderungen zu erfüllen.
-
-Durch allgemeine Lösungen können Kunden dieser Anbieter von niedrigeren Kosten im Vergleich zu eigenen Lösungen profitieren.
-
-Zu beachten ist jedoch, dass gegebenenfalls vergleichsweise höhere Kosten für Anpassungen an den allgmeinen Lösungen anfallen.
-
-Dazu kommt, dass nicht vollständig ohne das Personal,
-das bei einer On-Premise-Lösung notwendig ist,
-kalkuliert werden sollte,
-da sonst wichtige Berater auf Seite der eigenen Firma und Fachwissen bei Umstiegen, Wartungen, Anpassungen oder Integration von neuen Bausteinen auf Firmenseite verloren gehen kann.
-Darüberhinaus entstehen so Abhängigkeiten zu den Cloud-Computing-Anbietern entsteht.
-
-Besonders hervorzuheben ist der letzte Punkt, denn die Schwierigkeit von Umstiegen auf andere Anbieter wird von Cloud-Computing-Kunden unterschätzt.
-
-Ein Umstieg auf einen alternativen Anbieter, kann notwendig werden, wenn die Preise des aktuellen Anbieters nicht mehr tragbar sind oder andere Anbieter ein besseres Preis-Leistungs-Verhältnis anbieten.
-
-Nicht nur finanzielle Aspekte können zu einem Wechselwunsch beim Kunden führen.
-
-Durch Anpassungen am Leistungskatalog und die vertragliche Möglichkeit manche Leistungen nicht mehr anzubieten, kann es dazu kommen, dass notwenige Bausteine nicht mehr vom Cloud-Computing-Anbieter unterstützt werden.
-
-Außerdem kann es dazu kommen, 
-dass Kunden von mehreren Anbietern ihre benötigten Leistungen auf einen einzigen konsolidieren wollen oder im Gegenbeispiel ihre Anforderungen auf mehrere Anbieter verteilen wollen,
-um die unterschiedlichen Alleinstellungsmerkmale mehrerer Anbieter gleichzeitig zu nutzen.
-
-Zuletzt kann es auch durch äußere Faktoren wie gesetzliche Vorgaben,
- denen das Produkt des aktuellen Anbieters nicht mehr folgt, dazu kommen,
-  dass ein Wechsel unbedingt notwendig wird.
-Auch geopolitische Änderungen wie Zölle zählen zu den Gründen für einen Wechselwunsch.
-
-\subsection{Risiken bei Anbieterbindung}
-Existiert bei einem Cloud-Computing-Kunden nun der Wechselwunsch, so müssen alternative Anbieter auf ihre Brauchbarkeit untersucht werden. 
 
 
