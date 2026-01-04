@@ -2,15 +2,98 @@
 
 \section{Ausgangssituation}
 
-\subsection{Besonderheiten beim IT-Dienstleister kubus IT}
-Die kubus IT ist durch ihre Funktion als Dienstleister für die gesetzlichen Krankenkassen AOK Bayern und AOK PLUS teil der öffentlichen Verwaltung.
+\subsection{Besonderheiten am Beispiel kubus IT}
+Die kubus IT ist durch ihre Funktion als Dienstleister für die gesetzlichen Krankenkassen AOK Bayern und AOK PLUS Teil der öffentlichen Verwaltung.
 
-Durch diese Position ergeben sich rechtliche Besonderheiten im Vergleich zu einem vergleichbaren Dienstleister der deutschen Wirtschaft.
+Die Krankenversicherungen dieser Institutionen zählen laut §4 des SGB V zu den gesetzlichen Krankenversicherungen. Daher werden neben versicherungs\-bezogenen Aspekten auch die informations\-technische Umsetzung im Gesetzestext und daraus abgeleiten Organen geregelt.
 
-[...]
+\subsection{Resultierende rechtliche Vorschriften}
+Durch die Arbeit für eine gesetzliche Krankenkasse ergeben sich Anforderungen bei der Wahl des Cloud-Anbieters.
 
-\subsection{Vergabeverfahren im Vendor-Management}
-Der Abteilung Einkauf ist die Abteilung Vendor-Management zur Orchestrierung der Beziehungen zwischen der kubus IT und Anbietern.
+Relevant sind Kapitel zehn bis zwölf des fünften Sozialgesetzbuches, wobei zum Teil auch Paragraphen vorheriger Kapitel referenziert werden.
+Grundlegend sind diese gesetzlichen Vorschriften nicht direkt bei der Frage der Anbieterbindung von Relevanz, sondern werden generell bei der Architektur der (Cloud-)Infrastruktur der gesetzlichen Krankenkasse wichtig.
+
+\paragraph{Kapitel 10 - Buch V - Sozialgesetzbuch}
+Das zehnte Kapitel des fünften Buches definiert Versicherungs- und Leistungsdaten, den Datenschutz und die Datentransparenz. Dieses Kapitel befasst sich mit Informationsþ\-management. Ob die Informationen in digitaler Form oder in Form analoger Akten gespeichert sind ist hier nicht relevant. Stattdessen wird geregelt an wen die Daten weitergegeben oder durch wen die Daten verarbeitet werden dürfen. Auch Fristen und Regeln zur Vernichtung der Informationen wird aufgeführt. Diese Regelungen bilden indirekt Anforderungen an das Informations\-sicherheits\-management und die Zugriffs\-möglichkeiten auf Daten bei dem Cloud-Anbieter. \cite{SGBV10}
+
+\paragraph{Kapitel 11 - Buch V - Sozialgesetzbuch}
+Das elfte Kapitel des fünften Buches regelt alle Belange der sogenannten Telematikinfrastruktur.
+Laut dem §306 des selbigen Abschnitts handelt es sich bei der Telematikinfrastruktur um "die interoperable und kompatible Information-, Kommunikations- und Sicherheitsinfrastruktur, die der Vernetzung von Leistungererbringern, Kostenträgern, Versicherten und weiteren Akteueren des Gesundheitswesens sowie der der Rehabilitation und der Pflege dient und […]". \cite{SGBV11}
+
+\subparagraph{Folgen des Paragraph 307}
+In diesem Paragraphen werden datenschutzregliche Verantwortlichkeiten festglegt (§307).
+Dieser Paragraph legt zusammengefasst fest, dass die Nutzer einer verteilten Infrastruktur, also beispielsweise die Nutzer eines Cloud-Anbieters, für eine rechtskonforme sichere Verarbeitung der schützenswerten Daten innerhalb des Netzes der verteilten Infrastruktur verantwortlich sind.
+Des Weiteren erstreckt sich die Verantwortlichkeit auch auf die ordnungsgemäße Inbetriebnahme, Wartung und Verwendung der Komponenten. Der Nutzer ist dann nicht verantwortlich,
+wenn dieser nicht über die "Mittel der Datenverarbeitung mitentscheiden" \cite{SGBV11} kann,
+wie es in §307 lautet. 
+Diese Regelung bedeutet im Kontext der Cloud,
+dass bereits beim Liefermodell Infrastructure-as-a-Service die Verantwortung zur rechtskonformen sicheren Verarbeitung beim Anbieter liegt,
+denn schon ab diesem Niveau wird die Mitsprache durch den Nutzer der Cloud über die Mittel der Datenverarbeitung eingeschränkt.
+Spätestens bei dem Liefermodell Software-as-a-Service, wo der gesamte Technologie-Stapel (einschließlich der Software) durch den Anbieter betrieben wird, liegt auch die Verantwortung vollständig bei diesem.
+
+\subparagraph{Folgen des Paragraph 308}
+In diesem Paragraphen wird der Vorrang von Schutzmaßnahmen vor der europäischen Datenschutz-Grundverordnung geregelt (§308).
+Zusammenfassend werden die "Rechte der betroffenen Person nach den Artikeln 12 bis 22 der Verordnung (EU) 2016/679 […] ausgeschlossen, soweit diese Rechte […] nicht oder nur unter Umgehung von Schutzmechanismen […] gewährleistet werden können." \cite{SGBV11}
+Folglich muss ein Verantwortlicher einem Betroffenen Daten nicht aushändigen, wenn für die Aushändigung Sicherheitsmaßnahmen umgangen oder Daten ungesichert separat gespeichert werden müssten.
+Dieses Gesetz widerspricht also zunächst dem allgemeinen europäischen Recht, dass jederzeit die Daten eines Betroffenen beipielsweise für diesen offengelegt oder gelöscht werden müssen, wenn dieser das verlangt.
+Jene Reglung des §308 gilt allerdings auch nur dann, wenn die Datenverarbeitung rechtmäßig ist
+und beispielsweise die Einsichtnahme zweifelsohne nicht ohne Umgehung von Sicherheitvorkehrungen möglich ist. \cite{SGBV11}
+Für den Cloud-Anbieter bedeutet das, dass eine Schnittstelle zur Verfügung gestellt werden sollte, die eine geregelte Einsichtnahme in die Daten eines Betroffenen ermöglicht. 
+
+
+\paragraph{Kapitel 12 - Buch V - Sozialgesetzbuch}
+Das zwölfte Kapitel beinhaltet unter anderem explizit den Einsatz von Cloud-Technologie im Gesundheitswesen in §393.
+Dort wird festgelegt, dass die Verarbeitung von Sozial- und Gesundheitsdaten im Weges des Cloud-Computing-Dienstes nur im Inland, einem Mitgliedsstaat der Europäischen Union oder einem der Mitgliedstaat der europäischen Union gleichgestellten Staat wie der Schweiz und Mitgliedstaaten des europäischen Wirtschaftsraumes erfolgen darf. Alle anderen Staaten gelten als Drittstaaten müssen in einem sogenannten Angemessenheitsbeschluss für die Übermittlung personenbezogener Daten erst genehmigt werden. \cite{SGBV12}
+
+Derzeit sind folgende Staaten als Drittstaat durch einen Angemesseheitsbeschluss zugelassen:
+\begin{itemize}
+\item[-] Andorra
+\item[-] Argentinien
+\item[-] Kanada
+\item[-] Färöer-Inseln (Bestandteil des Königreichs Dänemark) \cite{Faeroeer2026}
+\item[-] Guernsey (Im britischen Kronbesitz) \cite{Guernsey2026}
+\item[-] Israel
+\item[-] Isle of Man (Im autonomen britischen Kronbesitz) \cite{IsleOfMan2026}
+\item[-] Japan
+\item[-] Jersey
+\item[-] Neuseeland
+\item[-] Republik Korea (Südkorea)
+\item[-] Schweiz
+\item[-] Uruguay
+\item[-] Vereinigtes Königreich
+\item[-] Vereinigte Staaten von Amerika
+\end{itemize}
+
+\cite{AngembeschlEU}
+
+Darüberhinaus wird im Absatz 3 des §393 festgelegt, dass eine Verarbeitung nur zulässig ist, wenn technische und organisatorische Maßnahmen, die dem Stand der Technik entsprechen, zur Gewährleistung der Informationssicherheit ergriffen worden sind. Zudem muss ein Sicherheitszertifikat der datenverarbeitenden Stelle, also des Cloud-Anbieters, vorliegen und zusätzlich die Kriterien für Kunden, die im Prüfungsbericht des Testats enthalten sind, umgesetzt wurden. \cite{SGBV12}
+
+Das geforderte Testat muss den Anbieter insofern zertifizieren, dass Sicherheitsvorkehrungen mit dem Niveau des C5-Typ2-Testats oder höher getroffen wurden.
+
+Auf Basis dieser Gesetzte wird eine übergreifend gültige Strategie vom AOK Bundesverband veröffentlicht.
+
+\subsection{Cloud-Architektur in der kubus IT}
+Die Cloud-Architektur der kubus IT basiert auf den Vorgaben des AOK Bundesverbandes.
+Die kubus IT verwendet das Modell der hybriden und teilt den Bedarf für Cloud-Computing in zwei Bereiche.
+\paragraph{Personenbezogene Daten in der Private Cloud}
+Die Private Cloud ist "eine Cloud-Umgebung, die nur einen bestimten geschlossenen Nutzerkreis (z.B. Mitarbeitende eines Unternehmens) zur Verfügung steht." \cite{Hennrich2023}
+Eine private Cloud-Umgebung nutzt dedizierte Infrastruktur was die Überwachung der Einhaltung der Gesetze zum Datenschutz erleichtert. 
+Die Firma Arvato Systems ist der Cloud-Computing-Anbieter, der die private Cloud der AOK Bayern und AOK PLUS betreibt. Die Auslagerung des Betriebs der Infrastruktur ermöglicht hier einen Fokus und eine Spezialiserung auf beiden Seiten. So kann sich die kubus IT als IT-Dienstleister nach der Auslagerung auf den Betrieb der Anwendungen fokussieren.
+
+\paragraph{Technische Daten in der Public Cloud}
+Die Public Cloud ist "eine Cloud-Umgebung, die von der Allgemeinheit \- also von \'jedermann\' \- genutzt werden kann." \cite{Hennrich2023}
+Dennoch lassen sich die Daten und Dienste der Cloud durch Verschlüsselung und Authentifizierung sichern.
+Der Nachweis der Einhaltung der gesetzlichen Vorgaben zum Schutz personenbezogner Daten ist jedoch schwieriger.
+Die öffentliche Cloud beinhaltet stärker als die private Cloud die Skalierbarkeit und Agilität,
+die generell Cloud-Computing zugeschrieben wird. 
+An dieser Stelle wird aus Leistungs-Perspektive von den großen Spielern des Cloud-Computing profitiert werden.
+Beispielsweise besonders deutlich wird das im Bereich der Entwicklung neuer Anwendungen durch den Dienstleister kubus IT.
+Hier wird die Applikationen für Entwicklung und Betrieb von Microsoft verwendet (Microsoft Azure DevOps).
+Dieses Produkt ist unter Anderem so attraktiv, weil die Integration mit der Microsoft-eigenen Entwicklungsumgebung (IDE) ausgezeichnet ist.
+Außerdem bietet Azure DevOps viele Werkzeuge zur Umsetzung sauberer Entwicklungs- und Betriebsprozesse.
+
+\subsection{Vendor-Management in der kubus IT}
+Der Abteilung Einkauf ist die Abteilung Vendor-Management zur Orchestrierung der Beziehungen zwischen der kubus IT und Anbietern untergeordnet.
 
 Die Anbieter werden in drei Kategorien segmentiert.
 
@@ -26,29 +109,26 @@ Demnach zählen folgende Anbieter aktuell in das A-Segment:
 
 \begin{itemize}
 \item[-] Arvato: Cloud-Computing
-\item[-] DATAGROUP: 'IMAC'
+\item[-] DATAGROUP: 'Install-Manage-Add-Change'-Dienstleister
 \item[-] Avaya: Cloud-Kommunikation
 \end{itemize}
-
-\subsection{Bisherige Wechsel von Anbietern}
-
-[…]
 
 \section{Anforderungen}
 
 \subsection{Zielsetzung der Analyse}
-Das Analyseverfahren soll einen Ausgabewert liefern, der beschreibt wie hoch das Risiko eines Vendor-Lock-Ins ist.
-Da diese Gesamtbewertung aus allen einzelnen Bewertungen aufsummiert wird, liegt es nahe das Risiko mit einer Prozentzahl zu bewerten. Die Schranken zur Ablehnung oder Akzeptierung eines Anbieter lassen sich dann wiederrum variabel wählen.
+Das Analyseverfahren soll einen Ausgabewert liefern, der beschreibt wie hoch das Risiko eines Vendor-Lock-Ins ist. Kurz der Faktor Vendor-Lock-In soll quantifiziert werden.
 
-Hierbei ist eine strengere oder lockerere Hürde denkbar. 
+Damit lässt sich die dieser Punkt besser in künftigen Vergabeverfahren berücksichtigen,
+wo auch wirtschaftliche, strategische und inhaltliche Faktoren eine Rolle spielen.
 
-Unabhängig von der Bewertung des Vendor-Lock-In-Risikos, ist dieser Punkt auch nur ein kleiner Bestandteil im gesamten Vergabeverfahren und andere wirtschaftlichen, strategischen und inhaltlichen Faktoren sind ebenfalls zu betrachten.
+Diese Riskobewertung wird zunächst als Prozentzahl angeben. Nachgelagert werden Bestehungsgrenzen beziehungsweise Schranken zur Ablehnung oder Akzeptierung eines Anbieter diskutiert.
 
-Daher kann die Gewichtung des Faktors Vendor-Lock-In-Risko im Gesamtbild dem jeweiligen Entscheidungsträger des Verfahrens überlassen werden.
-
-Unabhängig von diesen Punkten ist die Gesamtbewertung des Risikos ein Werkzeug zum fairen Gegenüberstellen verschiedener Anbieter.
+Die Gesamtbewertung des Risikos soll als Werkzeug zur fairen Gegenüberstellen verschiedener Anbieter dienen.
 
 \subsection{Verifizierbarkeit der Ergebnisse}
+Nachdem ein Prozess entwickelt wurde, der eine Bewertung des Vendor-Lock-In-Riskos liefert, muss im Anschluss diese Bewertung geprüft werden.
+
+Vor der Entwicklung des Prozesses werden daher direkt Methoden der Verifikation vorgestellt.
 Die Verifizierbarkeit lässt sich durch drei Methoden abbilden.
 Es ist einerseits möglich die Bewertung des Modells mit der Einschätzung eins Experten im Cloud-Bereich zu vergleichen und andererseits bestehende Analysen als Messlatte zu wählen.
 
@@ -56,26 +136,29 @@ Darüberhinaus lassen sich die Ergebnisse auch durch das Messen des Aufwands der
 Eine Metrik für den Aufwand wäre die benötigte Arbeitzeit, die Kosten der Migration oder der Anteil der Anwendungen, die umgestellt werden müssen.
 
 Um die durch das Bewertungsmodell vorgeschlagene Bewertung per Experiment zu überprüfen, muss der Aufwand Emigration vom Anbieter betrachtet werden.
- Doch auch das Ziel des gesamten Migrationsprozesses ist hierbei relevant und hat einen Einfluss auf den gesamten Aufwand.
+Doch auch das Ziel des gesamten Migrationsprozesses ist hierbei relevant und hat einen Einfluss auf den gesamten Aufwand.
 Generell werben Anbieter mit Angeboten und Werkzeugen, die bei der Migration unterstützen.
 
-Damit die Experimente verschiedener Anbieter vergleichbar sind, sollte jedoch der Anteil des Aufwands, der auf die Immigration zurückzuführen ist, minimiert werden.
+Damit die Experimente verschiedener Anbieter vergleichbar sind,
+sollte jedoch der Anteil des Aufwands,
+der auf die Immigration zurückzuführen ist,
+minimiert werden.
 Dazu zählt auch die Erleichterung der Migration durch eventuelle Dienstleistungen des Ziel-Anbieters.
 
 Zur Bewerk\-stelligung hiervon kann die Im\-migration in ein niederes Liefer\-modell gewählt werden.
 So kann beispielsweise der Wechsel verschiedener Anbieter im Liefermodell Software-as-a-Service zu einem Anbieter mit dem Liefermodell Platform-as-a-Service betrachtet werden.
 
-Obwohl der Trend zu umfangreicheren Liefermodellen geht und solche Migrationen generell eher aufwendig sind, hat diese Methode Relevanz, um die Bewertung der Anbieter generell zu überpüfen. Da solche Migrationen aufwendig sind, ist anzunehmen, dass die Aufwandsunterschiede der einzelen Anbieter in Relation zum Gesamtaufwand niedrig sind.
+Obwohl der Trend zu umfangreicheren Liefermodellen geht und solche Migrationen generell eher aufwendig sind, hat diese Methode Relevanz,
+um die Bewertung der Anbieter generell zu überpüfen.
+Da solche Migrationen aufwendig sind,
+ist anzunehmen, dass die Aufwandsunterschiede der einzelen Anbieter in Relation zum Gesamtaufwand niedrig sind.
 
 Auch mit der Migration innerhalb eines Liefermodells kann experimentiert werden.
-Im Gegensatz zur vorherigen Methode ist anzunehmen, dass die Aufwandsunterschiede zwischen Anbietern innerhalb eines Liefermodells in Relation zum Gesamtaufwand drastischer sind. 
-Wichtig ist jedoch für einen fairen Vergleich, dass die Vendor-Lock-In-Risikobewertung vom Wechselziel besser ist als die beste Bewertung der zu untersuchenden Menge an Anbietern.
+Im Gegensatz zur vorherigen Methode ist anzunehmen,
+dass die Aufwandsunterschiede zwischen Anbietern innerhalb eines Liefermodells in Relation zum Gesamtaufwand drastischer sind. 
+Wichtig ist jedoch für einen fairen Vergleich,
+dass die Vendor-Lock-In-Risikobewertung vom Wechselziel besser ist als die beste Bewertung der zu untersuchenden Menge an Anbietern.
 
-Der Grund für diese Einschränkung ist einerseits die Notwendigkeit einer Verbesserung, denn obwohl es beispielsweise wirtschaftliche Argumente für einen Anbieter mit einer höheren Anbieterbindung geben kann, ist im Kontext dieser Arbeit ein Wechsel in eine stärkere Anbieterbindung generell nicht sinnvoll. 
+Der Grund für diese Einschränkung ist einerseits die Notwendigkeit einer Verbesserung,
+denn obwohl es beispielsweise wirtschaftliche Argumente für einen Anbieter mit einer höheren Anbieterbindung geben kann, ist im Kontext dieser Arbeit ein Wechsel in eine stärkere Anbieterbindung generell nicht sinnvoll. 
 Andererseits sorgt eine bessere Bewertung implizit für eine höhere Kompatibilität zwischen zwei Anbietern.
-
-
- 
-
-
-
