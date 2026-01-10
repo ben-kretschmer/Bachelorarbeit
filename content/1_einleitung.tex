@@ -2,13 +2,35 @@
 
 \section{Heranführung}
 
-\subsection{Einleitung in das Cloud Computing}
-Das Schlagwort Cloud fällt sowohl im Heim-IT-Umfeld als auch in den Besprechungen und Büros der großen deutschen und internationalen Unternehmen regelmäßig. 
-Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der IT-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend feststellte. \cite{Hennrich2023}
+\subsection{Theoretische Hintergründe der Cloud}
 
-Weniger eindrucksvoll klingt die ISO Norm, nach der Cloud Computing ein Paradigma,um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen. \cite{ISO22123}
+\paragraph{Definitionen der Cloud Computing}
+Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der IT-Branche wie der Fachbuchautor Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend formulierte. \cite{Hennrich2023}
 
-Diese übersetze Definiton jedoch gibt einen Einblick in das vermeintliches Potential der Technologie.
+Pragmatischer ist die ISO Norm, nach der Cloud Computing ein Paradigma,um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen. \cite{ISO22123}
+
+Ergänzend dazu steht der Artikel vom US-amerikanischen Technologieunternehmen Microsoft mit dem Titel \glqq Was ist die Cloud?\grqq. Der Webartikel klärt aus Sicht des Cloud-Anbieters auf und definiert die Cloud als \glqq […] Online-Speicherplatz, in dem Personen und Unternehmen ihre Dateien und Anwendungen speichern, die von überall mit einer Internetverbindung zugänglich sind.\grqq
+Des Weiteren bietet die Cloud laut dem Anbieter \glqq Dienste wie Rechenleistung, Datenbanken, Netzwerke und Softwareanwendungen.\grqq
+\cite{CloudDefMicro2025}
+
+Aus diesen Perspektiven zur Technologie lassen sich wichtige Grundlagen wie den Zusammenhang zwischen Internet und Cloud und die inherente Flexibilität als Fundament der Technologie ableiten.
+
+IT-Kompontenen wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glq on Premise \grq aufzufinden waren, können ausgelagert werden. Je nach Umsetzungsart sind die Komponenten der Cloud trotzdem auf dem gleichen Grundstück, im gleichen Land oder an einem völlig anderen Ort auf der Erde. Genutzt werden die Komponten jedoch immer per Fernzugriff über das Internet.
+
+Diese Ausgestaltung alleine ermöglicht eine höhere Flexibilität, da Mitarbeitende des Unternehmens aus der Ferne auf die Komponenten zugreifen können. Darüberhinaus ist ein wichtiger Bestandteil des Konzeptes die Skalierung der Ressourcen. Die Skalierung beinhaltet, dass zusätzliche Komponenten auf Wunsch eines Unternehmens zugeschaltet werden können.
+
+\paragraph{Begriffsunterscheidung Cloud und Cloud-Computing}
+Spannend ist, dass Cloud und Cloud-Computing oft synonym verwendet werden. So auch im Informationsmaterial von Microsoft, wo das Konzept von Cloud-Computing beschrieben wird, aber kurz als \glq Cloud \grq abgekürzt wird.
+Zur Verwirring trägt erschwerend bei, dass Microsoft einen zweiten Artikel mit dem Titel \glqq Was ist Cloud-Computing?\grqq veröffentlicht hat, der eine sehr ähnliche Definition beinhaltet, aber die Cloud selbst als Bezeichnung für das Internet beschreibt. \cite{CloudDefMicro20252}
+
+Diese Arbeit beschränkt sich auf Cloud-Computing. 
+
+\paragraph{Ansehen der Technologie}
+Die Definitionen geben einen Einblick in das vermeintliches Potential der Technologie.
+
+Statistische Befragungen der letzten Jahrzehnte von Führungskräften deutscher und internationaler Unternehmen, machen deutlich, dass das Thema die Aufmerksamkeit der Führungsebene längst erreicht hat. 
+
+
 Zu den Vorzügen zählen daher Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte, die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
 
 Mit der Popularität ist klar, dass diese Vorteile schon beim Auflisten verlockend sind. 
@@ -16,8 +38,11 @@ Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit v
 Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
 Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen. 
 
-\subsection{Cloud als Produkt}
+\paragraph{Funktionsweise und gängige Architekturen}
 
+\paragraph{Versprechungen und Vorteile der Cloud}
+
+\paragraph{Kapitalisierung der Cloud}
 Aus dem Konzept der Cloud wird durch die Anbieter ein Produkt oder ein Katalogs mit Produkten. 
 Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
 Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
@@ -34,7 +59,9 @@ Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenz
 \item[-] Software as a Service
 \end{itemize} \cite{ISO22123}
 
-\subsection{Überblick über die Nachteile der Cloud}
+\paragraph{Schematische Gegenüberstellung von Kosten und Funktionsweise}
+
+\paragraph{Herrausforderungen und Nachteile der Cloud}
 Die Herausvorderungen und Nachteile der Cloud werden im späteren Kapitel 3.6 "Der organisatorische Einfluss von Cloud-Computing" des Buches "Cloud Governance" aufgelistet:
 \begin{itemize}
 \item[-] Sicherheit (gegen Cyber-Angriffe)
@@ -52,6 +79,8 @@ Der Fokus dieser Arbeit ist die Anbieterbindung.
 Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service möglich.
 
 \subsection{Grundlagen der Anbieterbindung}
+
+\paragraph{Definitionen von Anbieterbindung}
 Vendor-Lock-In (dt. Anbieterbindung) ist ein Umstand in der Beziehung zu einem Anbieter aus Kundensicht. Dieser Umstand wird beim Beenden der Beziehung problematisch.
 Denn möchte ein Unternehmen den Anbieter wechseln, so ist eine Anbietermigration nötig.
 
@@ -62,7 +91,7 @@ Waren beim ursprünglichen Anbieter jedoch Anbieter-eigene Lösungen im Einsatz,
 
 Ein besonders schwerwiegender Vendor-Lock-In liegt vor, wenn Bausteine des Produkts gar nicht vom neuen Anbieter abgebildet werden können.
 
-\subsection{Anbieterbindung in niedrigeren Liefermodellen}
+\paragraph{Grundsätzlich anfällige Cloud-Produkte}
 In niedrigeren Liefermodellen wie Platform as a Service, wo die Anwendungen und Daten in der Hand des Kunden liegen, ist Anbieterbindung generell kein Problem.
 Dadurch, dass die Anwendungen bei allen Anbietern gleichermaßen durch den Kunden gewählt und betrieben werden, können diese Anwendungen zum neuen Anbieter einfach migriert werden.
 
@@ -70,17 +99,34 @@ Dies ist ebenfalls aufwendig, vor allem wenn die Umgebung beim neuen Anbieter an
 
 Die Kunden habe dazu das technische Fachwissen im Hause, um die Anwendungen entsprechen zu modifzieren oder umzukonfigurieren, damit diese in der neuen Umgebung funktionieren.
 
+\paragraph{Einordnung der Kritikalität des Problems}
+
+\paragraph{Erkennung von betroffenen Cloud-Produkten}
+
+\paragraph{Werkzeuge zur Messung von Anbieterbindung}
+
+
+\subsection{Überblick über Anbieter und Cloud-Produkte}
+
+\paragraph{Definition von Cloud-Anbietern}
+
+\paragraph{Kennzahlen für Cloud-Anbieter}
+
+\paragraph{Einblick in die Marktanteile in Deutschland}
+
+\paragraph{Kernelemente der Produktkataloge von Anbietern}
+
+\paragraph{Navigieren von Produktkatalogen}
+
 \section{Motiviation}
 
-\subsection{Generelle Gründe für die Beschäftigung mit Anbieterbindung}
+\subsection{Bedarf eines Prozesses zur Einordnung von Anbieterbindung}
+
+\paragraph{Strategische Bedeutung für Unternehmenen}
 Die Beschäftigung mit Anbietern ist spannend, denn sie hat strategische und politische Komponenten.
 Die Wahl eines Cloud-Anbieters für ein Unternehmen ist elementar und Anbieterbeziehungen durchlaufen einen Lebenszyklus (vergleiche Software-Lebenszyklus).
 Obwohl es Diskrepanzen zwischen der Praxis unter der Theorie gibt, so sollte schon bei der Schließung einer neuen Geschäftsbeziehung deren Ende und Wechsel-Strategie festgelegt sein.
 Hierfür ist die Durchleuchtung eines Anbieters hinsichtlich Vendor-Lock-In schon im Voraus wichtig.
-
-Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
-
-\subsection{Beenden von Anbieterbeziehungen}
 Wie schon festgestellt, wird die Anbieterbindung beim Beenden einer Geschäftsbeziehung relevant.
 Dafür zentral ist, wann das Ende der Geschäftsbeziehung in einem Unternehmen erreicht ist.
 Bei alleinstehenden Anwendungen beispielsweise wird die Lebenszeit überlicherweise auf eine gewisse Jahreszahl begrenzt. 
@@ -100,21 +146,27 @@ um die unterschiedlichen Alleinstellungsmerkmale mehrerer Anbieter gleichzeitig 
 Zuletzt kann es auch durch äußere Faktoren wie gesetzliche Vorgaben,
 denen das Produkt des aktuellen Anbieters nicht mehr folgt, dazu kommen,
 dass ein Wechsel unbedingt notwendig wird.
-Auch geopolitische Änderungen wie Zölle oder Gesetze zählen zu den Gründen für das frühzeitige Ende der Geschäftsbeziehung
+Auch geopolitische Änderungen wie Zölle oder Gesetze zählen zu den Gründen für das frühzeitige Ende der Geschäftsbeziehung.
 
-\section{Abgrenzungen}
+\paragraph{Strategische Bedeutung auf geopolitscher Ebene}
 
-\subsection{Definition von technischen Kriterien}
+\subsection{Besonderheiten des Themas}
+
+\paragraph{Unterschiede zu anderen Herausforderungen der Cloud}
+Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
+
+\subsection{Beenden von Anbieterbeziehungen}
+
+\section{Zielsetzung}
+\subsection{Entwicklung einer Methode zur Analyse des Risikos von Anbieterbindung}
+\paragraph{Verwendung von technischen Kriterien}
 Vendor-Lockin ist ein primär technisches Problem für den Käufer eines Produktes be\-ziehungs\-weise konkret eins Cloud-Computing-Anbieters.
 
 Daher wird untersucht welche technischen Kriterien zu diesem technischen Problem führen.
 Technische Kriterien sind Eigenschaften eines Produktes im Kontext von Cloud-Computing, die sich auf die inherente Struktur und die Bestandteile des Produktes beziehen.
 
-\subsection{Distanzierung von ökonomischen Ansätzen}
-Im Gegensatz dazu sind vertragliche oder ökonomische Kriterien Gegenstand dieser Arbeit.
-Zur Verdeutlichung wird also beispielsweise nicht untersucht, ob die These, dass das Nutzen eines teurerer Cloud-Computing-Anbieter seltener zum Vendor-Lockin führt, zutrifft.
 
-\subsection{Auswahl der Cloud-Computing-Anbietern}
+\subsection{Anwendung der Analysemethode bei ausgewählten Anbietern}
 Bei der Auswahl der Anbieter wurden sowohl solche berücksichtigt, die die kubus IT bereits verwendete, als auch solche die vermeintlich interessante Ergebnisse liefern sollten.
 Aktuell sind folgende Cloud-Computing-Anbieter bereits in Benutzung.
 \begin{itemize}
@@ -128,5 +180,14 @@ Darüberhinaus werden folgende Anbieter aufgrund ihrer Relevanz auf dem internat
 \item[-] Alibaba Cloud (China)
 \item[-] IONOS Cloud (Deutschland)
 \end{itemize}
+
+\section{Abgrenzungen}
+
+
+\subsection{Distanzierung von ökonomischen Ansätzen}
+Im Gegensatz dazu sind vertragliche oder ökonomische Kriterien Gegenstand dieser Arbeit.
+Zur Verdeutlichung wird also beispielsweise nicht untersucht, ob die These, dass das Nutzen eines teurerer Cloud-Computing-Anbieter seltener zum Vendor-Lockin führt, zutrifft.
+
+
 
 
