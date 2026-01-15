@@ -77,15 +77,15 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>Ben Kretschmer</xmp:CreatorTool> 
-   <xmp:ModifyDate>2026-01-06T16:23:54+01:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2026-01-06T16:23:54+01:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2026-01-06T16:23:54+01:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2026-01-12T10:34:45+01:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2026-01-12T10:34:45+01:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2026-01-12T10:34:45+01:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:C8CFC28F-88E1-7995-E9AD-F6D12EAD346B</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:C5BBCC39-05A7-0BB8-9595-6F62742B37F7</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:97F8EBF8-1FB6-2AA7-E55A-EF07C34C09F1</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 
