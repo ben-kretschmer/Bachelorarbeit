@@ -3,19 +3,55 @@
 \section{Scoringmodell}
 
 \subsection{Definition des Lösungsansatzes}
-Zur Ermittlung dieser Gesamtbewertung des Risikos wird ein gewichtetes Scoring-Modell entwickelt.
-Die inhaltlichen Kriterien des Modells können unabhängig von den jeweils dazugehörigen Gewichtungen definiert werden. 
-Abhängig von den Ergebnissen der Verifizierungsphase können die Gewichte im Nachgang angepasst werden.
+\paragraph{Grundlagen}
+Zur Ermittlung dieser Gesamtbewertung (englisch: score) des Risikos wird ein gewichtetes Scoring-Modell entwickelt. Es wird ein Katalog (K) mit Kriterien (k) aufgestellt:
+\begin{eqnarray}
+K \in \{k_{1},k_{2},...,k_{n-1},k_{n}\},\ n \in \mathbb{N}
+\end{eqnarray} 
 
-Je nach Fokus und Bedürftnissen des Anwenders können die einzelnen Kategorien auch durch Gewichtung priorisiert werden.
-Dadurch kann das breite Spektrum der Kategorien nach Bedarf reduziert werden.
+Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein:
+\begin{eqnarray}
+x_{k} \in \{0,1\}
+\end{eqnarray}
+
+Die Gesamtbewertung (S) wird aus dem Verhältnis aller erfüllten Kriterien zu der maximal möglichen Punktzahl errechnet.
+\begin{eqnarray}
+S_{ungewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} x_{k}}{|K|}
+\end{eqnarray}
+
+\paragraph{Hintergrund der Gewichtungen}
+Die Inhalte der Kriterien des Modells können unabhängig von den jeweils dazugehörigen Gewichtungen definiert werden. Das Gewicht (englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
+\begin{eqnarray}
+w_{k} \in \mathbb{Q}
+\end{eqnarray}
+
+Standardmäßig sind alle Kriterien mit einfacher Gewichtung konfiguriert und dadurch einen Punkt wert. Die erreichte Punktzahl (s) für ein gewichtetes Kriterium errechnet sich aus:
+\begin{eqnarray}
+s_{k} = w_{k}  * x_{k} 
+\end{eqnarray}
+
+\paragraph{Feinjustierung durch Anwender}
+Es ist nicht vorgesehen, dass die Inhalte vom Anwender des Scoring-Modells bearbeitet werden.
+Falls einzelne Kriterien im Anwendungszenario nicht relevant sind, können diese Verworfen werden, indem die dazugehörige Gewichtung auf Null gesetzt wird.
+
+Je nach Fokus und Bedürftnissen des Anwenders können die einzelnen Kriterien auch durch Gewichtung priorisiert werden.
+
+Dadurch kann das breite Spektrum der Kategorien und Kriterien nach Bedarf reduziert werden.
+
+Durch Anwenden der Gewichte ergibt sich die Berechnung der Gesamtbewertung:
+\begin{eqnarray}
+S_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\sum_{n=1} ^{|K|} w_{k}*1}
+\end{eqnarray}
 
 \subsection{Entwicklung von Bewertungskategorien}
 Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
 Grundsätzlich wurden die Kategorien durch die Ermittlung der Produktschnittmenge der Anbieter festgelegt:
 
 \begin{itemize}
+\item[-] Alibaba Cloud
 \item[-] Amazon Azure
+\item[-] Google Cloud Plattform
+\item[-] IONOS Cloud
 \end{itemize}
 
 Darüberhinaus werden die Definitionen und Anforderungen folgender Stellen berücksichtigt:
@@ -23,14 +59,26 @@ Darüberhinaus werden die Definitionen und Anforderungen folgender Stellen berü
 \begin{itemize}
 \item[-] Gematik GmbH
 \item[-] Sozialgesetzbuch
+\item[-] ISO-Norm 27001 und 50001
+\item[-] C5-Standard
 \end{itemize}
 
 \subsection{Kategorien mit indirektem Einfluss}
-Allgemein wird bei jedem Kriterium bewertet, ob der Cloud-Anbieter dieses Kriterium erfüllt.
+
+\paragraph{Handhabung der Kategorien}
+Allgemein wird bei jedem Kriterium bewertet, ob der Cloud-Anbieter überhaupt Produkte anbietet, die das jeweilige Kriterium erfüllen. Für jedes Kriterium ist dokumentiert, was ein adequates Produkt ausmacht.
 Die ungewichtete Punktzahl wird verdoppelt,
-wenn das Kriterium durch eine Standartlösung erfüllt wird, die nicht für den konkreten Anbieter einzigartig ist.
-Die Kategorie hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein Kriterium oder konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
-Je mehr SaaS-Produkte ein direktes Pendant bei einem Ziel-Anbieter haben, desto schächer ist die Anbieterbindung.
+wenn das Kriterium durch eine Standartlösung erfüllt wird, die demnach nicht für den konkreten Anbieter einzigartig ist.
+
+\paragraph{Begründung dieser Vorgehensweise}
+Die Kategorie hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
+Je mehr SaaS-Produkte ein direktes Pendant bei einem Ziel-Anbieter haben, desto schächer ist die Anbieterbindung. 
+Ein direktes Pedant ist ein Produkt, das bei dem Ziel- und Ursprungs-Anbieter auf der gleichen Technologie beziehungsweise dem gleichen offenen Standard funktioniert.
+
+
+
+\paragraph{Diskussion der Handhabung}
+
 
 \paragraph{SaaS-Produkte für Tagesgeschäfte}
 In dieser Bewertungskategorie wird der Anbieter auf seine Leistungen hinsichtlich Anwendungen für das Tagesgeschäft überprüft.
