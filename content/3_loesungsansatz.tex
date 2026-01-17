@@ -9,7 +9,7 @@ Zur Ermittlung dieser Gesamtbewertung (englisch: score) des Risikos wird ein gew
 K \in \{k_{1},k_{2},...,k_{n-1},k_{n}\},\ n \in \mathbb{N}
 \end{eqnarray} 
 
-Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein:
+Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein. Zunächst ist die einzige Komponente für ein erfülltes Kriterium die Existenz eines Produktes von Seiten des Anbieters. Dadurch ist die Variable $x$ (kurz für: Existenz beziehungsweise englisch existence) mit zwei Zuständen versehen:
 \begin{eqnarray}
 x_{k} \in \{0,1\}
 \end{eqnarray}
@@ -20,7 +20,7 @@ S_{ungewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} x_{k}}{|K|}
 \end{eqnarray}
 
 \paragraph{Hintergrund der Gewichtungen}
-Die Inhalte der Kriterien des Modells können unabhängig von den jeweils dazugehörigen Gewichtungen definiert werden. Das Gewicht (englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
+Individuell zu jedem Kriterium wird ein Gewicht zugeordnet. Das Gewicht (englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
 \begin{eqnarray}
 w_{k} \in \mathbb{Q}
 \end{eqnarray}
@@ -32,7 +32,7 @@ s_{k} = w_{k}  * x_{k}
 
 \paragraph{Feinjustierung durch Anwender}
 Es ist nicht vorgesehen, dass die Inhalte vom Anwender des Scoring-Modells bearbeitet werden.
-Falls einzelne Kriterien im Anwendungszenario nicht relevant sind, können diese Verworfen werden, indem die dazugehörige Gewichtung auf Null gesetzt wird.
+Falls einzelne Kriterien im Anwendungszenario nicht relevant sein sollten, können diese Verworfen werden, indem die dazugehörige Gewichtung auf Null gesetzt wird.
 
 Je nach Fokus und Bedürftnissen des Anwenders können die einzelnen Kriterien auch durch Gewichtung priorisiert werden.
 
@@ -42,6 +42,80 @@ Durch Anwenden der Gewichte ergibt sich die Berechnung der Gesamtbewertung:
 \begin{eqnarray}
 S_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\sum_{n=1} ^{|K|} w_{k}*1}
 \end{eqnarray}
+
+\paragraph{Erweiterung der Kriterienkomponenten}
+Über die reine Existenz eines Produktes hinaus, kann auf die Beschaffenheit des Produktes einberechnet werden.
+
+Wenn das Modell nur zählt wie viele Kriterien erfüllt werden, ist die Bewertung mehr ein Indikator für die Vielfältigkeit und die Diversität des Produktkatalogs des Anbieters.
+Es ist wichtig, dass ein Anbieter alle erforderlichen Produkte in der SaaS-Cloud anbietet, jedoch sind weitere Faktoren entscheidend:
+\begin{itemize}
+\item[-] Verwendung von Standardsoftware
+\item[-] Verwendung von frei zugänglichen Software
+\item[-] Dokumentation der Schnittstellen
+\item[-] Dokumentation der Funktionsweise
+\end{itemize}
+
+Als frei zugänglich gilt eine Software, wenn diese unter einer Open-Source-Lizenz verteilt wird.
+Diese Faktoren werden integriert. Die Variable $t$ (kurz für: Technologie beziehungsweise englisch technology) repräsentiert die Zustände interne, Standard- oder offene Technologie beziehungsweise Software.
+\begin{eqnarray}
+t_{k} \in \{0,1,2\}
+\end{eqnarray}
+
+Der Umfang der Dokumentation wird mit der Variable $d$ und den zwei Zuständen vorhanden oder nicht vorhanden modelliert.
+\begin{eqnarray}
+d_{k} \in \{0,1\}
+\end{eqnarray}
+
+\paragraph{Integration der zusätzlichen Komponenten}
+Die neuen Komponenten werden mit der bisherigen Existenz-Komponente kombiniert.
+Eine Dokumentation bei einer Standard-Software nicht zwangsläufig notwenig ist,
+da die Informationen bereits vom Hersteller geliefert werden.
+Dieser Umstand wird bei der Verknüpfung berücksichtigt.
+Punkte sollte als eine Situation geben,
+wenn es sich um eine Standard-Software handelt oder eine Dokumentation existiert oder beides der Fall ist.
+\begin{eqnarray}
+s'_{k} = d_{k} + t_{k}
+\label{s-strich-von-k}
+\end{eqnarray}
+
+Wenn kein Produkt zum Kriterium existiert, soll das Ergebis immer null Punkte ergeben, daher gilt insgesamt:
+\begin{eqnarray}
+s_{k} = w_{k}*x_{k}*(d_{k} + t_{k})
+\end{eqnarray}
+
+\paragraph{Effekt auf die Höchstpunktzahl}
+Um die Höchstpunktzahl zu berechnen, müsste für $s'_{k}$ (von \ref{s-strich-von-k}) das Maximum gewählt werden, was drei entspricht. 
+Die maximale Punktzahl würde also der Produktkatalog eines Cloud-Anbieters bekommen,
+der ausschließlich frei zugängliche Software mit zusätzlicher Dokumentation anbietet.
+Angenommen der vollständige Katalog umfasst 100 Kriterien,
+so ist die maximal mögliche Punktzahl bei einheitlich einfacher Gewichtung 300:
+
+\begin{eqnarray}
+S_{Maximal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(1+2) = 100 * 3 = 300
+\end{eqnarray}
+
+\paragraph{Charakterisirung eines Anbieters mit keinen Punkten}
+
+Ein Cloud-Anbieter,
+der keine Open-Source- oder Standard-Software anbietet erhält bei einheitlich einfacher Gewichtung und 100 Kriterien keine Punkte:
+
+\begin{eqnarray}
+S_{Minimal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(0) = 100 * 0 = 0
+\label{Minimal100}
+\end{eqnarray}
+
+Ein Anbieter, der hier keine Punkte erhält, kann dennoch Produkte anbieten,
+die mit anderen Eigenschaften beziehungsweise Qualitätsmerkmalen von Software überzeugen 
+(beispielsweise durch ausgezeichnete Bedienbarkeit der Oberfläche, Sparsamkeit mit Rechenressourcen oder IT-Sicherheit). 
+Diese anderen Qualitätsmerkmale sind jedoch nicht Gegenstand der Analyse.
+
+\paragraph{Zusätzliche Eigenschaften des Modells}
+Ein Anbieter, der keine Kriterien erfüllt erhält unabhängig von der Gewichtigung keine Punkte.
+Wenn ein Anwender des Modells alle Gewichte auf null setzt, dann ist die Gesamtbewertung ebenfalls null.
+Theoretisch könnte ein Anwender eingeben,
+dass der Anbieter das Kriterium nicht mit einem Produkt erfüllt,
+aber das Produkt beispielsweise dennoch eine Dokumentation aufweist. Diese Eingabe ergibt keine Punkte.
+Auch diese drei Möglichkeiten könnten als Beispiel für eine minimale Gesamtpunktzahl (vergleiche \ref{Minimal100}) angeführt werden, sind jedoch in der Praxis uninteressant.
 
 \subsection{Entwicklung von Bewertungskategorien}
 Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
