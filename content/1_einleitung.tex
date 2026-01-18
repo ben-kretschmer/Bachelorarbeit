@@ -14,6 +14,7 @@ Der Webartikel klärt aus Sicht des Cloud-Anbieters auf und definiert die Cloud 
 Des Weiteren bietet die Cloud laut dem Anbieter \glqq Dienste wie Rechenleistung, Datenbanken, Netzwerke und Softwareanwendungen.\grqq
 \cite{CloudDefMicro2025}
 
+\paragraph{Folgerungen aus den Definitionen}
 Aus diesen Perspektiven zur Technologie lassen sich wichtige Grundlagen wie den Zusammenhang zwischen Internet und Cloud und die inherente Flexibilität als Fundament der Technologie ableiten.
 
 IT-Kompontenen wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glq \Gls{on-Premise}\grq\ aufzufinden waren, können ausgelagert werden. 
@@ -34,11 +35,11 @@ dass Microsoft einen zweiten Artikel mit dem Titel \glqq Was ist Cloud-Computing
 der eine sehr ähnliche Definition beinhaltet, aber die Cloud selbst als Bezeichnung für das Internet beschreibt. \cite{CloudDefMicro20252}
 Diese Arbeit beschränkt sich auf Cloud-Computing. 
 
-\paragraph{Ansehen der Technologie}
-
+\paragraph{Verbreitung der Technologie}
 Die Definitionen geben einen Einblick in das vermeintliches Potential der Technologie.
 
-Statistische Befragungen der letzten Jahrzehnte von Führungskräften deutscher und internationaler Unternehmen, machen deutlich, dass das Thema die Aufmerksamkeit der Führungsebene längst erreicht hat.
+Statistische Befragungen der letzten Jahrzehnte von Führungskräften deutscher und internationaler Unternehmen, machen deutlich, dass das Thema die Aufmerksamkeit der Führungsebene längst erreicht hat und Cloud-Computing in die Unternehmen eingezogen ist.
+
 Dies geht aus Abbildung \ref{A_Nutz_CC} hervor.
 Die Abbildung zeigt ein Balkendiagramm,
 das die Nutzung von Cloud-Computing über die Jahre 2011 bis 2024 beschreibt.
@@ -54,14 +55,6 @@ Der hohe Nutzungsanteil zum Ende der Datenreihe,
 lässt darauf schließen, dass sich die Entscheidungstragende heute nicht mehr fragen, ob sie diese Technologie einsätzen,
 sondern welche Anbieter wie genutzt werden.
 
-Zu den Vorzügen zählen daher Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
-die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
-
-Mit der Popularität ist klar, dass diese Vorteile schon beim Auflisten verlockend sind. 
-Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit vergleichen.
-Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
-Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen.
-
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.75\linewidth]{figures/statistic_id177484_umfrage-zur-nutzung-von-cloud-computing-in-deutschen-unternehmen-bis-2024}
@@ -72,6 +65,39 @@ Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie 
 \paragraph{Funktionsweise und gängige Architekturen}
 
 \paragraph{Versprechungen und Vorteile der Cloud}
+Zu den Vorzügen zählen daher Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
+die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
+
+Mit der Popularität (vergleiche Abbildung \ref{A_Nutz_CC}) wird klar, dass diese Versprechungen für Entscheidungstragende handfest.
+
+\subparagraph{Kosteneinsparung}
+Bei Unternehmen, die ihre Anwendungen selbst verwalten, fallen erfahrungsgemäß für Folgendes Kosten an:
+\begin{itemize}
+\item[-] Mitarbeitende für die Entwicklung, Betrieb und Wartung von Anwendungen
+\item[-] Lizenzen für Kaufsoftware (auch für IDEs und Code-Verwaltungsplattformen)
+\item[-] externe zusätzliche Mitarbeiter bei großen Projekten
+\item[-] externe Entwicklungs-Projekte
+\item[-] Schulungen von Mitarbeitenden für neue Technologien und Anwendungen
+\item[-] zusätzliche Mitarbeitende für (Personal-)Verwaltung, Buchhaltung und Einkauf
+\item[-] zusätzliche Büroflächen
+\end{itemize}
+Soll darüberhinaus, auch die Infrastruktur selbst verwaltet werden, fallen zusätzlich noch Kosten für Folgendes an. 
+\begin{itemize}
+\item[-] Grundstücke, Gebäude und Räumlichkeiten
+\item[-] Strom-, Wasser- und Wärmeversorgung
+\item[-] Mitarbeitende für Installation, Betrieb und Wartung von Hardware
+\item[-] Anschaffung, Ersatzteile und Entsorgung von IT-Komponenten
+\item[-] Sonstiges wie beispielsweise Möbel
+\item[-] teilweise: Sicherheit wie Überwachungskameras und Sicherheitskräfte
+\end{itemize}
+Durch diese unvollständigen und schematischen Kostenaufstellung soll gezeigt werden, welche Kosten durch den Verzicht auf Cloud-Computing und die Zusammenarbeit mit SaaS-Anbietern entstehen können. 
+
+
+\subparagraph{Skalierbarkeit}
+
+\subparagraph{Wiederherstellungsmöglichkeiten}
+
+\subparagraph{Datensicherheit}
 
 \paragraph{Kapitalisierung der Cloud}
 Aus dem Konzept der Cloud wird durch die Anbieter ein Produkt oder ein Katalogs mit Produkten. 
@@ -143,9 +169,14 @@ damit diese in der neuen Umgebung funktionieren.
 
 \paragraph{Einordnung der Kritikalität des Problems}
 
+
 \paragraph{Erkennung von betroffenen Cloud-Produkten}
 
 \paragraph{Werkzeuge zur Messung von Anbieterbindung}
+Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit vergleichen.
+Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
+Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen.
+
 
 \subsection{Überblick über führende Cloud-Computing-Anbieter}
 \label{lead-cc-A}

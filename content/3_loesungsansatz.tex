@@ -145,9 +145,8 @@ Es ist stattdessen vorgesehen, dass diese Kriterien sich erst nach einem ersten 
 
 Für diese Herangehensweise gibt es auch Ausnahmen und manche Kriterien aus dem zweiten Teil lassen sich auch anhand von Informationen auf der Internetseite des gegebenen Anbieters ermitteln.
 
-\subsection{Kategorien mit indirektem Einfluss}
+\subsection{Heranführung an Kategorien mit indirektem Einfluss}
 \label{kat-indirekt-lockin}
-
 \paragraph{Entwicklungsprozess konkreter Kriterien}
 Wie in Abschnitt \ref{entw-bewertungs-kat} beschrieben wurde folgende SaaS-Cloud-Anbieter untersucht:
 
@@ -181,7 +180,7 @@ In Relation zu den im Kapitel \ref{Gartner-Magic-Cloud} aufgeführten Cloud-Anbi
 a_{Seed} = \{Alibaba, Amazon, Google, Ionos\}, |a| = 4
 \end{eqnarray}
 \begin{eqnarray}
-A_{Gartner} = \{...\}, |A| = 20
+A_{Gesamtanbietermenge} = \{...\}, |A| = 20
 \end{eqnarray}
 \begin{eqnarray}
 a \subset A
@@ -199,7 +198,9 @@ die nicht für die Entwicklung verwendet wurden.
 
 Falls durch den verwendeten Entwicklungsprozess ein Bias zugunsten von Anbietern aus der Grundlage entstanden ist, lässt sich das gegebenfalls mit den zusätzlichen Anbietern zeigen.
 
-Eine ausführliche und systematische Untersuchung über die ausreichende Größe der Stichprobe ist nicht Gegenstand dieser Arbeit. Dies würde unabhängige Entwicklung mehrer Kataloge mit verschieden großen Basis-Anbietern benötigen.
+Eine ausführliche und systematische Untersuchung über die ausreichende Größe der Stichprobe ist nicht Gegenstand dieser Arbeit, dies würde unabhängige Entwicklung mehrer Kataloge mit verschieden großen Basis-Anbietern benötigen.
+
+\subsection{Definitionen der einzelnen Kriterienkategorien}
 
 \paragraph{SaaS-Produkte für Tagesgeschäfte}
 In dieser Bewertungskategorie wird der Anbieter auf seine Leistungen hinsichtlich Anwendungen für das Tagesgeschäft überprüft.
@@ -221,9 +222,11 @@ Das Konzept für Rechte, Rollen und deren Inhaber wächst üblich mit der Zeit u
 SaaS-Produkte, die zur Stabilität im Betrieb beitragen, schützen Beispielsweise die Infrastruktur vor Angriffen. Auch hier kann eine Migration notwendig werden, wenn beispielsweise Firewall-Einstellungen bei dem neuen Anbieter übernommen werden sollen.
 
 \paragraph{Überwachung und Management}
-Produkte, die eine Bedienoberfläche zur Überwachung oder der Verwaltung von Ressourcenverbauch 
+Produkte, die eine Bedienoberfläche zur Überwachung oder der Verwaltung von Ressourcenverbauch. Konkret sind Ressourcen beispielsweise Budget für Berechnung durch KI, Netzwerkverkehr oder Rechenressourcen wie Speicher.
+Darüberhinaus gibt es teilweise auch Produkte zum Auswerten von beispielsweise CO2-Emissionen.
+
 \paragraph{Virtual-Desktop-Infrastruktur}
-Betrifft Produkte eines Anbieters, die 
+Betrifft Produkte eines Anbieters, die zum Betrieb und zur Überwachung von virtuellen Desktops und allgemeiner Endgeräten wie beispielsweise auch Smartphones notwendig sind. 
 
 \subsection{Kategorien mit direktem Einfluss}
 \label{kat-direkt-lockin}
@@ -256,9 +259,19 @@ Inital sind jedoch folgende Gewichtungskonfigurationen vorgesehen.
 Jedes Kriterium hat das gleiche Gewicht. Das Endergebniss hängt alleine von der Zahl der erfüllten Kriterien ab.
 
 \paragraph{Schwerpunkt bei direken Kriterien}
-Viele erfüllte direkte Kriterien, bedeuten dass Aufwand eines Anbieterwechsels auf technischer Ebene erleichtert, denn es werden viele Hilfestellungen bei der Migration geboten. Um einen Schwerpuntk an dieser Stelle zu setzen, werden die Gewichte der Kriterien um einen gewissen Faktor erhöht.
-Alternativ kann das Bewertungsmodell auch so Konfiguriert werden, dass die übrigen Kritieren keine Gewichtung haben, wodurch die Gesamtbewertung ausschließlich direkte Kriterien beinhaltet.
+Viele erfüllte direkte Kriterien, bedeuten dass Aufwand eines Anbieterwechsels auf technischer Ebene erleichtert, denn es werden viele Hilfestellungen bei der Migration geboten. 
+Um einen Schwerpuntk an dieser Stelle zu setzen, 
+werden die Gewichte der Kriterien um einen gewissen Faktor erhöht.
+Alternativ kann das Bewertungsmodell auch so Konfiguriert werden, 
+dass die übrigen Kritieren keine Gewichtung haben, 
+wodurch die Gesamtbewertung ausschließlich direkte Kriterien beinhaltet.
  
 \paragraph{Schwerpunkt bei indirekten Kriterien}
-Sind viele indirekte Kriterien erfüllt, so lassen sich viele alte Anwendungen zu einen neuen Anbieter umziehen, weil die verwendeten Anwendungen nicht exklusiv für einen Anbieter sind. Das erleichtert die Migration der Anwendungsdaten, da die Daten nicht in das Format neuer Anwendungen übersetzt werden müssen. Außerdem ist eine solche Migration für die Mitarbeitenden weniger spürbar und diese müssen nicht in neue Software eingearbeitet werden.
-Daher haben auch die indirekten Kritieren eine große Relavanz. Analog zu dem vorherigen Paragraph, kann entweder ein alleinige Analyse oder schwerpunktmäßige Berücksichtigung durch eine entsprechende Konfiguration der Kriterien erfolgen.
+Sind viele indirekte Kriterien erfüllt, so lassen sich viele alte Anwendungen zu einen neuen Anbieter umziehen, weil die verwendeten Anwendungen nicht exklusiv für einen Anbieter sind. 
+Das erleichtert die Migration der Anwendungsdaten, 
+da die Daten nicht in das Format neuer Anwendungen übersetzt werden müssen. 
+Außerdem ist eine solche Migration für die Mitarbeitenden weniger spürbar und diese müssen nicht in neue Software eingearbeitet werden.
+Daher haben auch die indirekten Kritieren eine große Relavanz. 
+Analog zu dem vorherigen Paragraph, 
+kann entweder ein alleinige Analyse oder schwerpunktmäßige Berücksichtigung 
+durch eine entsprechende Konfiguration der Kriterien erfolgen.
