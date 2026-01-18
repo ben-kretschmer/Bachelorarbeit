@@ -44,7 +44,8 @@ S_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\
 \end{eqnarray}
 
 \paragraph{Erweiterung der Kriterienkomponenten}
-Über die reine Existenz eines Produktes hinaus, kann auf die Beschaffenheit des Produktes einberechnet werden.
+\label{erw-kriterien-komponenten}
+Über die reine Existenz eines Produktes hinaus, kann auf die Beschaffenheit des Produktes einberechnet werden, was jedoch nicht bei allen Kriterien praktikabel ist (vergleiche Abschnitt \ref{kat-direkt-lockin}). Die Erweiterung der Kriterienkomponenten, sind also nicht universell für beliebige Kriterien konzipiert, sondern nur für solche, die sich auf ein konkretes Produkt beziehen (vergleiche Abschnitt \ref{kat-indirekt-lockin}).
 
 Wenn das Modell nur zählt wie viele Kriterien erfüllt werden, ist die Bewertung mehr ein Indikator für die Vielfältigkeit und die Diversität des Produktkatalogs des Anbieters.
 Es ist wichtig, dass ein Anbieter alle erforderlichen Produkte in der SaaS-Cloud anbietet, jedoch sind weitere Faktoren entscheidend:
@@ -115,11 +116,40 @@ Wenn ein Anwender des Modells alle Gewichte auf null setzt, dann ist die Gesamtb
 Theoretisch könnte ein Anwender eingeben,
 dass der Anbieter das Kriterium nicht mit einem Produkt erfüllt,
 aber das Produkt beispielsweise dennoch eine Dokumentation aufweist. Diese Eingabe ergibt keine Punkte.
-Auch diese drei Möglichkeiten könnten als Beispiel für eine minimale Gesamtpunktzahl (vergleiche \ref{Minimal100}) angeführt werden, sind jedoch in der Praxis uninteressant.
+Auch diese drei Möglichkeiten könnten als Beispiel für eine minimale Gesamtpunktzahl (vergleiche Formel \ref{Minimal100}) angeführt werden, sind jedoch in der Praxis uninteressant.
 
 \subsection{Entwicklung von Bewertungskategorien}
+\label{entw-bewertungs-kat}
+\paragraph{Herangehensweise an die Strukturierung}
 Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
-Grundsätzlich wurden die Kategorien durch die Ermittlung der Produktschnittmenge der Anbieter festgelegt:
+Zudem hat der gesamte Katalog zwei Hauptbestandteile: Kategorien mit indirektem und Kategorien mit direktem Einfluss auf die Anbieterbindung.
+
+\paragraph{Motivation für diese Aufteilung}
+Die Art der Aufteilung führt zu einem übersichtlichen Kriterienkatalog.
+Für die Anwendung ist der Katalog zudem so konzipiert, dass die Kriterien der Teile unabhängig voneinander und auf verschiedene Arten bewertet werden können.
+
+\subparagraph{Erster Teil des Katalogs}
+Die im ersten Teil aufgelisteten Kriterien mit indirektem Einfluss lassen sich vom Anwender des Katalogs anhand der Produktlisten des Anbieters ausfüllen.
+Das liegt daran, dass der Inhalt dieser Kriterien auch auf Basis von aktuellen Produktkatalogen erarbeitet wurde.
+
+Wie im Abschnitt \ref{produkt-übersicht-saas} aufglistet, haben sich 
+gängige Produkte etabliert und führende Anbieter bieten üblicherweise alle diese Produkte an.
+Generell ist die Frage mit einem Blick auf die Produktkataloge der führenden und größten Anbieter eher wie genau die Kriterien umgesetzt wurden und nicht,
+ob die Kriterien überfüllt wurden.
+Der definierte Lösungsansatz bevorzugt stark Anbieter, die weniger Produkte mit besseren Migrationsvorraussetzungen anbieten. Eindeutig wird das, am Gedankenspiel aus Rechnung \ref{Minimal100}.
+
+\subparagraph{Zweiter Teil des Katalogs}
+Die im zweiten Teil aufgeglisteten Kriterien lassen sich zum Teil schwerer nur anhand der Verkaufsseite der Produkte im Internet bewerten,
+denn diese beziehen sich auch auf vertragliche Aspekte der Anbieter.
+Es ist stattdessen vorgesehen, dass diese Kriterien sich erst nach einem ersten schriftlichen Austausch oder Verkaufsgespräch mit dem Cloud-Anbieter bewerten lassen.
+
+Für diese Herangehensweise gibt es auch Ausnahmen und manche Kriterien aus dem zweiten Teil lassen sich auch anhand von Informationen auf der Internetseite des gegebenen Anbieters ermitteln.
+
+\subsection{Kategorien mit indirektem Einfluss}
+\label{kat-indirekt-lockin}
+
+\paragraph{Entwicklungsprozess konkreter Kriterien}
+Wie in Abschnitt \ref{entw-bewertungs-kat} beschrieben wurde folgende SaaS-Cloud-Anbieter untersucht:
 
 \begin{itemize}
 \item[-] Alibaba Cloud
@@ -128,31 +158,48 @@ Grundsätzlich wurden die Kategorien durch die Ermittlung der Produktschnittmeng
 \item[-] IONOS Cloud
 \end{itemize}
 
-Darüberhinaus werden die Definitionen und Anforderungen folgender Stellen berücksichtigt:
-
-\begin{itemize}
-\item[-] Gematik GmbH
-\item[-] Sozialgesetzbuch
-\item[-] ISO-Norm 27001 und 50001
-\item[-] C5-Standard
-\end{itemize}
-
-\subsection{Kategorien mit indirektem Einfluss}
-
-\paragraph{Handhabung der Kategorien}
-Allgemein wird bei jedem Kriterium bewertet, ob der Cloud-Anbieter überhaupt Produkte anbietet, die das jeweilige Kriterium erfüllen. Für jedes Kriterium ist dokumentiert, was ein adequates Produkt ausmacht.
-Die ungewichtete Punktzahl wird verdoppelt,
-wenn das Kriterium durch eine Standartlösung erfüllt wird, die demnach nicht für den konkreten Anbieter einzigartig ist.
+\paragraph{Handhabung der Bepunktung}
+In der Definition des Lösungsansatzes wurde formal beschrieben wie die Bepunktung abläuft. Berücksichtigt wird die Existenz eines Produkt, die dazugehörige Dokumentation und die zugrundeliegende Technologie und, ob diese ein Standard beziehungsweise eine offene Technologie ist (vergleiche \ref{erw-kriterien-komponenten}).
 
 \paragraph{Begründung dieser Vorgehensweise}
-Die Kategorie hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
+Produkte eines SaaS-Cloud-Anbieters hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
 Je mehr SaaS-Produkte ein direktes Pendant bei einem Ziel-Anbieter haben, desto schächer ist die Anbieterbindung. 
 Ein direktes Pedant ist ein Produkt, das bei dem Ziel- und Ursprungs-Anbieter auf der gleichen Technologie beziehungsweise dem gleichen offenen Standard funktioniert.
-
-
+Nach dieser Logik ist die Bepunktung sinnvoll, wenn Migration ergleichtert werden soll. 
+Migrationskomplexität ist ein erheblicher Faktor der Anbieterbindung.
 
 \paragraph{Diskussion der Handhabung}
+Der Entwicklungsprozess für den Kritierenkatalog verwendet eine Auswahl von Anbietern als Basis für den Katalog.
+Der benötigte Umfang der Menge der Anbieter, die als Quelle für den Kriterienkataloges dienten, ist unbekannt.
 
+Für diese Arbeit wurde mit vier Anbietern als Grundlage entwickelt, um die Zeit für die Recherche auf den Seiten der Anbieter im Vergleich zu allen anderen Recherchen und der tatsächlichen Ausarbeitung der Lösung zu reduzieren. Gleichermaßen wäre die Verwendung einer größeren Anbietermenge möglich gewesen.
+ 
+\subparagraph{Gründe gegen eine größere Basismenge}
+In Relation zu den im Kapitel \ref{Gartner-Magic-Cloud} aufgeführten Cloud-Anbietern, entspricht die Stichprobengröße von 4 rund 20\% der Gesamtzahl der größten Anbieter.
+
+\begin{eqnarray}
+a_{Seed} = \{Alibaba, Amazon, Google, Ionos\}, |a| = 4
+\end{eqnarray}
+\begin{eqnarray}
+A_{Gartner} = \{...\}, |A| = 20
+\end{eqnarray}
+\begin{eqnarray}
+a \subset A
+\end{eqnarray}
+\begin{eqnarray}
+R_{Gesamtanbieterzahl} = \frac{|a|}{|A|}
+\end{eqnarray}
+\begin{eqnarray}
+R_{Gesamtanbieterzahl} = \frac{4}{20} = 0,2 = 20%
+\end{eqnarray}
+
+Es werden zusätzliche Anbieter der Gesamtanbietermenge (vergleiche \ref{lead-cc-A}) für die Experimente mit der erarbeiteten Lösung benötigt,
+die nicht für die Entwicklung verwendet wurden.
+(vergleiche \ref{krit-kat-experimente})
+
+Falls durch den verwendeten Entwicklungsprozess ein Bias zugunsten von Anbietern aus der Grundlage entstanden ist, lässt sich das gegebenfalls mit den zusätzlichen Anbietern zeigen.
+
+Eine ausführliche und systematische Untersuchung über die ausreichende Größe der Stichprobe ist nicht Gegenstand dieser Arbeit. Dies würde unabhängige Entwicklung mehrer Kataloge mit verschieden großen Basis-Anbietern benötigen.
 
 \paragraph{SaaS-Produkte für Tagesgeschäfte}
 In dieser Bewertungskategorie wird der Anbieter auf seine Leistungen hinsichtlich Anwendungen für das Tagesgeschäft überprüft.
@@ -174,12 +221,19 @@ Das Konzept für Rechte, Rollen und deren Inhaber wächst üblich mit der Zeit u
 SaaS-Produkte, die zur Stabilität im Betrieb beitragen, schützen Beispielsweise die Infrastruktur vor Angriffen. Auch hier kann eine Migration notwendig werden, wenn beispielsweise Firewall-Einstellungen bei dem neuen Anbieter übernommen werden sollen.
 
 \paragraph{Überwachung und Management}
-[…]
-
+Produkte, die eine Bedienoberfläche zur Überwachung oder der Verwaltung von Ressourcenverbauch 
 \paragraph{Virtual-Desktop-Infrastruktur}
 Betrifft Produkte eines Anbieters, die 
 
 \subsection{Kategorien mit direktem Einfluss}
+\label{kat-direkt-lockin}
+\begin{itemize}
+\item[-] Gematik GmbH
+\item[-] Sozialgesetzbuch
+\item[-] ISO-Norm 27001 und 50001
+\item[-] C5-Standard
+\end{itemize}
+
 \paragraph{Interoperabilität}
 In dieser Kategorie werden Kriterien gesammelt, die zur generellen Interoperabilität beitragen und sich keiner anderen Kategorie unterordnen lassen.
 Unter Interoperabilität versteht man...
@@ -197,8 +251,10 @@ Es wird untersucht welche Containiersierungtechnologien zum Einsatz kommen.
 \subsection{Umgang mit Gewichtung}
 Die Lösung ist so konzipitiert, dass durch Feinjustierung der Gewichte, die Bedürftnisse des Anwenders berücksichtigt werden können.
 Inital sind jedoch folgende Gewichtungskonfigurationen vorgesehen.
+
 \paragraph{Einheitliche Gewichtung}
 Jedes Kriterium hat das gleiche Gewicht. Das Endergebniss hängt alleine von der Zahl der erfüllten Kriterien ab.
+
 \paragraph{Schwerpunkt bei direken Kriterien}
 Viele erfüllte direkte Kriterien, bedeuten dass Aufwand eines Anbieterwechsels auf technischer Ebene erleichtert, denn es werden viele Hilfestellungen bei der Migration geboten. Um einen Schwerpuntk an dieser Stelle zu setzen, werden die Gewichte der Kriterien um einen gewissen Faktor erhöht.
 Alternativ kann das Bewertungsmodell auch so Konfiguriert werden, dass die übrigen Kritieren keine Gewichtung haben, wodurch die Gesamtbewertung ausschließlich direkte Kriterien beinhaltet.
