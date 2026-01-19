@@ -49,7 +49,8 @@ Laut der Visualisierung stieg im Zeitraum der Untersuchung,
 welcher sich auf 13 Jahre beläuft, die Nutzung von Cloud-Compting von 28% auf 98%. 
 Der Anteil der Befragten, die angaben,
 dass sie die Technologie nur planen, sank von 22% auf 0%. 
-Für die Untersuchung wurden Geschäftsführer und IT-Führungskräfte aus 503 Unternehmen befragt.
+Für die Untersuchung wurden Geschäftsführer und IT-Führungskräfte aus 503 Unternehmen befragt. \cite{StatistaCCNutzung2024}
+
 Im Kontext dieser Arbeit gibt die Befragung einen ersten Einblick in die Nutzungstrends der Technologie an.
 Der hohe Nutzungsanteil zum Ende der Datenreihe,
 lässt darauf schließen, dass sich die Entscheidungstragende heute nicht mehr fragen, ob sie diese Technologie einsätzen,
@@ -65,7 +66,7 @@ sondern welche Anbieter wie genutzt werden.
 \paragraph{Funktionsweise und gängige Architekturen}
 
 \paragraph{Versprechungen und Vorteile der Cloud}
-Zu den Vorzügen zählen daher Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
+Zu den Vorzügen zählen unter anderem Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
 die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
 
 Mit der Popularität (vergleiche Abbildung \ref{A_Nutz_CC}) wird klar, dass diese Versprechungen für Entscheidungstragende handfest.
@@ -108,21 +109,54 @@ In der Summe lässt sich annehmen, dass finanzielles Risiko und große anfängli
 \subparagraph{Skalierbarkeit}
 Bei herkömmlichen Architekturen mit Hardware und Software in eigner Verwaltung durch das Unternehmen oder den IT-Dienstleister ist die Herausforderung bezüglich der Skalierung erfahrungsgemäß der fehlende Vorrat freier Rechenressourcen.
 
-Bei kurzfristiger Skalierung über den üblichen Arbeitstag, aber auch über das Arbeitsjahr gibt es Zeiten und Zeiträume, in denen mehr Kapazitäten benötigt werden. 
+Bei kurzfristiger Skalierung über den üblichen Arbeitstag, aber auch über das Arbeitsjahr gibt es Zeiten und Zeiträume, in denen mehr Kapazitäten benötigt werden. D
 Beispielsweise gibt es in der AOK Bayern und AOK PLUS ein Mitarbeiterportal für die Zeitbuchung und das Stellen von verschiedenen Anträgen wie Urlaubsanträgen. 
 Hierbei gibt es sicherlich Lastspitzen am Morgen und am Nachmittag. 
 Ein weiteres Beispiel ist die Kommunikationssoftware, 
 die bei unternehmensweiten Besprechungen zwei- oder viermal im Jahr deutlich stärker ausgelastet wird.
+Gibt es freie Ressorucen, die bei alltäglicher Auslastung im Leerlauf sind, dann können diese bei Bedarf dazu geschalten werden. Das bedeutet für die Endnutzer kürzere Wartezeiten bei der Benutzung von Anwendungen.
 
 Im Gegensatz hierzu gibt es auch langfristige Skalierungen, wenn ein Unternehmen wachsen möchte. 
 Bei der Krankenkasse AOK Bayern oder AOK PLUS ist starkes Wachstum in einem kurzen Zeitraum eher untypisch, 
-da sich die Versichertenzahl üblicherweise gleichmäßig und allmählich erhöht und nie neue Märkte erschlossen werden. 
+da sich die Versichertenzahl üblicherweise gleichmäßig und allmählich erhöht.
 Dennoch können neue Bedürftnisse im Bezug auf Rechen- oder Speicherleistung entstehen, 
-wenn sich gesetzliche Vorgaben ändern.
+wenn sich gesetzliche Vorgaben ändern oder neue Technologien auf den Markt kommen.
+Gibt es hier freie Ressourcen, können ohne Ausfall alte Komponten ausgetauscht werden oder ohne Austausch direkt mehr Ressourcen verwendet werden.
 
 \subparagraph{Wiederherstellungsmöglichkeiten}
+Bei technischen Fehlfunktionen, Schäden durch Feuer oder Wasser, oder bei Verschlüsselung von Daten ist es wichtig eine Momentaufnahme der eigenen Systeme zu haben, um die verlorenen Informationen wiederherzustellen. Je aktueller die Momentaufnahme dabei ist, desto weniger Daten gehen durch den Vorfall und die Wiederherstellung verloren.
+Je mehr verloren geht, desto höher der finanzielle Schaden, der dadurch verursacht wird.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\linewidth]{figures/statistic_id417433_umfrage-zu-vorbeugenden-technischen-it-sicherheitsmassnahmen-in-unternehmen-2018}
+\end{center}
+\label{SecMaß-Nutzung}\caption{Vorbeugende technische IT-Sicherheitsmaßnahmen}
+\end{figure}
+
+Die Abbildung \ref{SecMaß-Nutzung} zeigt ein Balkendiagramm über das Thema IT-Sicherheitsmaßnahmen aus dem Jahr 2018. Neben anderen Maßnahmen wurde das Erstellen von Backups für Daten abgefragt und jedes der 503 Industrieunternehmen gab an, das es diese Maßnahme im Einsatz hatte.
+Die Abbildung zeigt außerdem weniger weit verbreitete Maßnahmen wie Intrusion Detection System (IDS) oder die Verwendung von Penetrationstests. \cite{StatistaSecMassnahmen2018}
+
+Dennoch lässt sich schlussfolgern, dass die Relevanz von Backup- beziehungsweise Wiederherstellungsmöglichkeiten vollständig erkannt wurde. Doch auch die richtige und häufige Durchführung ist relevant.
+
+Wie im Abschnitt \ref{produkt-übersicht-saas} beschrieben, zählt zu den gängigen Produkten vieler SaaS-Anbieter ein Produkt zur Verwaltung und automatischen oder manuellen Erstellung von Sicherungen.
+
+Durch die Werbung für das Produkt, könnten sich mehr Kunden, die auf SaaS setzen, mit dem Thema auseinandersetzen.
 
 \subparagraph{Datensicherheit}
+Das Thema Wiederherstellungsmöglichkeiten liefert einen Einstieg in die Art und Weise wie Saas-Anbieter Kunden zum Oberthema Datensicherheit heranführen können.
+Durch das Angebot von diversen Produkten werden die Themen auch für Entscheidungstragende greifbarer, der Einstieg wird leichter und der Bedarf nach Fachpersonal sinkt.
+
+Letzeres ist ein Punkt der ein großes Gewicht hat, denn Fachpersonal ist oftmals eine Hürde bei der Digitalisierung allgemein und damit auch speziell bei Sicherheitsmaßnahmen \cite{StatistaHuerden2025}
+
+Wird die Thematik in ein oder mehrere leicht bedienbare Produkte verpackt, für deren Bedienung nur wenige Mitarbeitende nötig sind, so steigt die Sicherheit durch die Verwendung von SaaS-Produkten.
+
+\subparagraph{Weitere Punkte}
+Außerdem werden im ursprünglich zitierten Kaptiel noch \glqq Vorteile der Cloud\grqq\ wie \glq Internet of Things\grq -Funktionalitäten, verbesserte Zusammenarbeit, Umweltfreundlichkeit, Mitarbeiter-Engagement, Echtzeit-Software-Updates und Analyse-Möglichkeiten angesprochen. \cite{Mezzio2023}
+
+Da diese Punkte jedoch in der Gesamtaufstellung auf den hinteren Plätzen der Einordnung der Quelle landen, werden diese in diesem gemeinsamen Abschnitt kurz aufgeführt.
+
+Besonders hervorzuheben ist der letzte Platz der Auflistung, der wie auch bei anderen Vorteilen bereits, durch Produkte bei vielen Anbietern ermöglicht wird. Die Analyse von Daten, Netwerkverkehr oder sonstigen Informationen wird durch eigene Produkte für die Kunden von SaaS-Anbietern stark vereinfacht und zugänglicher gemacht.
 
 \paragraph{Kapitalisierung der Cloud}
 Aus dem Konzept der Cloud wird durch die Anbieter ein Produkt oder ein Katalogs mit Produkten. 
