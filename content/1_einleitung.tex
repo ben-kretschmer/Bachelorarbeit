@@ -71,10 +71,11 @@ die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buc
 Mit der Popularität (vergleiche Abbildung \ref{A_Nutz_CC}) wird klar, dass diese Versprechungen für Entscheidungstragende handfest.
 
 \subparagraph{Kosteneinsparung}
-Bei Unternehmen, die ihre Anwendungen selbst verwalten, fallen erfahrungsgemäß für Folgendes Kosten an:
+Bei IT-Dienstleistern im GKV-Markt, die ihre Anwendungen selbst verwalten, fallen erfahrungsgemäß für Folgendes Kosten an:
 \begin{itemize}
 \item[-] Mitarbeitende für die Entwicklung, Betrieb und Wartung von Anwendungen
 \item[-] Lizenzen für Kaufsoftware (auch für IDEs und Code-Verwaltungsplattformen)
+\item[-] Zertifizierung (bei selbst hergestellter Software)
 \item[-] externe zusätzliche Mitarbeiter bei großen Projekten
 \item[-] externe Entwicklungs-Projekte
 \item[-] Schulungen von Mitarbeitenden für neue Technologien und Anwendungen
@@ -88,12 +89,36 @@ Soll darüberhinaus, auch die Infrastruktur selbst verwaltet werden, fallen zus�
 \item[-] Mitarbeitende für Installation, Betrieb und Wartung von Hardware
 \item[-] Anschaffung, Ersatzteile und Entsorgung von IT-Komponenten
 \item[-] Sonstiges wie beispielsweise Möbel
-\item[-] teilweise: Sicherheit wie Überwachungskameras und Sicherheitskräfte
+\item[-] Sicherheit wie Überwachungskameras, Sicherheitskräfte und Zertifizierungen
 \end{itemize}
-Durch diese unvollständigen und schematischen Kostenaufstellung soll gezeigt werden, welche Kosten durch den Verzicht auf Cloud-Computing und die Zusammenarbeit mit SaaS-Anbietern entstehen können. 
+Besonders zu unterstreichen sind die initialen Investitionen, die in dieser Herangehensweise notwendig sind.
 
+Durch diese eigene Darstellung der Kostensituation wird gezeigt, welche Kosten durch den Verzicht auf Cloud-Computing und die Zusammenarbeit mit SaaS-Anbietern entstehen können.
 
+Des Weiteren wird ein Kontext für die Kosten von Cloud-Computing geschaffen.
+Diese Fallen wiederrum bei der Integration von Cloud-Computing im Unternehmen teilweise oder vollständig an.
+Zu welchem Grad Kosten eigener Infrastruktur und Software wegfallen, hängt vom Grad der Integration der Cloud ab.
+
+So werden für die erfolgreiche Integration von Cloud-Computing Mitarbeitende mit neuen Kompetenzen benötigt. Zu diesen Kompetenzen zählt die Kontrolle, Regulierung und Überwachung der Dienstleistungsvereinbarungen (kurz: SLA) mit den Cloud-Computing-Anbietern und der Cloud-Computing-Nutzung durch das Unternehmen. \cite{Mezzio2023}
+
+Auch zu beachten ist, dass Schulungen für die neuen Bedienoberflächen der SaaS-Anbieter notwendig werden. Hat der gewählte Anbieter größtenteils eigene Software im Angebot, so gibt es entsprechend wenige Optionen für Schulungsanbieter.
+
+In der Summe lässt sich annehmen, dass finanzielles Risiko und große anfängliche Investitionen für Unternehmen wegfallen, jedoch ist ein vollständiger Kostenvergleich nicht Gegenstand dieser Arbeit.
+ 
 \subparagraph{Skalierbarkeit}
+Bei herkömmlichen Architekturen mit Hardware und Software in eigner Verwaltung durch das Unternehmen oder den IT-Dienstleister ist die Herausforderung bezüglich der Skalierung erfahrungsgemäß der fehlende Vorrat freier Rechenressourcen.
+
+Bei kurzfristiger Skalierung über den üblichen Arbeitstag, aber auch über das Arbeitsjahr gibt es Zeiten und Zeiträume, in denen mehr Kapazitäten benötigt werden. 
+Beispielsweise gibt es in der AOK Bayern und AOK PLUS ein Mitarbeiterportal für die Zeitbuchung und das Stellen von verschiedenen Anträgen wie Urlaubsanträgen. 
+Hierbei gibt es sicherlich Lastspitzen am Morgen und am Nachmittag. 
+Ein weiteres Beispiel ist die Kommunikationssoftware, 
+die bei unternehmensweiten Besprechungen zwei- oder viermal im Jahr deutlich stärker ausgelastet wird.
+
+Im Gegensatz hierzu gibt es auch langfristige Skalierungen, wenn ein Unternehmen wachsen möchte. 
+Bei der Krankenkasse AOK Bayern oder AOK PLUS ist starkes Wachstum in einem kurzen Zeitraum eher untypisch, 
+da sich die Versichertenzahl üblicherweise gleichmäßig und allmählich erhöht und nie neue Märkte erschlossen werden. 
+Dennoch können neue Bedürftnisse im Bezug auf Rechen- oder Speicherleistung entstehen, 
+wenn sich gesetzliche Vorgaben ändern.
 
 \subparagraph{Wiederherstellungsmöglichkeiten}
 
