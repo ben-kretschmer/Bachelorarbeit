@@ -4,30 +4,31 @@
 
 \subsection{Definition des Lösungsansatzes}
 \paragraph{Grundlagen}
-Zur Ermittlung dieser Gesamtbewertung (englisch: score) des Risikos wird ein gewichtetes Scoring-Modell entwickelt. Es wird ein Katalog (K) mit Kriterien (k) aufgestellt:
+Zur Ermittlung dieser Gesamtbewertung (G) des Risikos wird ein gewichtetes Scoring-Modell entwickelt. Es wird ein Katalog (K) mit Kriterien (k) aufgestellt:
 \begin{eqnarray}
 K \in \{k_{1},k_{2},...,k_{n-1},k_{n}\},\ n \in \mathbb{N}
 \end{eqnarray} 
 
-Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein. Zunächst ist die einzige Komponente für ein erfülltes Kriterium die Existenz eines Produktes von Seiten des Anbieters. Dadurch ist die Variable $x$ (kurz für: Existenz beziehungsweise englisch existence) mit zwei Zuständen versehen:
+Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein. Zunächst ist die einzige Komponente für ein erfülltes Kriterium die Existenz eines Produktes von Seiten des Anbieters. Dadurch ist die Variable $x$ (kurz für: Existenz) mit zwei Zuständen versehen:
 \begin{eqnarray}
 x_{k} \in \{0,1\}
 \end{eqnarray}
 
-Die Gesamtbewertung (S) wird aus dem Verhältnis aller erfüllten Kriterien zu der maximal möglichen Punktzahl errechnet.
+Die Gesamtbewertung (G) wird aus dem Verhältnis aller erfüllten Kriterien zu der maximal möglichen Punktzahl errechnet. Das Ergebnis wird in Prozent angegeben. Generell gilt: Je höher das Ergebnis, desto niedriger das Risko für Anbieterbindung.
 \begin{eqnarray}
-S_{ungewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} x_{k}}{|K|}
+G_{ungewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} x_{k}}{|K|}
 \end{eqnarray}
 
 \paragraph{Hintergrund der Gewichtungen}
-Individuell zu jedem Kriterium wird ein Gewicht zugeordnet. Das Gewicht (englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
+Individuell zu jedem Kriterium wird ein Gewicht zugeordnet. Das Gewicht (w,englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
 \begin{eqnarray}
 w_{k} \in \mathbb{Q}
 \end{eqnarray}
+Für die Gewichtung wurde der englische Anfangsbuchstabe verwendet, um Verwechslung mit der Gesamtbewertung zu verhindern.
 
-Standardmäßig sind alle Kriterien mit einfacher Gewichtung konfiguriert und dadurch einen Punkt wert. Die erreichte Punktzahl (s) für ein gewichtetes Kriterium errechnet sich aus:
+Standardmäßig sind alle Kriterien mit einfacher Gewichtung konfiguriert. Das Teilergebnis (g) für ein für ein gewichtetes Kriterium errechnet sich aus:
 \begin{eqnarray}
-s_{k} = w_{k}  * x_{k} 
+g_{k} = w_{k}  * x_{k} 
 \end{eqnarray}
 
 \paragraph{Feinjustierung durch Anwender}
@@ -40,7 +41,7 @@ Dadurch kann das breite Spektrum der Kategorien und Kriterien nach Bedarf reduzi
 
 Durch Anwenden der Gewichte ergibt sich die Berechnung der Gesamtbewertung:
 \begin{eqnarray}
-S_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\sum_{n=1} ^{|K|} w_{k}*1}
+G_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\sum_{n=1} ^{|K|} w_{k}*1}
 \end{eqnarray}
 
 \paragraph{Erweiterung der Kriterienkomponenten}
@@ -57,12 +58,12 @@ Es ist wichtig, dass ein Anbieter alle erforderlichen Produkte in der SaaS-Cloud
 \end{itemize}
 
 Als frei zugänglich gilt eine Software, wenn diese unter einer Open-Source-Lizenz verteilt wird.
-Diese Faktoren werden integriert. Die Variable $t$ (kurz für: Technologie beziehungsweise englisch technology) repräsentiert die Zustände interne, Standard- oder offene Technologie beziehungsweise Software.
+Diese Faktoren werden integriert. Die Variable $t$ (kurz für: Technologie) repräsentiert die Zustände interne, Standard- oder offene Technologie beziehungsweise Software.
 \begin{eqnarray}
 t_{k} \in \{0,1,2\}
 \end{eqnarray}
 
-Der Umfang der Dokumentation wird mit der Variable $d$ und den zwei Zuständen vorhanden oder nicht vorhanden modelliert.
+Der Umfang der Dokumentation wird mit der Variable $d$ (kurz für: Dokumentation) und den zwei Zuständen vorhanden oder nicht vorhanden modelliert.
 \begin{eqnarray}
 d_{k} \in \{0,1\}
 \end{eqnarray}
@@ -75,33 +76,33 @@ Dieser Umstand wird bei der Verknüpfung berücksichtigt.
 Punkte sollte als eine Situation geben,
 wenn es sich um eine Standard-Software handelt oder eine Dokumentation existiert oder beides der Fall ist.
 \begin{eqnarray}
-s'_{k} = d_{k} + t_{k}
+g'_{k} = d_{k} + t_{k}
 \label{s-strich-von-k}
 \end{eqnarray}
 
 Wenn kein Produkt zum Kriterium existiert, soll das Ergebis immer null Punkte ergeben, daher gilt insgesamt:
 \begin{eqnarray}
-s_{k} = w_{k}*x_{k}*(d_{k} + t_{k})
+g_{k} = w_{k}*x_{k}*(d_{k} + t_{k})
 \end{eqnarray}
 
-\paragraph{Effekt auf die Höchstpunktzahl}
-Um die Höchstpunktzahl zu berechnen, müsste für $s'_{k}$ (von \ref{s-strich-von-k}) das Maximum gewählt werden, was drei entspricht. 
-Die maximale Punktzahl würde also der Produktkatalog eines Cloud-Anbieters bekommen,
+\paragraph{Effekt auf die minimalem Risiko}
+Um die Höchstprozentzahl zu berechnen, müsste für $g'_{k}$ (von \ref{s-strich-von-k}) das Maximum gewählt werden, was drei entspricht. 
+Die maximale Prozentzahl würde also der Produktkatalog eines Cloud-Anbieters bekommen,
 der ausschließlich frei zugängliche Software mit zusätzlicher Dokumentation anbietet.
 Angenommen der vollständige Katalog umfasst 100 Kriterien,
-so ist die maximal mögliche Punktzahl bei einheitlich einfacher Gewichtung 300:
+so ist die maximal mögliche absoulte Punktzahl bei einheitlich einfacher Gewichtung 300 oder relativ 100%:
 
 \begin{eqnarray}
-S_{Maximal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(1+2) = 100 * 3 = 300
+G_{Maximal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(1+2) = 100 * 3 = 300
 \end{eqnarray}
 
-\paragraph{Charakterisirung eines Anbieters mit keinen Punkten}
+\paragraph{Charakterisirung eines Anbieters mit maximalem Risko}
 
 Ein Cloud-Anbieter,
 der keine Open-Source- oder Standard-Software anbietet erhält bei einheitlich einfacher Gewichtung und 100 Kriterien keine Punkte:
 
 \begin{eqnarray}
-S_{Minimal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(0) = 100 * 0 = 0
+G_{Minimal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(0) = 100 * 0 = 0
 \label{Minimal100}
 \end{eqnarray}
 
