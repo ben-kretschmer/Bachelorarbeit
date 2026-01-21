@@ -46,9 +46,9 @@ das die Nutzung von Cloud-Computing über die Jahre 2011 bis 2024 beschreibt.
 Hierbei zeigt die y-Achse die Prozentzahl der Befragten in Prozent und die x-Achse die Jahreszahlen.
 Ein Datenpunkt pro Jahr zeigt den Anteil der Unternehmen, die bereits Cloud Computing nutzen und ein weiterer Datenpunkt zeigt den Anteil der Unternehmen, die den Einsatz noch planen.
 Laut der Visualisierung stieg im Zeitraum der Untersuchung,
-welcher sich auf 13 Jahre beläuft, die Nutzung von Cloud-Compting von 28% auf 98%. 
+welcher sich auf 13 Jahre beläuft, die Nutzung von Cloud-Compting von 28\% auf 98\%. 
 Der Anteil der Befragten, die angaben,
-dass sie die Technologie nur planen, sank von 22% auf 0%. 
+dass sie die Technologie nur planen, sank von 22\% auf 0\%. 
 Für die Untersuchung wurden Geschäftsführer und IT-Führungskräfte aus 503 Unternehmen befragt. \cite{StatistaCCNutzung2024}
 
 Im Kontext dieser Arbeit gibt die Befragung einen ersten Einblick in die Nutzungstrends der Technologie an.
@@ -64,6 +64,37 @@ sondern welche Anbieter wie genutzt werden.
 \end{figure}
 
 \paragraph{Funktionsweise und gängige Architekturen}
+Das Grundprinzip von Auslagerung von IT-Komponenten lässt sich in verschiedene Stufen unterteilen.
+Die Abbildung \ref{A-cloud-stack} zeigt eine eigene Übersicht über verschiedene Modelle der Cloud-Computing-Architektur
+basierend auf der ISO-Norm zu Cloud Computing. \cite{ISO22123}.
+Dabei ist farblich (rot) hervorgeheben, welche Komponenten jeweils vom Cloud-Computing-Anbieter verwaltet werden.
+Die übrigen Komponenten werden durch den Kunden selbst verwaltet. \cite{Cloud1012026}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\linewidth]{figures/CloudStack}
+\end{center}
+\label{A-cloud-stack}\caption{Übersicht über verschieden Verwaltungsformen der Cloud}
+\end{figure}
+
+Neben der Auslagerung von Bausteinen der IT-Infrastruktur, wird auch in Public und Private Cloud unterschieden.
+Dabei ist besonders hervorzuheben, dass Informationen, die in die Public Cloud abgelegt werden, nicht automatisch öffentlich sind.
+Stattdessen hat der Cloud-Kunde bei der Verwendung der Public Cloud den Zugriff auf einen öffentlichen Vorrat aus Rechenressourcen.
+
+Im Gegensatz hierzu wird der Umfang der Rechenressourcen bei der Private Cloud festgelegt und dann für den Kunden fest zugeorndet.
+
+Neben der Verwendung eines einzigen Cloud-Anbieters kann ein Unternehmen auch andere Architekturen wählen.
+Dazu zählen die simultane Verwendung von Public und Private Cloud, sowie eigener Rechenzentren,
+was als Hybride Cloud bezeichnet wird. \cite{Cloud1012026}
+
+Außerdem eine gängige Architektur ist die Multi-Cloud, 
+bei der mehrere Public Cloud oder Private Cloud Anbieter gleichzeitig verwendet werden.
+
+Bei Hybride Cloud und Multi-Cloud ist vorteilhaft, dass Alleinstellungsmerkmale mehrerer Anbieter gleichzeitig genutzt werden können
+und die Vorzüge der jeweiligen Modelle kombiniert werden können.
+Jedoch kommt die Verwendung solcher Ansätze auch mit höherem organisatorischen Aufwand, es müssen verschiedene Geschäftsbeziehungen gepflegt werden
+und die Verknüpfung der verschiedenen Produkte kann zusätzliche Kosten und Aufwand mit sich bringen.
+Außerdem kann der Verbindungskanal zwischen Produkten von verschieden Anbietern ein Flaschenhals und eine Schwachstelle sein.
 
 \paragraph{Versprechungen und Vorteile der Cloud}
 Zu den Vorzügen zählen unter anderem Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
@@ -163,21 +194,16 @@ Da diese Punkte jedoch in der Gesamtaufstellung auf den hinteren Plätzen der Ei
 Besonders hervorzuheben ist der letzte Platz der Auflistung, der wie auch bei anderen Vorteilen bereits, durch Produkte bei vielen Anbietern ermöglicht wird. Die Analyse von Daten, Netwerkverkehr oder sonstigen Informationen wird durch eigene Produkte für die Kunden von SaaS-Anbietern stark vereinfacht und zugänglicher gemacht.
 
 \paragraph{Kapitalisierung der Cloud}
-Aus dem Konzept der Cloud wird durch die Anbieter ein Produkt oder ein Katalogs mit Produkten. 
+Aus dem Paradigma Cloud Computing und den verschiedenen in Abschnift \ref{}
+
 Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
 Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
 
 Es gibt viele verschiedene Konfigurationen der Cloud.
-
 Wie auch bei eigenen Rechenzentren aus einer Vielzahl von Architekturen und Marken gewählt werden kann,
 so gibt es bei der Wahl der Cloud Liefermodelle und Produktbausteine, 
 die nach den Bedürftnissen des Kunden eingekauft werden können.
-Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. Die entsprechenden Stufen hierzu sind ebenfalls in der ISO-Norm beschrieben und lauten (sortiert nach aufsteigender Kompetenzen des Anbieters):
-\begin{itemize}
-\item[-] Infrastructure as a Service
-\item[-] Platform as a Service
-\item[-] Software as a Service
-\end{itemize} \cite{ISO22123}
+Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. (vergleiche \ref{A-cloud-stack})
 
 \paragraph{Schematische Gegenüberstellung von Kosten und Funktionsweise}
 
