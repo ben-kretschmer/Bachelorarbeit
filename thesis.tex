@@ -78,6 +78,9 @@ isbn=true,
 \usepackage{ragged2e}
 \usepackage{lscape}
 
+% hierachy setup
+\usepackage{forest}
+
 % PDF/A compliance
 \begin{filecontents*}{\jobname .xmpdata}
 \Title{\titel}
@@ -104,16 +107,16 @@ isbn=true,
 }
 
 % configure your listings style
-\usepackage{listings}
-\lstset{
-	tabsize=3,
-	extendedchars=true,
-	frame=single,
-	showstringspaces=true,
-	numbers=left,
-	numberstyle=\small,
-	breakautoindent=true
-}
+%\usepackage{listings}
+%\lstset{
+%	tabsize=3,
+%	extendedchars=true,
+%	frame=single,
+%	showstringspaces=true,
+%	numbers=left,
+%	numberstyle=\small,
+%	breakautoindent=true
+%}
 
 % page setup
 % \setlength{\topskip}{\ht\strutbox}
@@ -137,7 +140,7 @@ isbn=true,
 
 
 % TODO remove if not needed...
-\usepackage{blindtext}
+%\usepackage{blindtext}
 
 % load glossary entries
 \makenoidxglossaries
@@ -174,7 +177,9 @@ isbn=true,
 %\include{content/a1_supplemental}
 
 \backmatter
+
 \listoffigures
+
 \cleardoublepage
 
 %\listoftables

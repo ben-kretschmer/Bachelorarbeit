@@ -1,8 +1,167 @@
 \chapter{Lösungsansatz}\label{ch:method}
 
-\section{Scoringmodell}
+\section{Bewertungsmodell}
+Das Bewertungsmodell stellt im Hinblick auf die Zielsetzung dieser Arbeit die primär angesetzt Lösung dar, wobei zum Schluss zusätzliche Lösungen für Herausforderung der Anbieterbindung in Aussicht gestellt werden.
 
-\subsection{Definition des Lösungsansatzes}
+\subsection{Struktur des Kriterienkatalogs}
+\label{entw-bewertungs-kat}
+\paragraph{Überblick über die Struktur}
+Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
+Zudem hat der gesamte Katalog zwei Hauptbestandteile: Kategorien mit indirektem und Kategorien mit direktem Einfluss auf die Anbieterbindung.
+Aus diesem Ansatz ergibt sich die Hierachie aus Abbildung \ref{bewertungs-kat-tree}
+
+\begin{figure}[h]
+\begin{forest}
+[Bewertungsmodell, calign=center
+[indirekter Einfluss
+  [Business-SaaS
+    [CRM]
+    [ERP]
+  ]
+  [...]
+  [Virtual-Desktop]
+]
+[direkter Einfluss
+  [Interoperabilität
+    [API]
+  ]
+  [...]
+  [Containerisierung]
+]
+]
+\end{forest}
+\caption{Skizze der hierachischen Struktur des Kriterienkatalogs}
+\label{bewertungs-kat-tree}
+\end{figure}
+
+\paragraph{Motivation für diese Aufteilung}
+Die Art der Aufteilung führt zu einem übersichtlichen Kriterienkatalog.
+Für die Anwendung ist der Katalog zudem so konzipiert, dass die Kriterien der Teile unabhängig voneinander und auf verschiedene Arten bewertet werden können.
+
+\subparagraph{Erster Teil des Katalogs}
+Die im ersten Teil aufgelisteten Kriterien mit indirektem Einfluss lassen sich vom Anwender des Katalogs anhand der Informationen des Anbieter-Seite ausfüllen.
+Das liegt daran, dass der Inhalt dieser Kriterien auch auf Basis von aktuellen Produktkatalogen erarbeitet wurde.
+
+Wie im Abschnitt \ref{produkt-übersicht-saas} aufglistet, haben sich 
+gängige Produkte etabliert und führende Anbieter bieten üblicherweise alle diese Produkte an.
+Generell ist die Frage mit einem Blick auf die Produktkataloge der führenden und größten Anbieter eher wie genau die Kriterien umgesetzt wurden und nicht,
+ob die Kriterien überfüllt wurden.
+Der definierte Lösungsansatz bevorzugt stark Anbieter, die weniger Produkte mit besseren Migrationsvorraussetzungen anbieten. Eindeutig wird das, durch die Rechnung \ref{Minimal100}.
+
+\subparagraph{Zweiter Teil des Katalogs}
+Die im zweiten Teil aufgeglisteten Kriterien lassen sich zum Teil schwerer nur anhand der Verkaufsseite der Produkte im Internet bewerten,
+denn diese beziehen sich auch auf vertragliche Aspekte der Anbieter.
+Es ist stattdessen vorgesehen, dass diese Kriterien sich erst nach einem ersten schriftlichen Austausch oder Verkaufsgespräch mit dem Cloud-Anbieter bewerten lassen.
+
+Für diese Herangehensweise gibt es auch Ausnahmen und manche Kriterien aus dem zweiten Teil lassen sich auch anhand von Informationen auf der Internetseite des gegebenen Anbieters ermitteln.
+
+\subsection{Kriterien mit indirektem Einfluss}
+\label{kat-indirekt-lockin}
+\paragraph{Entwicklungsprozess konkreter Kriterien}
+Wie in Abschnitt \ref{entw-bewertungs-kat} beschrieben wurde folgende SaaS-Cloud-Anbieter untersucht:
+
+\begin{itemize}
+\item[-] Alibaba Cloud
+\item[-] Amazon Azure
+\item[-] Google Cloud Plattform
+\item[-] IONOS Cloud
+\end{itemize}
+
+\paragraph{Handhabung der Bepunktung}
+In der Definition des Lösungsansatzes wurde formal beschrieben wie die Bepunktung abläuft. Berücksichtigt wird die Existenz eines Produkt, die dazugehörige Dokumentation und die zugrundeliegende Technologie und, ob diese ein Standard beziehungsweise eine offene Technologie ist (vergleiche \ref{erw-kriterien-komponenten}).
+
+\paragraph{Begründung dieser Vorgehensweise}
+Produkte eines SaaS-Cloud-Anbieters hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
+Je mehr SaaS-Produkte ein direktes Pendant bei einem Ziel-Anbieter haben, desto schächer ist die Anbieterbindung. 
+Ein direktes Pedant ist ein Produkt, das bei dem Ziel- und Ursprungs-Anbieter auf der gleichen Technologie beziehungsweise dem gleichen offenen Standard funktioniert.
+Nach dieser Logik ist die Bepunktung sinnvoll, wenn Migration ergleichtert werden soll. 
+Migrationskomplexität ist ein erheblicher Faktor der Anbieterbindung.
+
+\paragraph{Diskussion der Handhabung}
+Der Entwicklungsprozess für den Kritierenkatalog verwendet eine Auswahl von Anbietern als Basis für den Katalog.
+Der benötigte Umfang der Menge der Anbieter, die als Quelle für den Kriterienkataloges dienten, ist unbekannt.
+
+Für diese Arbeit wurde mit vier Anbietern als Grundlage entwickelt, um die Zeit für die Recherche auf den Seiten der Anbieter im Vergleich zu allen anderen Recherchen und der tatsächlichen Ausarbeitung der Lösung zu reduzieren. Gleichermaßen wäre die Verwendung einer größeren Anbietermenge möglich gewesen.
+ 
+\subparagraph{Gründe gegen eine größere Basismenge}
+In Relation zu den im Kapitel \ref{lead-cc-A} aufgeführten Cloud-Anbietern, entspricht die Stichprobengröße von 4 rund 20\% der Gesamtzahl der größten Anbieter.
+
+\begin{eqnarray}
+a_{Seed} = \{Alibaba, Amazon, Google, Ionos\}, |a| = 4
+\end{eqnarray}
+\begin{eqnarray}
+A_{Gesamtanbietermenge} = \{...\}, |A| = 20
+\end{eqnarray}
+\begin{eqnarray}
+a \subset A
+\end{eqnarray}
+\begin{eqnarray}
+R_{Gesamtanbieterzahl} = \frac{|a|}{|A|}
+\end{eqnarray}
+\begin{eqnarray}
+R_{Gesamtanbieterzahl} = \frac{4}{20} = 0,2 = 20%
+\end{eqnarray}
+
+Es werden zusätzliche Anbieter der Gesamtanbietermenge (vergleiche \ref{lead-cc-A}) für die Experimente mit der erarbeiteten Lösung benötigt,
+die nicht für die Entwicklung verwendet wurden.
+(vergleiche \ref{krit-kat-experimente})
+
+Falls durch den verwendeten Entwicklungsprozess ein Bias zugunsten von Anbietern aus der Grundlage entstanden ist, lässt sich das gegebenfalls mit den zusätzlichen Anbietern zeigen.
+
+Eine ausführliche und systematische Untersuchung über die ausreichende Größe der Stichprobe ist nicht Gegenstand dieser Arbeit, dies würde unabhängige Entwicklung mehrer Kataloge mit verschieden großen Basis-Anbietern benötigen.
+
+\paragraph{Definitionen der einzelnen Kriterienkategorien}
+
+\subparagraph{SaaS-Produkte für Tagesgeschäfte}
+In dieser Bewertungskategorie wird der Anbieter auf seine Leistungen hinsichtlich Anwendungen für das Tagesgeschäft überprüft.
+Darunter zählen hier Anwendungen zur Pflege der Kundenbeziehungen oder der Unternehmensressourcen (CRM und ERP)
+Außerdem zählen Kommunikationsanwendungen in diese Kategorie.
+
+\subparagraph{Saas-Produkte zur Datenspeicherung}
+Es wird betrachtet welche Datenbank-Formate zum Einsatz kommen, um Daten des Unternehmens zu Speichern. Außerdem
+werden andere Speicherlösungen wie Blob-Speicher betrachtet.
+
+\subparagraph{Entwicklungs-Werzeuge}
+Für Unternehmen, wie die kubus IT, in denen Anwendungen und Skripte für den eigenen Gebrauch innerhalb der Firma entwickelt werden,
+sind Werkzeuge zur Zusammenarbeit an Entwicklungsprojekten, zum Teilen und Speichern von Programmcode im Sinne einer Versionsverwaltung und zum effizienten Schreiben von Code im Sinne einer Entwicklungsumgebung notwendig.
+
+\subparagraph{Indentitätenmanagment}
+Das Konzept für Rechte, Rollen und deren Inhaber wächst üblich mit der Zeit und kann sehr komplex werden. Da es erstrebenswert ist, dass die Art und Weise wie Identitäten auf der Seite des Cloud-Anbieters funktionieren möglichst kompatibel mit anderen Lösungen ist, wird auch diese Kategorie im Katalog berücksichtigt.
+
+\subparagraph{Operationsstabilität}
+SaaS-Produkte, die zur Stabilität im Betrieb beitragen, schützen Beispielsweise die Infrastruktur vor Angriffen. Auch hier kann eine Migration notwendig werden, wenn beispielsweise Firewall-Einstellungen bei dem neuen Anbieter übernommen werden sollen.
+
+\subparagraph{Überwachung und Management}
+Produkte, die eine Bedienoberfläche zur Überwachung oder der Verwaltung von Ressourcenverbauch. Konkret sind Ressourcen beispielsweise Budget für Berechnung durch KI, Netzwerkverkehr oder Rechenressourcen wie Speicher.
+Darüberhinaus gibt es teilweise auch Produkte zum Auswerten von beispielsweise CO2-Emissionen.
+
+\subparagraph{Virtual-Desktop-Infrastruktur}
+Betrifft Produkte eines Anbieters, die zum Betrieb und zur Überwachung von virtuellen Desktops und allgemeiner Endgeräten wie beispielsweise auch Smartphones notwendig sind. 
+
+\subsection{Kriterien mit direktem Einfluss}
+\label{kat-direkt-lockin}
+\begin{itemize}
+\item[-] Gematik GmbH
+\item[-] Sozialgesetzbuch
+\item[-] ISO-Norm 27001 und 50001
+\item[-] C5-Standard
+\end{itemize}
+
+\subparagraph{Interoperabilität}
+In dieser Kategorie werden Kriterien gesammelt, die zur generellen Interoperabilität beitragen und sich keiner anderen Kategorie unterordnen lassen.
+Unter Interoperabilität versteht man...
+
+Das Konzept kann sowohl im Sinne der Zusammenarbeit zwischen mehreren aktiven Cloud-Anbietern innerhalb eines Unternehmen, der Zusammenarbeit von eigenen Rechenzentren und Cloud-Infrastruktur und auch im Sinne der Zusammenarbeit zwischen einem neuen und einem ehemaligen Anbieter verstanden werden.
+Diese Bereiche werden alle durch Kriterien dieser Kategorie abgedeckt.
+
+\subparagraph{Migrationswerkzeuge}
+Werkzeuge zur Migration können als Werkzeuge, die beim Wechsel zu einem Anbieter hin oder von diesem weg, unterstützen verstanden werden. Darunter zählen zum Beispiel Anwendungen zum Export oder zum Versenden von gespeicherten Daten zu oder von einem anderen Anbieter.
+
+\subparagraph{Container-Lösungen}
+Containerisierung unterstützt beim Betreiben von verschiedenen Anwendungen, indem diese Anwendungen in definierte Umgebungen gepackt werden. 
+Es wird untersucht welche Containiersierungtechnologien zum Einsatz kommen.
+
+\subsection{Entwicklung des Bewertungsschemas}
 \paragraph{Grundlagen}
 Zur Ermittlung dieser Gesamtbewertung (G) des Risikos wird ein gewichtetes Scoring-Modell entwickelt. Es wird ein Katalog (K) mit Kriterien (k) aufgestellt:
 \begin{eqnarray}
@@ -119,147 +278,14 @@ dass der Anbieter das Kriterium nicht mit einem Produkt erfüllt,
 aber das Produkt beispielsweise dennoch eine Dokumentation aufweist. Diese Eingabe ergibt keine Punkte.
 Auch diese drei Möglichkeiten könnten als Beispiel für eine minimale Gesamtpunktzahl (vergleiche Formel \ref{Minimal100}) angeführt werden, sind jedoch in der Praxis uninteressant.
 
-\subsection{Entwicklung von Bewertungskategorien}
-\label{entw-bewertungs-kat}
-\paragraph{Herangehensweise an die Strukturierung}
-Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
-Zudem hat der gesamte Katalog zwei Hauptbestandteile: Kategorien mit indirektem und Kategorien mit direktem Einfluss auf die Anbieterbindung.
-
-\paragraph{Motivation für diese Aufteilung}
-Die Art der Aufteilung führt zu einem übersichtlichen Kriterienkatalog.
-Für die Anwendung ist der Katalog zudem so konzipiert, dass die Kriterien der Teile unabhängig voneinander und auf verschiedene Arten bewertet werden können.
-
-\subparagraph{Erster Teil des Katalogs}
-Die im ersten Teil aufgelisteten Kriterien mit indirektem Einfluss lassen sich vom Anwender des Katalogs anhand der Produktlisten des Anbieters ausfüllen.
-Das liegt daran, dass der Inhalt dieser Kriterien auch auf Basis von aktuellen Produktkatalogen erarbeitet wurde.
-
-Wie im Abschnitt \ref{produkt-übersicht-saas} aufglistet, haben sich 
-gängige Produkte etabliert und führende Anbieter bieten üblicherweise alle diese Produkte an.
-Generell ist die Frage mit einem Blick auf die Produktkataloge der führenden und größten Anbieter eher wie genau die Kriterien umgesetzt wurden und nicht,
-ob die Kriterien überfüllt wurden.
-Der definierte Lösungsansatz bevorzugt stark Anbieter, die weniger Produkte mit besseren Migrationsvorraussetzungen anbieten. Eindeutig wird das, am Gedankenspiel aus Rechnung \ref{Minimal100}.
-
-\subparagraph{Zweiter Teil des Katalogs}
-Die im zweiten Teil aufgeglisteten Kriterien lassen sich zum Teil schwerer nur anhand der Verkaufsseite der Produkte im Internet bewerten,
-denn diese beziehen sich auch auf vertragliche Aspekte der Anbieter.
-Es ist stattdessen vorgesehen, dass diese Kriterien sich erst nach einem ersten schriftlichen Austausch oder Verkaufsgespräch mit dem Cloud-Anbieter bewerten lassen.
-
-Für diese Herangehensweise gibt es auch Ausnahmen und manche Kriterien aus dem zweiten Teil lassen sich auch anhand von Informationen auf der Internetseite des gegebenen Anbieters ermitteln.
-
-\subsection{Heranführung an Kategorien mit indirektem Einfluss}
-\label{kat-indirekt-lockin}
-\paragraph{Entwicklungsprozess konkreter Kriterien}
-Wie in Abschnitt \ref{entw-bewertungs-kat} beschrieben wurde folgende SaaS-Cloud-Anbieter untersucht:
-
-\begin{itemize}
-\item[-] Alibaba Cloud
-\item[-] Amazon Azure
-\item[-] Google Cloud Plattform
-\item[-] IONOS Cloud
-\end{itemize}
-
-\paragraph{Handhabung der Bepunktung}
-In der Definition des Lösungsansatzes wurde formal beschrieben wie die Bepunktung abläuft. Berücksichtigt wird die Existenz eines Produkt, die dazugehörige Dokumentation und die zugrundeliegende Technologie und, ob diese ein Standard beziehungsweise eine offene Technologie ist (vergleiche \ref{erw-kriterien-komponenten}).
-
-\paragraph{Begründung dieser Vorgehensweise}
-Produkte eines SaaS-Cloud-Anbieters hat einen indirekten Einfluss auf die Anbieterbindung, wenn ein konkretes Produkt Daten nutzt oder produziert, dessen Format umgewandelt werden muss oder die migriert werden müssen. 
-Je mehr SaaS-Produkte ein direktes Pendant bei einem Ziel-Anbieter haben, desto schächer ist die Anbieterbindung. 
-Ein direktes Pedant ist ein Produkt, das bei dem Ziel- und Ursprungs-Anbieter auf der gleichen Technologie beziehungsweise dem gleichen offenen Standard funktioniert.
-Nach dieser Logik ist die Bepunktung sinnvoll, wenn Migration ergleichtert werden soll. 
-Migrationskomplexität ist ein erheblicher Faktor der Anbieterbindung.
-
-\paragraph{Diskussion der Handhabung}
-Der Entwicklungsprozess für den Kritierenkatalog verwendet eine Auswahl von Anbietern als Basis für den Katalog.
-Der benötigte Umfang der Menge der Anbieter, die als Quelle für den Kriterienkataloges dienten, ist unbekannt.
-
-Für diese Arbeit wurde mit vier Anbietern als Grundlage entwickelt, um die Zeit für die Recherche auf den Seiten der Anbieter im Vergleich zu allen anderen Recherchen und der tatsächlichen Ausarbeitung der Lösung zu reduzieren. Gleichermaßen wäre die Verwendung einer größeren Anbietermenge möglich gewesen.
- 
-\subparagraph{Gründe gegen eine größere Basismenge}
-In Relation zu den im Kapitel \ref{lead-cc-A} aufgeführten Cloud-Anbietern, entspricht die Stichprobengröße von 4 rund 20\% der Gesamtzahl der größten Anbieter.
-
-\begin{eqnarray}
-a_{Seed} = \{Alibaba, Amazon, Google, Ionos\}, |a| = 4
-\end{eqnarray}
-\begin{eqnarray}
-A_{Gesamtanbietermenge} = \{...\}, |A| = 20
-\end{eqnarray}
-\begin{eqnarray}
-a \subset A
-\end{eqnarray}
-\begin{eqnarray}
-R_{Gesamtanbieterzahl} = \frac{|a|}{|A|}
-\end{eqnarray}
-\begin{eqnarray}
-R_{Gesamtanbieterzahl} = \frac{4}{20} = 0,2 = 20%
-\end{eqnarray}
-
-Es werden zusätzliche Anbieter der Gesamtanbietermenge (vergleiche \ref{lead-cc-A}) für die Experimente mit der erarbeiteten Lösung benötigt,
-die nicht für die Entwicklung verwendet wurden.
-(vergleiche \ref{krit-kat-experimente})
-
-Falls durch den verwendeten Entwicklungsprozess ein Bias zugunsten von Anbietern aus der Grundlage entstanden ist, lässt sich das gegebenfalls mit den zusätzlichen Anbietern zeigen.
-
-Eine ausführliche und systematische Untersuchung über die ausreichende Größe der Stichprobe ist nicht Gegenstand dieser Arbeit, dies würde unabhängige Entwicklung mehrer Kataloge mit verschieden großen Basis-Anbietern benötigen.
-
-\subsection{Definitionen der einzelnen Kriterienkategorien}
-
-\paragraph{SaaS-Produkte für Tagesgeschäfte}
-In dieser Bewertungskategorie wird der Anbieter auf seine Leistungen hinsichtlich Anwendungen für das Tagesgeschäft überprüft.
-Darunter zählen hier Anwendungen zur Pflege der Kundenbeziehungen oder der Unternehmensressourcen (CRM und ERP)
-Außerdem zählen Kommunikationsanwendungen in diese Kategorie.
-
-\paragraph{Saas-Produkte zur Datenspeicherung}
-Es wird betrachtet welche Datenbank-Formate zum Einsatz kommen, um Daten des Unternehmens zu Speichern. Außerdem
-werden andere Speicherlösungen wie Blob-Speicher betrachtet.
-
-\paragraph{Entwicklungs-Werzeuge}
-Für Unternehmen, wie die kubus IT, in denen Anwendungen und Skripte für den eigenen Gebrauch innerhalb der Firma entwickelt werden,
-sind Werkzeuge zur Zusammenarbeit an Entwicklungsprojekten, zum Teilen und Speichern von Programmcode im Sinne einer Versionsverwaltung und zum effizienten Schreiben von Code im Sinne einer Entwicklungsumgebung notwendig.
-
-\paragraph{Indentitätenmanagment}
-Das Konzept für Rechte, Rollen und deren Inhaber wächst üblich mit der Zeit und kann sehr komplex werden. Da es erstrebenswert ist, dass die Art und Weise wie Identitäten auf der Seite des Cloud-Anbieters funktionieren möglichst kompatibel mit anderen Lösungen ist, wird auch diese Kategorie im Katalog berücksichtigt.
-
-\paragraph{Operationsstabilität}
-SaaS-Produkte, die zur Stabilität im Betrieb beitragen, schützen Beispielsweise die Infrastruktur vor Angriffen. Auch hier kann eine Migration notwendig werden, wenn beispielsweise Firewall-Einstellungen bei dem neuen Anbieter übernommen werden sollen.
-
-\paragraph{Überwachung und Management}
-Produkte, die eine Bedienoberfläche zur Überwachung oder der Verwaltung von Ressourcenverbauch. Konkret sind Ressourcen beispielsweise Budget für Berechnung durch KI, Netzwerkverkehr oder Rechenressourcen wie Speicher.
-Darüberhinaus gibt es teilweise auch Produkte zum Auswerten von beispielsweise CO2-Emissionen.
-
-\paragraph{Virtual-Desktop-Infrastruktur}
-Betrifft Produkte eines Anbieters, die zum Betrieb und zur Überwachung von virtuellen Desktops und allgemeiner Endgeräten wie beispielsweise auch Smartphones notwendig sind. 
-
-\subsection{Kategorien mit direktem Einfluss}
-\label{kat-direkt-lockin}
-\begin{itemize}
-\item[-] Gematik GmbH
-\item[-] Sozialgesetzbuch
-\item[-] ISO-Norm 27001 und 50001
-\item[-] C5-Standard
-\end{itemize}
-
-\paragraph{Interoperabilität}
-In dieser Kategorie werden Kriterien gesammelt, die zur generellen Interoperabilität beitragen und sich keiner anderen Kategorie unterordnen lassen.
-Unter Interoperabilität versteht man...
-
-Das Konzept kann sowohl im Sinne der Zusammenarbeit zwischen mehreren aktiven Cloud-Anbietern innerhalb eines Unternehmen, der Zusammenarbeit von eigenen Rechenzentren und Cloud-Infrastruktur und auch im Sinne der Zusammenarbeit zwischen einem neuen und einem ehemaligen Anbieter verstanden werden.
-Diese Bereiche werden alle durch Kriterien dieser Kategorie abgedeckt.
-
-\paragraph{Migrationswerkzeuge}
-Werkzeuge zur Migration können als Werkzeuge, die beim Wechsel zu einem Anbieter hin oder von diesem weg, unterstützen verstanden werden. Darunter zählen zum Beispiel Anwendungen zum Export oder zum Versenden von gespeicherten Daten zu oder von einem anderen Anbieter.
-
-\paragraph{Container-Lösungen}
-Containerisierung unterstützt beim Betreiben von verschiedenen Anwendungen, indem diese Anwendungen in definierte Umgebungen gepackt werden. 
-Es wird untersucht welche Containiersierungtechnologien zum Einsatz kommen.
-
-\subsection{Umgang mit Gewichtung}
-Die Lösung ist so konzipitiert, dass durch Feinjustierung der Gewichte, die Bedürftnisse des Anwenders berücksichtigt werden können.
+\paragraph{Umgang mit Gewichtung}
+Das Bewertungsschema ist so konzipitiert, dass durch Feinjustierung der Gewichte, die Bedürftnisse des Anwenders berücksichtigt werden können.
 Inital sind jedoch folgende Gewichtungskonfigurationen vorgesehen.
 
-\paragraph{Einheitliche Gewichtung}
+\subparagraph{Einheitliche Gewichtung}
 Jedes Kriterium hat das gleiche Gewicht. Das Endergebniss hängt alleine von der Zahl der erfüllten Kriterien ab.
 
-\paragraph{Schwerpunkt bei direken Kriterien}
+\subparagraph{Schwerpunkt bei direken Kriterien}
 Viele erfüllte direkte Kriterien, bedeuten dass Aufwand eines Anbieterwechsels auf technischer Ebene erleichtert, denn es werden viele Hilfestellungen bei der Migration geboten. 
 Um einen Schwerpuntk an dieser Stelle zu setzen, 
 werden die Gewichte der Kriterien um einen gewissen Faktor erhöht.
@@ -267,7 +293,7 @@ Alternativ kann das Bewertungsmodell auch so Konfiguriert werden,
 dass die übrigen Kritieren keine Gewichtung haben, 
 wodurch die Gesamtbewertung ausschließlich direkte Kriterien beinhaltet.
  
-\paragraph{Schwerpunkt bei indirekten Kriterien}
+\subparagraph{Schwerpunkt bei indirekten Kriterien}
 Sind viele indirekte Kriterien erfüllt, so lassen sich viele alte Anwendungen zu einen neuen Anbieter umziehen, weil die verwendeten Anwendungen nicht exklusiv für einen Anbieter sind. 
 Das erleichtert die Migration der Anwendungsdaten, 
 da die Daten nicht in das Format neuer Anwendungen übersetzt werden müssen. 
