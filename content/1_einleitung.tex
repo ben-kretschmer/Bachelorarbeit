@@ -2,26 +2,35 @@
 
 \section{Heranführung}
 
-\subsection{Theoretische Hintergründe der Cloud}
+\subsection{Theoretische Hintergründe des Cloud-Computing}
 
-\paragraph{Definitionen der Cloud Computing}
-Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der \Gls{IT}-Branche wie der Fachbuchautor Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend formulierte. \cite{Hennrich2023}
+\paragraph{Definitionen von Cloud Computing}
+Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der \Gls{IT}-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend formulierte. \parencite{Hennrich2023}
 
-Pragmatischer ist die ISO Norm, nach der Cloud Computing ein \glqq Paradigma [ist],um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen.\grqq \cite{ISO22123}
+Pragmatischer ist die ISO Norm, nach der Cloud Computing ein \begin{quote}
+Paradigma [ist],um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen.
+\parencite{ISO22123}
+\end{quote}
 
-Ergänzend dazu steht der Artikel vom US-amerikanischen Technologieunternehmen Microsoft mit dem Titel \glqq Was ist die Cloud?\grqq. 
-Der Webartikel klärt aus Sicht des Cloud-Computing-Anbieters auf und definiert die Cloud als \glqq […] Online-Speicherplatz, in dem Personen und Unternehmen ihre Dateien und Anwendungen speichern, die von überall mit einer Internetverbindung zugänglich sind.\grqq
-Des Weiteren bietet \glqq die Cloud\grqq , laut dem Anbieter, \glqq Dienste wie Rechenleistung, Datenbanken, Netzwerke und Softwareanwendungen.\grqq
-\cite{CloudDefMicro2025}
+Ergänzend dazu steht der Artikel vom US-amerikanischen Technologieunternehmen Microsoft mit dem Titel \glq Was ist die Cloud?\grq. 
+Der Webartikel klärt aus Sicht des Cloud-Computing-Anbieters auf und definiert die Cloud als \glqq[…] Online-Speicherplatz, in dem Personen und Unternehmen ihre Dateien und Anwendungen speichern, die von überall mit einer Internetverbindung zugänglich sind.\grqq\parencite{CloudDefMicro2025}
+Des Weiteren bietet \glq die Cloud\grq , laut dem Anbieter, \glqq Dienste wie Rechenleistung, Datenbanken, Netzwerke und Softwareanwendungen.\grqq
+\parencite{CloudDefMicro2025}
 
 \paragraph{Folgerungen aus den Definitionen}
 Aus diesen Perspektiven zu der Cloud-Computing-Technologie lassen sich wichtige Grundlagen wie den Zusammenhang zwischen Internet und Cloud und die inherente Flexibilität als Fundament der Technologie ableiten.
 
-IT-Kompontenen wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glq \Gls{on-Premise}\grq\ aufzufinden waren, können ausgelagert werden. 
-Je nach Umsetzungsart sind die Komponenten der Cloud trotzdem auf dem Grundstück des Unternehmens, im gleichen Land oder an einem völlig anderen Ort auf der Erde. 
-Genutzt werden die Komponten jedoch immer per Fernzugriff und -steuerung über das Internet.
+IT-Kompontenen wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glsfirst{on-Premise} aufzufinden waren, können ausgelagert werden. 
+Je nach Umsetzungsart sind die IT-Komponenten von Cloud-Computing trotzdem auf dem Grundstück des Unternehmens, im gleichen Land oder an einem völlig anderen Ort auf der Erde.
+
+Immer jedoch in Rechenzentren (englisch: Data Centers, auch Cluster), was spezielle Räume oder Gebäude sind, die aus einer Vielzahl einzelner Rechenmaschinen bestehen und enorme Maßstäbe annehmen können. Die Größe ist oft lediglich durch die finanziellen Grenzen des Betreibers und die Strom- und Internet-Infrastruktur eingeschränkt. Dadurch ist dieser Informationssektor (Quatärsektor der Wirtschaft) wie auch die (Ur-)Produktion von Standortfaktoren wie Grundstücks- und Energiepreisen, sowie -Verfügbarkeit (\zB Wasserkraft), abhängig.
+\parencite{Tanenbaum2013} 
+\parencite{Wirtschaftssektoren2026}
+
+Genutzt werden die Komponten immer per Fernzugriff und -steuerung über das Internet. 
 
 Diese Ausgestaltung alleine ermöglicht schon deshalb eine höhere Flexibilität, da Mitarbeitende des Unternehmens aus der Ferne auf die Komponenten zugreifen können. 
+
 Darüberhinaus ist ein wichtiger Bestandteil des Konzeptes die Skalierung beziehungsweise Erweiterung der Ressourcen. 
 Die Skalierung beinhaltet, dass zusätzliche Komponenten auf Wunsch des Cloud-Computing-Kunden zugeschaltet werden können. Diese Skalierung ist in die Produkte einbaut und geschieht über einen definierten Prozess.
 
@@ -31,12 +40,27 @@ wo das Konzept von Cloud-Computing beschrieben wird,
 aber oft als \glq die Cloud \grq abgekürzt wird.
 Zur Verwirrung trägt erschwerend bei, 
 dass Microsoft einen zweiten Artikel mit dem Titel \glqq Was ist Cloud-Computing?\grqq veröffentlicht hat, 
-der eine sehr ähnliche Definition beinhaltet, aber die Cloud selbst als Bezeichnung für das Internet beschreibt. \cite{CloudDefMicro20252}
+der eine sehr ähnliche Definition beinhaltet, aber die Cloud selbst als Bezeichnung für das Internet beschreibt. \parencite{CloudDefMicro20252}
 Diese Arbeit bezieht sich auf Cloud-Computing nach den explizit genannten Definitionen. 
 
-\paragraph{Verbreitung der Technologie}
+\paragraph{Geschichte und Verbreitung der Technologie}
 Die Definitionen geben einen Einblick in das vermeintliches Potential der Technologie.
 
+\subparagraph{Verbindungen zu Mainframe Computing}
+Doch das Konzept von zentralisierter Com\-puter-Ressourcen in einem Rechenzentrum (englisch Data Center) ist laut Andrew Tanenbaums \glq Structured Computer Organisation\grq eine Art \glqq Mainframe Computing V2.0\grqq . \parencite{Tanenbaum2013}
+Bei dieser Archiktur wurde auf einen Großrechner, der meist in einem speziellen Gebäude oder Raum einer Instituion aufzufinden war, über ein Intranet und ein leistungsschwachen Terminal(-Computer) zugegriffen. Über die Terminals werden große Rechenaufgaben angestoßen und die Ergebnisse später betrachtet.
+Die Architektur war notwendig, da die benötigte Rechenleistung ein solch großes Volumen einnahm. \parencite{Tanenbaum2013}
+
+\subparagraph{Miniaturisierung von Transistoren}
+Da die Transistoren (fundamentaler Baustein für Computer) mit unvergleichlicher Geschwindigkeit miniaturisiert und immer kompakter auf Computer-Chips platziert werden konnten, schrupfte auch der Raumbedarf. Dadurch wurde die Mainframe-Archiktur zunächst obsolet. Die Entwicklung der Transistorengröße ist jedoch von physikalischen Größen begrenzt und dadurch ein ewiges Phänomen.
+Zu den physikalischen Grenzen zählen Energie-Verlust (englisch: energy dissipation), Strom-Abfluss (englisch: current leakage) und die Größe von Silikon-Atomen
+Im Fachbuch von Tanenbaum, wird erwähnt, dass die Grenzen der Transistor-Miniaturisierung Schätzungen zufolge 2023 erreicht werden könnte. \parencite{Tanenbaum2013}
+
+\subparagraph{Wiedergeburt von zentralisiertem Computing}
+Die rasante Entwicklung der Berechnungsmöglichkeiten erzeugt einen Teufelskreis (englisch: virtuous circle), der daraus besteht, dass die technologischen Entwicklungen auch die Anforderungen und Erwartungen an Software steigerte, was wiederrum verbesserte Rechenleistung forderte. \parencite{Tanenbaum2013}
+Daher vertritt diese Arbeit die Auffassung, dass die beschriebenen Gegebenheiten die erneute räumliche und organisatorische Zentralisierung begünstigt haben.
+
+\subparagraph{Aktuelle Verbreitung von Cloud-Computing}
 Statistische Befragungen der letzten Jahrzehnte von Führungskräften deutscher und internationaler Unternehmen, machen deutlich, dass das Thema die Aufmerksamkeit der Führungsebenen erreicht hat und Cloud-Computing in die Unternehmen eingezogen ist.
 
 Exemplarisch geht dies aus Abbildung \ref{fig:A_Nutz_CC} hervor.
@@ -48,7 +72,7 @@ Laut der Visualisierung stieg im Zeitraum der Untersuchung,
 welcher sich auf insgesamt 13 Jahre beläuft, die Nutzung von Cloud-Compting von 28\% auf 98\%. 
 Der Anteil der Befragten, die angaben,
 dass sie die Technologie nur planen, sank von 22\% auf 0\%. 
-Für die Untersuchung wurden Geschäftsführer und IT-Führungskräfte aus 503 Unternehmen befragt. \cite{StatistaCCNutzung2024}
+Für die Untersuchung wurden Geschäftsführer und IT-Führungskräfte aus 503 Unternehmen befragt. \parencite{StatistaCCNutzung2024}
 
 Im Kontext dieser Arbeit gibt die Befragung einen ersten Einblick in die Nutzungstrends der Technologie an.
 Der hohe Nutzungsanteil zum Ende der Datenreihe,
@@ -71,9 +95,9 @@ die nach den Bedürftnissen des Kunden kombiniert werden können.
 \subparagraph{Service-Modell des Cloud-Computing}
 Das Grundprinzip von Auslagerung von IT-Komponenten lässt sich in verschiedene Stufen unterteilen.
 Die Abbildung \ref{fig:A-cloud-stack} zeigt eine eigene Übersicht über verschiedene Service-Modelle der Cloud-Computing-Architektur
-basierend auf der ISO-Norm zu Cloud Computing. \cite{ISO22123}.
+basierend auf der ISO-Norm zu Cloud Computing. \parencite{ISO22123}.
 Dabei ist farblich (rot) hervorgeheben, welche Komponenten jeweils vom Cloud-Computing-Anbieter verwaltet werden.
-Die übrigen Komponenten werden durch den Kunden selbst verwaltet. \cite{Cloud1012026}
+Die übrigen Komponenten werden durch den Kunden selbst verwaltet. \parencite{Cloud1012026}
 Die Cloud-Computing-Modelle stehen im Vergleich zur On-Premise-Lösung, wo von Anwendung, über Runtimes, dme Betriebsystem bis hin zu den Servern und der Netzwerk-Infrastruktur alles vom potentiellen Cloud-Computing-Kunden selbst verwaltet wird.
 
 \begin{figure}
@@ -86,7 +110,7 @@ Die Cloud-Computing-Modelle stehen im Vergleich zur On-Premise-Lösung, wo von A
 \subparagraph{Public und Private Cloud}
 Neben der Auslagerung von Bausteinen der IT-Infrastruktur, wird auch in Public und Private Cloud unterschieden.
 Dabei ist besonders hervorzuheben, dass Informationen, die in die Public Cloud abgelegt werden, nicht automatisch öffentlich sind.
-Stattdessen hat der Cloud-Kunde bei der Verwendung der Public Cloud den Zugriff auf einen öffentlichen Vorrat aus Rechenressourcen. \cite{Cloud1012026}
+Stattdessen hat der Cloud-Kunde bei der Verwendung der Public Cloud den Zugriff auf einen öffentlichen Vorrat aus Rechenressourcen. \parencite{Cloud1012026}
 
 Im Gegensatz hierzu wird der Umfang der Rechenressourcen bei der Private Cloud festgelegt und dann für den Kunden fest zugeordnet. Spätere Erweiterungen der Rechenressourcen sind hier trotzdem möglich.
 
@@ -94,7 +118,7 @@ Im Gegensatz hierzu wird der Umfang der Rechenressourcen bei der Private Cloud f
 Neben der Verwendung eines einzigen Cloud-Anbieters für alle Bedürftnisse, gibt es auch Architekturen, die eine Zusammenarbeit mehrerer Anbieter und Cloud-Computing-Varianten vorsehen.
 
 Dazu zählen die simultane Verwendung von Public und Private Cloud, sowie eigener Rechenzentren,
-was als Hybride Cloud bezeichnet wird, wenn mindestens zwei Varianten gleichzeitig eingesetz werden. Auch verschiedene Service-Modelle durch Hybrid-Cloud-Architektur kombinierbar. \cite{Cloud1012026}
+was als Hybride Cloud bezeichnet wird, wenn mindestens zwei Varianten gleichzeitig eingesetz werden. Auch verschiedene Service-Modelle durch Hybrid-Cloud-Architektur kombinierbar. \parencite{Cloud1012026}
 
 Außerdem eine gängige Architektur ist die Multi-Cloud, 
 bei der mehrere Public Cloud oder Private Cloud Anbieter gleichzeitig verwendet werden.
@@ -107,9 +131,9 @@ Außerdem kann der Verbindungskanal zwischen Produkten von verschieden Anbietern
 
 \paragraph{Versprechungen und Vorteile der Cloud}
 Zu den Vorzügen zählen unter anderem Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
-die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \cite{Mezzio2023}
+die im Kapitel 1.4 namens "utopische Versprechungen des Cloud Computings" im Buch Cloud Governance aufgeführt werden. \parencite{Mezzio2023}
 
-Mit der Popularität (vergleiche Abbildung \ref{fig:A_Nutz_CC}) wird klar, dass diese Versprechungen für Entscheidungstragende handfest sind.
+Mit der aufzeigten Popularität bei Unternehmen (vergleiche Abbildung \ref{fig:A_Nutz_CC}),lässt sich argumentieren, dass diese Versprechungen für Entscheidungstragende handfest sind.
 
 \subparagraph{Kosteneinsparung}
 Bei IT-Dienstleistern im GKV-Markt, die ihre Anwendungen selbst verwalten, fallen erfahrungsgemäß für Folgendes Kosten an:
@@ -140,7 +164,7 @@ Des Weiteren wird ein Kontext für die Kosten von Cloud-Computing geschaffen.
 Welche wiederrum bei der Integration von Cloud-Computing im Unternehmen teilweise oder vollständig anfallen.
 Zu welchem Grad Kosten eigener Infrastruktur und Software wegfallen, hängt vom Service-Modell und der gewählten Architektur ab.
 
-Grundsätzlich werden für die erfolgreiche Integration von Cloud-Computing Mitarbeitende mit neuen Kompetenzen benötigt. Zu diesen Kompetenzen zählt die Kontrolle, Regulierung und Überwachung der Dienstleistungsvereinbarungen (kurz: SLA) mit den Cloud-Computing-Anbietern und der Cloud-Computing-Nutzung durch das Unternehmen. \cite{Mezzio2023}
+Grundsätzlich werden für die erfolgreiche Integration von Cloud-Computing Mitarbeitende mit neuen Kompetenzen benötigt. Zu diesen Kompetenzen zählt die Kontrolle, Regulierung und Überwachung der Dienstleistungsvereinbarungen (kurz: SLA) mit den Cloud-Computing-Anbietern und der Cloud-Computing-Nutzung durch das Unternehmen. \parencite{Mezzio2023}
 
 Auch zu beachten ist, dass Schulungen für die neuen Bedienoberflächen der SaaS-Anbieter notwendig werden. Hat der gewählte Anbieter größtenteils eigene Software im Angebot, so gibt es entsprechend wenige Optionen für Schulungsanbieter auf dem Markt, was zu hohen Schulungskosten führen kann.
 
@@ -166,9 +190,7 @@ wenn sich gesetzliche Vorgaben ändern oder neue Technologien auf den Markt komm
 Gibt es hier freie Ressourcen, können ohne Ausfall alte Komponten ausgetauscht werden oder ohne Austausch direkt mehr Ressourcen verwendet werden.
 
 \subparagraph{Wiederherstellungsmöglichkeiten}
-Bei technischen Fehlfunktionen,
-Schäden durch Feuer oder Wasser,
-oder bei Verschlüsselung von Daten ist es wichtig eine Momentaufnahme der eigenen Systeme zu haben, 
+Bei technischen Fehl\-funktionen, Schä\-den durch Feu\-er oder Wasser, oder bei Verschlüsselung von Daten ist es wichtig eine Momentaufnahme der eigenen Systeme zu haben, 
 um die verlorenen Informationen wiederherzustellen. 
 Je aktueller die Momentaufnahme dabei ist, 
 desto weniger Daten gehen durch den Vorfall und die Wiederherstellung verloren.
@@ -182,7 +204,7 @@ Je mehr verloren geht, desto höher der finanzielle Schaden, der dadurch verursa
 \end{figure}
 
 Die Abbildung \ref{SecMaß-Nutzung} zeigt ein Balkendiagramm über das Thema IT-Sicherheitsmaßnahmen aus dem Jahr 2018. Neben anderen Maßnahmen wurde das Erstellen von Backups für Daten abgefragt und jedes der 503 Industrieunternehmen gab an, das es diese Maßnahme im Einsatz hatte.
-Die Abbildung zeigt außerdem weniger weit verbreitete Maßnahmen wie Intrusion Detection System (IDS) oder die Verwendung von Penetrationstests. \cite{StatistaSecMassnahmen2018}
+Die Abbildung zeigt außerdem weniger weit verbreitete Maßnahmen wie Intrusion Detection System (IDS) oder die Verwendung von Penetrationstests. \parencite{StatistaSecMassnahmen2018}
 
 Dennoch lässt sich schlussfolgern, dass die Relevanz von Backup- beziehungsweise Wiederherstellungsmöglichkeiten vollständig erkannt wurde. Doch auch die richtige und häufige Durchführung ist relevant.
 
@@ -194,14 +216,14 @@ Durch die Werbung für das Produkt, könnten sich mehr Kunden, die auf SaaS setz
 Das Thema Wiederherstellungsmöglichkeiten liefert einen Einstieg in die Art und Weise wie Saas-Anbieter Kunden zum Oberthema Datensicherheit heranführen können.
 Durch das Angebot von diversen Produkten werden die Themen auch für Entscheidungstragende greifbarer, der Einstieg wird leichter und der Bedarf nach Fachpersonal sinkt.
 
-Letzeres ist ein Punkt der ein großes Gewicht hat, denn Fachpersonal ist oftmals eine Hürde bei der Digitalisierung allgemein und damit auch speziell bei Sicherheitsmaßnahmen \cite{StatistaHuerden2025}
+Letzeres ist ein Punkt der ein großes Gewicht hat, denn Fachpersonal ist oftmals eine Hürde bei der Digitalisierung allgemein und damit auch speziell bei Sicherheitsmaßnahmen \parencite{StatistaHuerden2025}
 
 Wird die Thematik in ein oder mehrere leicht bedienbare Produkte verpackt, für deren Bedienung nur wenige Mitarbeitende nötig sind, so steigt die Sicherheit durch die Verwendung von SaaS-Produkten.
 
 \subparagraph{Weitere Punkte}
 Außerdem werden im ursprünglich zitierten Kaptiel noch \glqq Vorteile der Cloud\grqq\ wie \glq Internet of Things\grq -Funktionalitäten,
 ver\-besserte Zu\-sammen\-arbeit, Umwelt\-freund\-lich\-keit,
-Mitarbeiter-Engagement, Echtzeit-Software-Updates und Analyse-Möglich\-keiten angesprochen. \cite{Mezzio2023}
+Mitarbeiter-Engagement, Echtzeit-Software-Updates und Analyse-Möglich\-keiten angesprochen. \parencite{Mezzio2023}
 
 Da diese Punkte jedoch in der Gesamtaufstellung auf den hinteren Plätzen der Einordnung der Quelle landen, werden diese in diesem gemeinsamen Abschnitt kurz aufgeführt.
 
@@ -211,13 +233,24 @@ durch Produkte bei vielen Anbietern ermöglicht wird.
 Die Analyse von Daten, 
 Netwerkverkehr oder sonstigen Informationen wird durch eigene Produkte für die Kunden von SaaS-Anbietern stark vereinfacht und zugänglicher gemacht.
 
-\paragraph{Kapitalisierung der Cloud}
-Aus dem Paradigma Cloud Computing und den verschiedenen in Abschnitt \ref{fig:A-cloud-stack}
+\paragraph{Kapitalisierung von Cloud-Computing}
+Aus dem Paradigma Cloud Computing und den verschiedenen aufgezeigten Service-Modellen (vergleiche Abschnitt \ref{fig:A-cloud-stack}), ergibt sich ein zentrales Geschäftsmodell.
 
-Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
-Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
+\subparagraph{Computing als Dienstleistung}
+Statt Produkte wie beispielsweise Serverkomponenten zu kaufen, wird Computing zu einer Dienstleistung. Dabei werden einmalige Anschaffungskosten und Betriebskosten zu einer monatlichen oder jährlichen Gebühr.
+Durch die neue Beziehung zwischen Cloud-Computing-Anbieter und Kunde ergeben sich Anforderungen für eine geregelte Geschäftsbeziehung. \parencite{Cloud1012026}
+Die notwendigen Regeln werden in den Dienstleistungsvereinbarungen (englisch: Service-Level-Agreement, SLA) in einvernehmlich und auf Basis geltender rechtlicher Vorschriften geschlossen.
+Die Vereinbarungen regeln die genaue Beschaffenheit und Eigenschaften jeder Leistung des Anbieters und die Ansprüche des Kunden im Falle eines Verstoßes. Unter Anderem zudem vertraglich geregelt, sind Punkte wie Bepreisung der Leistungen und der zeitliche Rahmen der Vereinbarung. 
 
-Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. (vergleiche \ref{fig:A-cloud-stack})
+
+
+
+%Wie im Abschnitt 
+%
+%Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
+%Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
+%
+%Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. (vergleiche \ref{fig:A-cloud-stack})
 
 \paragraph{Schematische Gegenüberstellung von Kosten und Funktionsweise}
 
@@ -232,9 +265,9 @@ Die Herausvorderungen und Nachteile der Cloud werden im späteren Kapitel 3.6 "D
 \item[-] (Verlust von) technischem Fachwissen
 \end{itemize}
 Die Auf\-zählung wurde aus dem Eng\-lischen über\-setzt und es wurde Kon\-text er\-gänzt.
-\cite{Mezzio2023}
-Die konkreten Punkte stammen aus einem Blog-Artikel der IT-Sicherheitsfirma Conosco.
-\cite{Conosco2020}
+\parencite{Mezzio2023}
+Die konkreten Punkte stammen aus einem Blog-Artikel der IT-Sicherheits\-firma Conosco.
+\parencite{Conosco2020}
 Der Fokus dieser Arbeit ist die Anbieterbindung.
 Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service möglich.
 

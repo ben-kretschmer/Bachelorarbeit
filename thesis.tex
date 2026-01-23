@@ -48,18 +48,29 @@
 \usepackage{scrhack}
 
 % other packages
+\usepackage{xurl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,relsize,textcomp,csquotes}
+\usepackage{lmodern,relsize,textcomp}
+\usepackage[german=quotes]{csquotes}
 \usepackage{amsmath,amsfonts}
 \usepackage[english,ngerman]{babel}  % flip for German thesis
 \usepackage[final]{graphicx}
-\usepackage{setspace,geometry,xcolor}
+\usepackage[table,x11names,rgb]{xcolor}
+\usepackage{setspace,geometry}
 \usepackage{makeidx}
 \usepackage{paralist,ifthen,todonotes}
 \usepackage{url}
 \usepackage[toc]{glossaries}
 \usepackage{pdfpages}
+\usepackage[
+backend=biber,
+style=apa,
+maxcitenames=2,
+isbn=true,
+]{biblatex}
+\addbibresource{refs.bib}
+
 
 % table setup
 \usepackage{longtable}
@@ -82,9 +93,9 @@
     bookmarksopenlevel=1,
     colorlinks=true,
     linkcolor=red,
-    urlcolor=magenta,
+    urlcolor=gray,
     anchorcolor=black,
-    citecolor=red,
+    citecolor=gray,
     filecolor=magenta,
     menucolor=red,
     plainpages=false,
@@ -132,7 +143,9 @@
 \makenoidxglossaries
 \loadglsentries{glossary}
 
-
+%Debugging Badboxes
+\overfullrule=5pt
+\sloppy
 
 \setcounter{secnumdepth}{3}  % numerate subsections
 \setcounter{tocdepth}{2}  % ...but don't include them in toc
@@ -167,8 +180,9 @@
 %\listoftables
 %\cleardoublepage
 
-\bibliographystyle{apalike-german}
-\bibliography{refs}
+%\bibliographystyle{plainurl}
+
+\printbibliography
 
 \printnoidxglossaries
 
