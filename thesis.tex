@@ -49,6 +49,7 @@
 
 % other packages
 \usepackage{xurl}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,relsize,textcomp}
@@ -71,6 +72,38 @@ isbn=true,
 ]{biblatex}
 \addbibresource{refs.bib}
 
+% form setup
+\usepackage{hyperref}
+\newcommand{\SMTextField}[2][]{%
+  \TextField[
+    bordercolor={1 1 1},
+    backgroundcolor={.95 0.95 .95},
+    borderstyle=U,
+    charsize=11pt,
+    width=5cm,
+    #1
+  ]{#2}%
+}
+\newcommand{\SMSumme}[2][]{%
+  \TextField[
+    bordercolor={0.95 0.2 0.2},
+    backgroundcolor={.95 0.95 .95},
+    borderstyle=U,
+    charsize=11pt,
+    width=5cm,
+    #1
+  ]{#2}%
+}
+\newcommand{\SMCheckBox}[2][]{%
+  \CheckBox[
+    bordercolor={0.2 0.2 0.2},
+    backgroundcolor={.95 0.95 .95},
+    borderstyle=U,
+    charsize=11pt,
+    width=1cm,
+    #1
+  ]{#2}%
+}
 
 % table setup
 \usepackage{longtable}
@@ -95,12 +128,12 @@ isbn=true,
     bookmarksnumbered=true,
     bookmarksopenlevel=1,
     colorlinks=true,
-    linkcolor=red,
+    linkcolor=gray,
     urlcolor=gray,
     anchorcolor=black,
     citecolor=gray,
     filecolor=magenta,
-    menucolor=red,
+    menucolor=gray,
     plainpages=false,
     hypertexnames=true,
     linktocpage=true
@@ -173,8 +206,8 @@ isbn=true,
 \include{content/5_ausblick}
 
 % remove if not needed
-%\appendix
-%\include{content/a1_supplemental}
+\appendix
+\include{content/a1_bewertungsmodell}
 
 \backmatter
 

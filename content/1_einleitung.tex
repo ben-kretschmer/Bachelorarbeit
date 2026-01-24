@@ -275,7 +275,7 @@ Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service m
 \paragraph{Definitionen von Anbieterbindung}
 Vendor-Lock-In (dt. Anbieterbindung) ist ein Umstand in der Beziehung zu einem Anbieter aus Kundensicht. 
 Dieser Umstand wird beim Beenden der Beziehung problematisch.
-Denn möchte ein Unternehmen den Anbieter wechseln,
+Wenn möchte ein Unternehmen den Anbieter wechseln,
 so ist eine Anbietermigration nötig.
 
 Grundsätzlich ist die Migration von einem Anbieter zu einem Konkurrenten immer mit Aufwand verbunden,
@@ -289,7 +289,23 @@ steigert sich der Migrationsaufwand über das zu erwartende Pensum hinaus.
 
 Ein besonders schwerwiegender Vendor-Lock-In liegt vor, wenn Bausteine des Produkts gar nicht vom neuen Anbieter abgebildet werden können.
 
-\paragraph{Grundsätzlich anfällige Cloud-Produkte}
+\paragraph{Technische Ursache für Anbieterbindung}
+Die Abbildung \ref{fig:technUr_Anbieterbindung} skizziert, wie das Paradigma Cloud-Computing und im Detail das SaaS-Service-Modell Anbieterbindung hervorbringt.
+Es werden Abhängigkeiten in der CC-Umgebung schematisch dargestellt,um zu visualisieren welche Verbindungen bei einem Anbieterwechsel neu geknüpft werden müssten.
+
+In der Abbildung befinden sich die vier Kernelemente Kunde (1), Anbieter (2), Rechenressourcen (3) und Daten (ohne Nummerierung). Im Zentrum steht dabei der Anbieter, vertreten durch seine Programme.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.75\linewidth]{figures/technUr_Anbieterbindung}
+\end{center}
+\label{technUr_Anbieterbindung}\caption{Eigene Skizze der Beziehung zwischen Cloud-Computing-Kunde, CC-Anbieter und den Rechenressourcen}
+\end{figure}
+
+
+
+
+\paragraph{Anfällige Cloud-Produkte}
 In niedrigeren Liefermodellen wie Platform as a Service,
 wo die Anwendungen und Daten in der Hand des Kunden liegen, ist Anbieterbindung generell kein Problem.
 Dadurch,
@@ -362,9 +378,6 @@ Auch geopolitische Änderungen wie Zölle oder Gesetze zählen zu den Gründen f
 Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
 
 \subsection{Beenden von Anbieterbeziehungen}
-
-
-
 
 \section{Abgrenzungen}
 In der Abgrenzung werden im Kontext dieser Arbeit gezielt und explizit Inhalte ausgeschlossen, um die Zielsetzung möglichst geradlinig und anwendungsbezogen zu erfüllen.
