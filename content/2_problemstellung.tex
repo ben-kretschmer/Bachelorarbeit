@@ -5,9 +5,28 @@ Der Abschnitt schlüsselt für den weiteren Verlauf der Arbeit den berücksichti
 
 \subsection{Besonderheiten am Beispiel kubus IT}
 \label{vorstellung-aok}
-Die kubus IT ist durch ihre Funktion als Dienstleister für die gesetzlichen Krankenkassen AOK Bayern und AOK PLUS Teil der öffentlichen Verwaltung.
+Die kubus IT ist durch ihre Funktion als IT-Dienstleister für die gesetzlichen Krankenkassen AOK Bayern und AOK PLUS Teil der öffentlichen Verwaltung.
 
-Die Krankenversicherungen dieser Institutionen zählen laut §4 des SGB V zu den gesetzlichen Krankenversicherungen. Daher werden neben versicherungs\-bezogenen Aspekten auch die informations\-technische Umsetzung im Gesetzestext und daraus abgeleiten Organen geregelt.
+Die Krankenversicherungen dieser Institutionen zählen laut §4 des SGB V zu den gesetzlichen Krankenversicherungen. Daher werden neben versicherungs\-bezogenen Aspekten auch die informations\-technische Umsetzung im Gesetzestext und daraus abgeleiten Organen geregelt. \parencite{SGBV10}
+
+\begin{figure}[h]
+\begin{center}
+\begin{forest}
+[kubus IT,grow=north
+[Data Group]
+[Arvato]
+[Microsoft]]
+\end{forest}
+\begin{forest}
+[kubus IT
+[AOK Bayern]
+[AOK PLUS]]
+\end{forest}
+\end{center}
+
+\caption{Skizze der Beziehung zwischen AOK Bayern, AOK PLUS und den IT-Dienstleistern}
+\label{relation-it-service-tree}
+\end{figure}
 
 \subsection{Resultierende rechtliche Vorschriften}
 Durch die Arbeit für eine gesetzliche Krankenkasse ergeben sich Anforderungen bei der Wahl des Cloud-Anbieters.
@@ -78,12 +97,12 @@ Auf Basis dieser Gesetzte wird eine übergreifend gültige Strategie vom AOK Bun
 Die Cloud-Architektur der kubus IT basiert auf den Vorgaben des AOK Bundesverbandes.
 Die kubus IT verwendet das Modell der hybriden und teilt den Bedarf für Cloud-Computing in zwei Bereiche.
 \paragraph{Personenbezogene Daten in der Private Cloud}
-Die Private Cloud ist "eine Cloud-Umgebung, die nur einen bestimten geschlossenen Nutzerkreis (z.B. Mitarbeitende eines Unternehmens) zur Verfügung steht." \parencite{Hennrich2023}
+Die Private Cloud ist \glqq eine Cloud-Umgebung, die nur einen bestimmten geschlossenen Nutzerkreis (z.B. Mitarbeitende eines Unternehmens) zur Verfügung steht.\grqq \parencite[S.~42]{Hennrich2023}
 Eine private Cloud-Umgebung nutzt dedizierte Infrastruktur was die Überwachung der Einhaltung der Gesetze zum Datenschutz erleichtert. 
 Die Firma Arvato Systems ist der Cloud-Computing-Anbieter, der die private Cloud der AOK Bayern und AOK PLUS betreibt. Die Auslagerung des Betriebs der Infrastruktur ermöglicht hier einen Fokus und eine Spezialiserung auf beiden Seiten. So kann sich die kubus IT als IT-Dienstleister nach der Auslagerung auf den Betrieb der Anwendungen fokussieren.
 
 \paragraph{Technische Daten in der Public Cloud}
-Die Public Cloud ist "eine Cloud-Umgebung, die von der Allgemeinheit \- also von \'jedermann\' \- genutzt werden kann." \parencite{Hennrich2023}
+Die Public Cloud ist \glqq eine Cloud-Umgebung, die von der Allgemeinheit \- also von \'jedermann\' \- genutzt werden kann.\grqq  \parencite[S.~39]{Hennrich2023}
 Dennoch lassen sich die Daten und Dienste der Cloud durch Verschlüsselung und Authentifizierung sichern.
 Der Nachweis der Einhaltung der gesetzlichen Vorgaben zum Schutz personenbezogner Daten ist jedoch schwieriger.
 Die öffentliche Cloud beinhaltet stärker als die private Cloud die Skalierbarkeit und Agilität,

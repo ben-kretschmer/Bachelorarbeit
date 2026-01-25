@@ -5,61 +5,98 @@
 Die Heranführung dient im Kontext der Arbeit als theoretische Grundlage für nachfolgende Abwägungen, als Ort für Hintergrundinformationen und zur Angleichung des Themenverständnisses im Hinblick auf Begriffsbedeutungen. 
 
 \subsection{Theoretische Hintergründe des Cloud-Computing}
+\paragraph{Cloud Computing als Phänomen}
+Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der \Gls{IT}-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend formulierte.
+Der Technologie Cloud Computing wird das \glqq disruptive Potential\grqq zugeorndet, das den Startschuss einer \glqq neuen Ära in der Informationstechnologie\grqq bedeuten könnte. \parencite[Kap.~1.2,S.~17]{Hennrich2023}
 
 \paragraph{Definitionen von Cloud Computing}
-Es ist zusammen mit der künstlichen Intelligenz einer der wohl schillerndsten und meistverwendetsten Begriffe in der \Gls{IT}-Branche wie Thorsten Hennrich in seinem Fachbuch zu Cloud Computing nach der Datengrundschutzverordnung einleitend formulierte. \parencite{Hennrich2023}
-
-Pragmatischer ist die ISO Norm, nach der Cloud Computing ein \begin{quote}
-Paradigma [ist],um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen.
+Laut der ISO Norm, ist Cloud Computing ein \begin{quote}
+Paradigma,um einen netzwerkbasierten Zugang auf ein skalierbares und elastisches Reservoir gemeinsam nutzbarer physischer oder virtueller Ressourcen nach dem Selbstbedienungsprinzip und bedarfsgerechter Administration zu ermöglichen.
 \parencite{ISO22123}
 \end{quote}
 
-Ergänzend dazu steht der Artikel vom US-amerikanischen Technologieunternehmen Microsoft mit dem Titel \glq Was ist die Cloud?\grq. 
+ISO ist die Kurzbezeichnung der internationalen Organisation für Standardisierung. Die drei Buchstaben sind laut dem Internetauftritt der Organisation vom griechischen \glq isos \grq abgeleitet, was zu \glq gleich \grq bedeutet.
+Die Standards der Organisation werden durch Komitees entwickelt. \parencite{ISODef2026}
+
+Ergänzend zu dieser Definition steht der Artikel vom US-amerikanischen Technologieunternehmen Microsoft mit dem Titel \glq Was ist die Cloud?\grq. 
 Der Webartikel klärt aus Sicht des Cloud-Computing-Anbieters auf und definiert die Cloud als \glqq[…] Online-Speicherplatz, in dem Personen und Unternehmen ihre Dateien und Anwendungen speichern, die von überall mit einer Internetverbindung zugänglich sind.\grqq\parencite{CloudDefMicro2025}
 Des Weiteren bietet \glq die Cloud\grq , laut dem Anbieter, \glqq Dienste wie Rechenleistung, Datenbanken, Netzwerke und Softwareanwendungen.\grqq
 \parencite{CloudDefMicro2025}
 
+Dabei ist anzumerken, dass jeder Anbieter für Cloud-Computing eine Variation dieser Definition veröffentlich. Diese Arbeit beschränkt sich schwerpunktmäßig auf die ISO-Definition. 
+
 \paragraph{Folgerungen aus den Definitionen}
-Aus diesen Perspektiven zu der Cloud-Computing-Technologie lassen sich wichtige Grundlagen wie den Zusammenhang zwischen Internet und Cloud und die inherente Flexibilität als Fundament der Technologie ableiten.
+Aus diesen Perspektiven zu der Cloud-Computing-Technologie lassen sich wichtige Grundlagen, wie den Zusammenhang zwischen Internet und Cloud-Computing und die inherente Flexibilität als Fundament der Technologie, ableiten.
 
-IT-Kompontenen wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glsfirst{on-Premise} aufzufinden waren, können ausgelagert werden. 
-Je nach Umsetzungsart sind die IT-Komponenten von Cloud-Computing trotzdem auf dem Grundstück des Unternehmens, im gleichen Land oder an einem völlig anderen Ort auf der Erde.
+\subparagraph{Ressource Internet im Kontext der Technologie}
+IT-Kompontenen, wie der Speicher für Daten, die zu jeder Organisation und jedem Unternehmen gehören und traditionell am gleichen Standort beziehungsweise \glsfirst{on-Premise} aufzufinden waren, können ausgelagert werden. 
+Je nach Umsetzungsart sind die IT-Komponenten von Cloud-Computing trotzdem auf dem Grundstück des Unternehmens, im gleichen Land oder an einem völlig anderen Ort auf der Erde. Jede Komponente, die der Kunde nicht selbst verwaltet, wird durch eine hinreichende Abstraktionsebene versteckt und es wird nur eine \glq bedarfsgerechte Administration ermöglicht\grq (vergleiche ISO-Definition).
 
-Immer jedoch in Rechenzentren (englisch: Data Centers, auch Cluster), was spezielle Räume oder Gebäude sind, die aus einer Vielzahl einzelner Rechenmaschinen bestehen und enorme Maßstäbe annehmen können. Die Größe ist oft lediglich durch die finanziellen Grenzen des Betreibers und die Strom- und Internet-Infrastruktur eingeschränkt. Dadurch ist dieser Informationssektor (Quatärsektor der Wirtschaft) wie auch die (Ur-)Produktion von Standortfaktoren wie Grundstücks- und Energiepreisen, sowie -Verfügbarkeit (\zB Wasserkraft), abhängig.
-\parencite{Tanenbaum2013} 
+Immer jedoch, sind die Komponenten in Rechenzentren (englisch: Data Centers, auch Cluster), 
+was spezielle Räume oder Gebäude sind, die aus einer Vielzahl einzelner Rechenmaschinen bestehen und enorme Maßstäbe annehmen können. 
+Die Größe ist oft lediglich durch die finanziellen Grenzen des Betreibers und die Strom- und Internet-Infrastruktur eingeschränkt.
+Es wird eine Internetverbindung benötigt, 
+die einzelne Daten schnell und viele Daten parallel transportieren kann. 
+Analog ist eine stabile und leistungsfähige Stromanbinung für Rechenzentren nötig. 
+Stromausfälle beispielsweise schränken die Verfügbarkeit ein und können die Komponenten beschädigen.
+Dadurch ist Cloud-Computing als Produkt des Informationssektor (Quatärsektor der Wirtschaftsektoren) 
+wie auch die (Ur-)Produktion von Standortfaktoren wie vorteilhaften Grundstücks- und Energiepreisen,
+sowie -Verfügbarkeit (\zB Wasserkraft), abhängig.
+\parencite[Kap.~1.3]{Tanenbaum2013} 
 \parencite{Wirtschaftssektoren2026}
 
-Genutzt werden die Komponten immer per Fernzugriff und -steuerung über das Internet. 
+\subparagraph{Flexibilität per Design}
+Genutzt werden die Komponten folglich per Fernzugriff und -steuerung über das Internet. (vergleiche ISO-Definition)
 
 Diese Ausgestaltung alleine ermöglicht schon deshalb eine höhere Flexibilität, da Mitarbeitende des Unternehmens aus der Ferne auf die Komponenten zugreifen können. 
 
 Darüberhinaus ist ein wichtiger Bestandteil des Konzeptes die Skalierung beziehungsweise Erweiterung der Ressourcen. 
-Die Skalierung beinhaltet, dass zusätzliche Komponenten auf Wunsch des Cloud-Computing-Kunden zugeschaltet werden können. Diese Skalierung ist in die Produkte einbaut und geschieht über einen definierten Prozess.
+Die Skalierung beinhaltet, 
+dass zusätzliche Komponenten auf Wunsch des Cloud-Computing-Kunden zugeschaltet werden können. 
+Diese Skalierung ist in die Produkte einbaut und geschieht \glqq nach Bedarf\grqq über einen definierten Prozess.
+Unabhängig von diesem Prozess entfällt die Notwendigkeit auf Kundenseite zusätzliche physische Komponenten an das System anzuschließen.
+\parencite[Kap.~1.2,S.~17]{Hennrich2023}
+
+Abrechnungsmodelle in dieser Flexibilität werden übersichthalber in Abschnitt \ref{abrechnungsmodelle} kurz vorgestellt.
 
 \paragraph{Begriffsunterscheidung Cloud und Cloud-Computing}
-Spannend ist, dass Cloud und Cloud-Computing oft synonym ver\-wendet werden. So auch teilsweise im Informationsmaterial von Microsoft,
+Cloud und Cloud-Computing wird oft synonym ver\-wendet werden. 
+So auch teilsweise im Informationsmaterial von Microsoft,
 wo das Konzept von Cloud-Computing beschrieben wird, 
-aber oft als \glq die Cloud \grq abgekürzt wird.
-Zur Verwirrung trägt erschwerend bei, 
-dass Microsoft einen zweiten Artikel mit dem Titel \glqq Was ist Cloud-Computing?\grqq veröffentlicht hat, 
+aber oft als \glq die Cloud \grq\ abgekürzt wird.
+Zur Irritation trägt erschwerend bei, 
+dass Microsoft einen zweiten Artikel mit dem Titel \glqq Was ist Cloud-Computing?\grqq\ veröffentlicht hat, 
 der eine sehr ähnliche Definition beinhaltet, aber die Cloud selbst als Bezeichnung für das Internet beschreibt. \parencite{CloudDefMicro20252}
-Diese Arbeit bezieht sich auf Cloud-Computing nach den explizit genannten Definitionen. 
+
+Diese Arbeit bezieht sich auf Cloud-Computing nach den explizit genannten Definitionen und, wenn alternative Begriffe synonym zu verstehen sind, wird dies ausdrücklich gekennzeichnet.
 
 \paragraph{Geschichte und Verbreitung der Technologie}
-Die Definitionen geben einen Einblick in das vermeintliches Potential der Technologie.
+Die Definitionen geben einen Einblick in das vermeintliche Potential der Technologie.
+Die tatsächliche Popularität von zentralisierter Computer-Ressorucen und Cloud-Computing hat sich im Laufe der Zeit verändert.
 
 \subparagraph{Verbindungen zu Mainframe Computing}
-Doch das Konzept von zentralisierter Com\-puter-Ressourcen in einem Rechenzentrum (englisch Data Center) ist laut Andrew Tanenbaums \glq Structured Computer Organisation\grq eine Art \glqq Mainframe Computing V2.0\grqq . \parencite{Tanenbaum2013}
-Bei dieser Archiktur wurde auf einen Großrechner, der meist in einem speziellen Gebäude oder Raum einer Instituion aufzufinden war, über ein Intranet und ein leistungsschwachen Terminal(-Computer) zugegriffen. Über die Terminals werden große Rechenaufgaben angestoßen und die Ergebnisse später betrachtet.
-Die Architektur war notwendig, da die benötigte Rechenleistung ein solch großes Volumen einnahm. \parencite{Tanenbaum2013}
+Das Konzept Cloud-Computing,
+also von zentralisierter Com\-puter-Ressourcen in einem Rechenzentrum (englisch Data Center),
+beschreibt A. Tanenbaum als eine Art \glqq Mainframe Computing V2.0\grqq .
+\parencite[Kap.~1.3]{Tanenbaum2013}
+Bei dieser Archiktur wurde auf eine Rechenmaschiene,
+die aufgrund des Platz- und Strombedarfs meist in einem speziellen Gebäude oder Raum einer Instituion aufzufinden war,
+über ein Intranet mit ein leistungsschwachen Terminal(-Computer) zugegriffen.
+Über diese Terminals werden große Rechenaufgaben angestoßen und die Ergebnisse später betrachtet.
+Sie waren die Benutzeroberfläche. \parencite[Kap.~1.3]{Tanenbaum2013}
 
 \subparagraph{Miniaturisierung von Transistoren}
-Da die Transistoren (fundamentaler Baustein für Computer) mit unvergleichlicher Geschwindigkeit miniaturisiert und immer kompakter auf Computer-Chips platziert werden konnten, schrupfte auch der Raumbedarf. Dadurch wurde die Mainframe-Archiktur zunächst obsolet. Die Entwicklung der Transistorengröße ist jedoch von physikalischen Größen begrenzt und dadurch ein ewiges Phänomen.
+Da die Transistoren (fundamentaler Baustein für Computer) mit unvergleichlicher Geschwindigkeit miniaturisiert und immer kompakter auf Computer-Chips platziert werden konnten, schrupfte auch der Raumbedarf.
+Dadurch wurde die Mainframe-Archiktur zunächst obsolet.
+Die Entwicklung der Transistorengröße ist jedoch von physikalischen Größen begrenzt und dadurch ein ewiges Phänomen.
 Zu den physikalischen Grenzen zählen Energie-Verlust (englisch: energy dissipation), Strom-Abfluss (englisch: current leakage) und die Größe von Silikon-Atomen
-Im Fachbuch von Tanenbaum, wird erwähnt, dass die Grenzen der Transistor-Miniaturisierung Schätzungen zufolge 2023 erreicht werden könnte. \parencite{Tanenbaum2013}
+Im Fachbuch von Tanenbaum, wird erwähnt, dass die Grenzen der Transistor-Miniaturisierung Schätzungen zufolge 2023 erreicht werden könnte. \parencite[Kap.~1.3]{Tanenbaum2013}
 
 \subparagraph{Wiedergeburt von zentralisiertem Computing}
-Die rasante Entwicklung der Berechnungsmöglichkeiten erzeugt einen Teufelskreis (englisch: virtuous circle), der daraus besteht, dass die technologischen Entwicklungen auch die Anforderungen und Erwartungen an Software steigerte, was wiederrum verbesserte Rechenleistung forderte. \parencite{Tanenbaum2013}
+Die rasante Entwicklung der Berechnungsmöglichkeiten erzeugt einen Teufelskreis (englisch: virtuous circle), der daraus bestand,
+dass die technologischen Entwicklungen auch die Anforderungen und Erwartungen an Software steigerten,
+was wiederrum verbesserte Rechenleistung forderte. \parencite{Tanenbaum2013}
+
 Daher vertritt diese Arbeit die Auffassung, dass die beschriebenen Gegebenheiten die erneute räumliche und organisatorische Zentralisierung begünstigt haben.
 
 \subparagraph{Aktuelle Verbreitung von Cloud-Computing}
@@ -69,7 +106,8 @@ Exemplarisch geht dies aus Abbildung \ref{fig:A_Nutz_CC} hervor.
 Die Abbildung zeigt ein Balkendiagramm,
 das die Nutzung von Cloud-Computing über die Jahre 2011 bis 2024 beschreibt.
 Hierbei zeigt die y-Achse die Verteilung der Ant\-worten der Be\-fragten in Prozent und die x-Achse die dazugehörigen Jahres\-zahlen.
-Ein Datenpunkt pro Jahr zeigt den Anteil der Unternehmen, die bereits Cloud Computing nutzen und ein weiterer Datenpunkt zeigt den Anteil der Unternehmen, die den Einsatz noch planen.
+Ein Datenpunkt pro Jahr zeigt den Anteil der Unternehmen, 
+die bereits Cloud Computing nutzen und ein weiterer Datenpunkt zeigt den Anteil der Unternehmen, die den Einsatz noch planen.
 Laut der Visualisierung stieg im Zeitraum der Untersuchung,
 welcher sich auf insgesamt 13 Jahre beläuft, die Nutzung von Cloud-Compting von 28\% auf 98\%. 
 Der Anteil der Befragten, die angaben,
@@ -87,6 +125,59 @@ sondern welcher Anbieter wie genutzt wird.
 \end{center}
 \label{fig:A_Nutz_CC}\caption{Nutzung von Cloud Computing}
 \end{figure}
+
+\subsection{Aktuelle Implementierungen des Paradigmas}
+\paragraph{Kapitalisierung von Cloud-Computing}
+Aus dem Paradigma Cloud Computing und den verschiedenen aufgezeigten Service-Modellen (vergleiche Abbildung \ref{fig:A-cloud-stack}), ergibt sich ein zentrales Geschäftsmodell.
+
+\subparagraph{Computing als Dienstleistung}
+Statt Produkte wie beispielsweise Serverkomponenten zu kaufen, wird Computing zum Produkt in Form einer Dienstleistung. 
+Dabei werden einmalige Anschaffungskosten und Betriebskosten zu einer monatlichen oder jährlichen Gebühr.
+\parencite[Kap.~1.2,S.~17]{Hennrich2023}
+Durch die neue kontinuierliche Beziehung zwischen Cloud-Computing-Anbieter und Kunde ergeben sich Anforderungen für eine geregelte Geschäftsbeziehung,
+zur klaren Regelung aller Bestandteile der fortlaufenden Interaktion. 
+\parencite[Kap.~8, S.~89ff]{Mezzio2023}
+
+Dieses Regelwerk wird als Dienstleistungsvereinbarung (englisch: Service-Level-Agreement, SLA)
+bezeichnet und von der europäischen Kommision als
+\begin{quote}
+Das Instrument zur Steuerung der Beziehung zwischen dem Endnutzer (Cloud Service Customer) und dem Dienstleister (Cloud Service Provider),
+ist ein einvernehmlicher Vertrag zwischen den beiden Parteien,
+was als Cloud Service Level Agreement (CSLA) bezeichnet wird. Aus der globalen Natur von Cloud-Angeboten heraus, übertreten CSLAs typischerweise mehrere Rechtsräume.
+Diese unterschieldiche Handhabung ist besonders im Hinblick auf Schutz von personenbezogenen Daten im Cloud-Service relevant.
+Die Vereinbarungen unterscheiden sich bei jedem CSP insofern,
+dass die Grundfunktionalitäten Ähnlichkeiten beinhalten,
+aber die individuellen Regelungen und Bedingungen für die Dienste der jeweiligen Anbieter sind einzigart für diesen Anbieter.
+\parencite[Übersetzt für diese Arbeit]{SLADefEU2016}
+\end{quote}
+definiert. 
+
+\subparagraph{Folgerungen aus der Definition}
+Aus der Definition der europäischen Kommision lässt sich folgern, dass eine korrekte Ausgestaltung der CSLAs entscheidend für positive Zusammenarbeit aus Sicht Cloud Service Customers ist.
+Die Aufgabe des Kunden ist es im Detail zu untersuchen, ob die Vereinbarung, die ein Cloud Service Provider vorschlägt oder in Abstimmung erarbeitet hat, tatsächlich vorteilhaft für die künftige Zusammenarbeit und vor allem hilfreich für die Klärung von Uneinigkeiten ist.
+Ist dies nicht der Fall, so könnnen unvorteilhafte oder unklare Formulierungen zu Rechtsstreitigkeiten und einer Gefahr für die langfristige Geschäftsstrategie des Kunden werden.
+\parencite{SLADefEU2016},\parencite[S.~89ff]{Mezzio2023}
+
+%Wie im Abschnitt 
+%
+%Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
+%Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
+%
+%Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. (vergleiche \ref{fig:A-cloud-stack})
+
+\paragraph{Schematische Gegenüberstellung von Abrechnungsmodell und Funktionsweise}
+\label{abrechnungsmodelle}
+Grundlegend sind die Abbrechnungsmodell der Cloud-Computing-Anbieter so gestaltet, 
+dass die Nutzung der Kunden einberechnet wird.
+Obwohl es vereinzelt einmalige Kosten wie Installations- oder Migrationsgebühren gibt,
+richten sich die Kosten für den Kunden prinzipiell nach der Anzahl der genutzen Ressourcen oder der Dauer der Nutzung.
+\begin{tabular}{l l}
+Bezeichnung & Prinzip \\
+\glq as a Service\grq & Produkt mit Abonnement \\
+\glq on Demand \grq & Produktkatalog mit Abonnement \\
+\glq Pay per Use \grq & Festgelegter Preis / Einheit \\
+\end{tabular}
+\parencite[Kap.~1.2]{Hennrich2023}
 
 \paragraph{Funktionsweise und gängige Architekturen}
 Es gibt viele verschiedene Variantenn und Konfigurationen des Cloud-Computing.
@@ -130,6 +221,10 @@ und die Vorzüge der jeweiligen Modelle kombiniert werden können.
 Jedoch kommt die Verwendung solcher Ansätze auch mit höherem organisatorischen Aufwand, denn es müssen Geschäftsbeziehungen zu mehreren Anbietern gepflegt werden
 und die Verknüpfung der verschiedenen Produkte kann zusätzliche Kosten und Aufwand mit sich bringen.
 Außerdem kann der Verbindungskanal zwischen Produkten von verschieden Anbietern ein Flaschenhals für den Informationsaustausch und eine Sicherheits-Schwachstelle sein.
+
+\subsection{Überblick über Vor- und Nachteile}
+\paragraph{Betrachtung in dieser Arbeit}
+Für die letzliche Heranführung an die Herausforderung, Anbieterbindung, werden zunächst die verbreitetsten Vor- und Nachteile des Cloud-Computings dargesellt und kurz inhaltlich ausgeführt. Die Gesichtspunkte beschränken sich nicht zwangläufig auf einzelne Service-Modelle oder Architekturen.
 
 \paragraph{Versprechungen und Vorteile}
 Zu den Vorzügen zählen unter anderem Kosteneinsparung, verbesserte Skalierbarkeit, Wiederherstellugsmöglicheiten, Datensicherheit und weitere Punkte,
@@ -235,24 +330,6 @@ durch Produkte bei vielen Anbietern ermöglicht wird.
 Die Analyse von Daten, 
 Netwerkverkehr oder sonstigen Informationen wird durch eigene Produkte für die Kunden von SaaS-Anbietern stark vereinfacht und zugänglicher gemacht.
 
-\paragraph{Kapitalisierung von Cloud-Computing}
-Aus dem Paradigma Cloud Computing und den verschiedenen aufgezeigten Service-Modellen (vergleiche Abschnitt \ref{fig:A-cloud-stack}), ergibt sich ein zentrales Geschäftsmodell.
-
-\subparagraph{Computing als Dienstleistung}
-Statt Produkte wie beispielsweise Serverkomponenten zu kaufen, wird Computing zu einer Dienstleistung. Dabei werden einmalige Anschaffungskosten und Betriebskosten zu einer monatlichen oder jährlichen Gebühr.
-Durch die neue Beziehung zwischen Cloud-Computing-Anbieter und Kunde ergeben sich Anforderungen für eine geregelte Geschäftsbeziehung. \parencite{Cloud1012026}
-Die notwendigen Regeln werden in den Dienstleistungsvereinbarungen (englisch: Service-Level-Agreement, SLA) in einvernehmlich und auf Basis geltender rechtlicher Vorschriften geschlossen.
-Die Vereinbarungen regeln die genaue Beschaffenheit und Eigenschaften jeder Leistung des Anbieters und die Ansprüche des Kunden im Falle eines Verstoßes. Unter Anderem zudem vertraglich geregelt, sind Punkte wie Bepreisung der Leistungen und der zeitliche Rahmen der Vereinbarung. 
-
-%Wie im Abschnitt 
-%
-%Der Bedarf nach den Leistungs\-versprechungen der Cloud ist enorm.
-%Nicht nur das Trainieren, sondern auch das Nutzen von KI-Modellen auf der eigenen Hardware ist rechenaufwändig. Auch andere Anwendungen wie das Managment von Kunden und Unternehmensressourcen wird immer komplexer.
-%
-%Grundlegend kann gewählt werden wie viele Schichten des ursprünglichen Rechenzentrums in die Cloud gehoben werden sollen. (vergleiche \ref{fig:A-cloud-stack})
-
-\paragraph{Schematische Gegenüberstellung von Kosten und Funktionsweise}
-
 \paragraph{Herausforderungen und Nachteile}
 Die Herausvorderungen und Nachteile der Cloud werden im späteren Kapitel 3.6 "Der organisatorische Einfluss von Cloud-Computing" des Buches "Cloud Governance" aufgelistet:
 \begin{itemize}
@@ -270,7 +347,7 @@ Die konkreten Punkte stammen aus einem Blog-Artikel der IT-Sicherheits\-firma Co
 Der Fokus dieser Arbeit ist die Anbieterbindung.
 Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service möglich.
 
-\subsection{Grundlagen der Anbieterbindung}
+\subsection{Detailbetrachtung der Anbieterbindung}
 
 \paragraph{Definitionen von Anbieterbindung}
 Vendor-Lock-In (dt. Anbieterbindung) ist ein Umstand in der Beziehung zu einem Anbieter aus Kundensicht. 
@@ -302,9 +379,6 @@ In der Abbildung befinden sich die vier Kernelemente Kunde (1), Anbieter (2), Re
 \label{technUr_Anbieterbindung}\caption{Eigene Skizze der Beziehung zwischen Cloud-Computing-Kunde, CC-Anbieter und den Rechenressourcen}
 \end{figure}
 
-
-
-
 \paragraph{Anfällige Cloud-Produkte}
 In niedrigeren Liefermodellen wie Platform as a Service,
 wo die Anwendungen und Daten in der Hand des Kunden liegen, ist Anbieterbindung generell kein Problem.
@@ -320,7 +394,6 @@ damit diese in der neuen Umgebung funktionieren.
 
 \paragraph{Einordnung der Kritikalität des Problems}
 
-
 \paragraph{Erkennung von betroffenen Cloud-Produkten}
 
 \paragraph{Werkzeuge zur Messung von Anbieterbindung}
@@ -328,6 +401,8 @@ Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit v
 Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
 Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen.
 
+
+\subsection{Beenden von Anbieterbeziehungen}
 
 \subsection{Überblick über führende Cloud-Computing-Anbieter}
 \label{lead-cc-A}
@@ -342,7 +417,12 @@ Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie 
 
 Die Motivation unterstreicht im Kontext der Arbeit die Notwendigkeit zur Erfüllung der Ziele und umreißt kurz die Gründe für die Themenwahl.
 
-\subsection{Bedarf eines Prozesses zur Einordnung von Anbieterbindung}
+\subsection{Besonderheiten des Themas}
+
+\paragraph{Unterschiede zu anderen Herausforderungen der Cloud}
+Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
+
+\subsection{Bedarf einer Analyse von Anbieterbindung}
 
 \paragraph{Strategische Bedeutung für Unternehmenen}
 Die Beschäftigung mit Anbietern ist spannend, denn sie hat strategische und politische Komponenten.
@@ -372,12 +452,7 @@ Auch geopolitische Änderungen wie Zölle oder Gesetze zählen zu den Gründen f
 
 \paragraph{Strategische Bedeutung auf geopolitscher Ebene}
 
-\subsection{Besonderheiten des Themas}
 
-\paragraph{Unterschiede zu anderen Herausforderungen der Cloud}
-Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
-
-\subsection{Beenden von Anbieterbeziehungen}
 
 \section{Abgrenzungen}
 In der Abgrenzung werden im Kontext dieser Arbeit gezielt und explizit Inhalte ausgeschlossen, um die Zielsetzung möglichst geradlinig und anwendungsbezogen zu erfüllen.
