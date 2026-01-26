@@ -3,11 +3,25 @@
 \section{Ausgangssituation}
 Der Abschnitt schlüsselt für den weiteren Verlauf der Arbeit den berücksichtigten Kontext im Sinne des Praxispartners kubus IT eGbR auf.
 
-\subsection{Besonderheiten am Beispiel kubus IT}
+\subsection{Einordnung der Firma kubus IT}
 \label{vorstellung-aok}
-Die kubus IT ist durch ihre Funktion als IT-Dienstleister für die gesetzlichen Krankenkassen AOK Bayern und AOK PLUS Teil der öffentlichen Verwaltung.
+Diese Arbeit ist in Zusammenarbeit mit dem IT-Dienstleister kubus IT enstanden. 
+Die Firma steht representativ für ein Unternehmen Markt der gesetzlichen Krankenkassen.
 
-Die Krankenversicherungen dieser Institutionen zählen laut §4 des SGB V zu den gesetzlichen Krankenversicherungen. Daher werden neben versicherungs\-bezogenen Aspekten auch die informations\-technische Umsetzung im Gesetzestext und daraus abgeleiten Organen geregelt. \parencite{SGBV10}
+\paragraph{Gesetzliche Krankenversicherungen} 
+Das fünfte Sozialgesetzbuch (SGB) definiert, welche Instituionen gesetzliche Krankenversicherungen anbieten, wie diese Versicherungen ausgelegt sein müssen und welche Regeln eine gesetzliche Krankenkasse befolgen muss.
+\\
+Zu den beschrieben Krankenkassen zählen unter anderem die allgemeinen Ortskrankenkassen (AOK), welche typischerweise in Regionen agieren, die nicht zwangsläufig den 16 Bundesländern entsprechen. \parencite[§143]{SGBV1988}
+\\
+Exemplarisch dafür steht die AOK PLUS, welche in den Bundesländern Sachsen und Thüringen aktiv ist. Im Gegensatz dazu steht zum Beispiel die AOK Bayern, die lediglich in Bayern Krankenversicherungen anbietet.
+\\
+Am relevantesten für diese Arbeit ist jedoch, wie im Gesetzestext geregelt wird, welche konkreten Eigenschaften die IT-Systeme einer gesetzlichen Krankenkasse haben müssen. 
+
+\paragraph{Verbindungen zwischen kubus IT und AOK}
+Die Versicherungsunternehmen haben unterschiedliche Herangehensweisen für die Verwaltung der IT.
+Dabei ist die kubus IT eine Arbeitsgemeinschaft der AOK Bayern und AOK PLUS.
+In der Abbildung \ref{relation-it-service-tree} ist diese Beziehung in einer Skizze visuell dargestellt. Der IT-Dienstleister übernimmt Beratung, Support, Entwicklung und Betrieb im Kontext IT für die beiden AOKen. Dabei wird des Weiteren dargestellt, dass die kubus IT von zusätzlichen Dienstleistern unterstützt wird. 
+Die rechtlichen Vorgaben die für die Krankenkassen gelten müssen auch von der kubus IT umgesetzt werden.
 
 \begin{figure}[h]
 \begin{center}
@@ -23,29 +37,30 @@ Die Krankenversicherungen dieser Institutionen zählen laut §4 des SGB V zu den
 [AOK PLUS]]
 \end{forest}
 \end{center}
-
 \caption{Skizze der Beziehung zwischen AOK Bayern, AOK PLUS und den IT-Dienstleistern}
 \label{relation-it-service-tree}
 \end{figure}
 
-\subsection{Resultierende rechtliche Vorschriften}
-Durch die Arbeit für eine gesetzliche Krankenkasse ergeben sich Anforderungen bei der Wahl des Cloud-Anbieters.
-
+\subsection{Rechtliche Vorschriften für die IT}
 Relevant sind Kapitel zehn bis zwölf des fünften Sozialgesetzbuches, wobei zum Teil auch Paragraphen vorheriger Kapitel referenziert werden.
-Grundlegend sind diese gesetzlichen Vorschriften nicht direkt bei der Frage der Anbieterbindung von Relevanz, sondern werden generell bei der Architektur der (Cloud-)Infrastruktur der gesetzlichen Krankenkasse wichtig.
+Die Vorschriften bieten den Raum für die Ausarbeitung von Lösungen hinsichtlich der Architektur der IT-Systeme.
 
 \paragraph{Kapitel 10 - Buch V - Sozialgesetzbuch}
-Das zehnte Kapitel des fünften Buches definiert Versicherungs- und Leistungsdaten, den Datenschutz und die Datentransparenz. Dieses Kapitel befasst sich mit Informationsþ\-management. Ob die Informationen in digitaler Form oder in Form analoger Akten gespeichert sind ist hier nicht relevant. Stattdessen wird geregelt an wen die Daten weitergegeben oder durch wen die Daten verarbeitet werden dürfen. Auch Fristen und Regeln zur Vernichtung der Informationen wird aufgeführt. Diese Regelungen bilden indirekt Anforderungen an das Informations\-sicherheits\-management und die Zugriffs\-möglichkeiten auf Daten bei dem Cloud-Anbieter. \parencite{SGBV10}
+Das zehnte Kapitel des fünften Buches definiert Versicherungs- und Leistungsdaten, den Datenschutz und die Datentransparenz. 
+Dieses Kapitel befasst sich mit Informationsþ\-management. Ob die Informationen in digitaler Form oder in Form analoger Akten gespeichert sind ist hier nicht relevant. 
+Stattdessen wird geregelt an wen die Daten weitergegeben oder durch wen die Daten verarbeitet werden dürfen. Auch Fristen und Regeln zur Vernichtung der Informationen wird aufgeführt. 
+Diese Regelungen bilden indirekt Anforderungen an das Informations\-sicherheits\-management und die Zugriffs\-möglichkeiten auf Daten bei dem Cloud-Anbieter. \parencite[§284-§305b, Kap.~10]{SGBV1988}
 
 \paragraph{Kapitel 11 - Buch V - Sozialgesetzbuch}
 Das elfte Kapitel des fünften Buches regelt alle Belange der sogenannten Telematikinfrastruktur.
-Laut dem §306 des selbigen Abschnitts handelt es sich bei der Telematikinfrastruktur um "die interoperable und kompatible Information-, Kommunikations- und Sicherheitsinfrastruktur, die der Vernetzung von Leistungererbringern, Kostenträgern, Versicherten und weiteren Akteueren des Gesundheitswesens sowie der der Rehabilitation und der Pflege dient und […]". \parencite{SGBV11}
+Laut dem §306 des selbigen Abschnitts handelt es sich bei der Telematikinfrastruktur um "die interoperable und kompatible Information-, Kommunikations- und Sicherheitsinfrastruktur, die der Vernetzung von Leistungererbringern, Kostenträgern, Versicherten und weiteren Akteueren des Gesundheitswesens sowie der der Rehabilitation und der Pflege dient und […]". \parencite[§306-§383, Kap.~11]{SGBV1988}
 
 \subparagraph{Folgen des Paragraph 307}
 In diesem Paragraphen werden datenschutzregliche Verantwortlichkeiten festglegt (§307).
 Dieser Paragraph legt zusammengefasst fest, dass die Nutzer einer verteilten Infrastruktur, also beispielsweise die Nutzer eines Cloud-Anbieters, für eine rechtskonforme sichere Verarbeitung der schützenswerten Daten innerhalb des Netzes der verteilten Infrastruktur verantwortlich sind.
 Des Weiteren erstreckt sich die Verantwortlichkeit auch auf die ordnungsgemäße Inbetriebnahme, Wartung und Verwendung der Komponenten. Der Nutzer ist dann nicht verantwortlich,
-wenn dieser nicht über die "Mittel der Datenverarbeitung mitentscheiden" \parencite{SGBV11} kann,
+wenn dieser nicht über die \glqq Mittel der Datenverarbeitung mitentscheiden\grqq\ 
+\parencite[§307]{SGBV1988} kann,
 wie es in §307 lautet. 
 Diese Regelung bedeutet im Kontext der Cloud,
 dass bereits beim Liefermodell Infrastructure-as-a-Service die Verantwortung zur rechtskonformen sicheren Verarbeitung beim Anbieter liegt,
@@ -54,17 +69,17 @@ Spätestens bei dem Liefermodell Software-as-a-Service, wo der gesamte Technolog
 
 \subparagraph{Folgen des Paragraph 308}
 In diesem Paragraphen wird der Vorrang von Schutzmaßnahmen vor der europäischen Datenschutz-Grundverordnung geregelt (§308).
-Zusammenfassend werden die "Rechte der betroffenen Person nach den Artikeln 12 bis 22 der Verordnung (EU) 2016/679 […] ausgeschlossen, soweit diese Rechte […] nicht oder nur unter Umgehung von Schutzmechanismen […] gewährleistet werden können." \parencite{SGBV11}
+Zusammenfassend werden die \glqq Rechte der betroffenen Person nach den Artikeln 12 bis 22 der Verordnung (EU) 2016/679 […] ausgeschlossen, soweit diese Rechte […] nicht oder nur unter Umgehung von Schutzmechanismen […] gewährleistet werden können.\grqq\ \parencite[§308]{SGBV1988}
 Folglich muss ein Verantwortlicher einem Betroffenen Daten nicht aushändigen, wenn für die Aushändigung Sicherheitsmaßnahmen umgangen oder Daten ungesichert separat gespeichert werden müssten.
 Dieses Gesetz widerspricht also zunächst dem allgemeinen europäischen Recht, dass jederzeit die Daten eines Betroffenen beipielsweise für diesen offengelegt oder gelöscht werden müssen, wenn dieser das verlangt.
 Jene Reglung des §308 gilt allerdings auch nur dann, wenn die Datenverarbeitung rechtmäßig ist
-und beispielsweise die Einsichtnahme zweifelsohne nicht ohne Umgehung von Sicherheitvorkehrungen möglich ist. \parencite{SGBV11}
+und beispielsweise die Einsichtnahme zweifelsohne nicht ohne Umgehung von Sicherheitvorkehrungen möglich ist. \parencite[§308]{SGBV1988}
 Für den Cloud-Anbieter bedeutet das, dass eine Schnittstelle zur Verfügung gestellt werden sollte, die eine geregelte Einsichtnahme in die Daten eines Betroffenen ermöglicht. 
 
 
 \paragraph{Kapitel 12 - Buch V - Sozialgesetzbuch}
 Das zwölfte Kapitel beinhaltet unter anderem explizit den Einsatz von Cloud-Technologie im Gesundheitswesen in §393.
-Dort wird festgelegt, dass die Verarbeitung von Sozial- und Gesundheitsdaten im Weges des Cloud-Computing-Dienstes nur im Inland, einem Mitgliedsstaat der Europäischen Union oder einem der Mitgliedstaat der europäischen Union gleichgestellten Staat wie der Schweiz und Mitgliedstaaten des europäischen Wirtschaftsraumes erfolgen darf. Alle anderen Staaten gelten als Drittstaaten müssen in einem sogenannten Angemessenheitsbeschluss für die Übermittlung personenbezogener Daten erst genehmigt werden. \parencite{SGBV12}
+Dort wird festgelegt, dass die Verarbeitung von Sozial- und Gesundheitsdaten im Weges des Cloud-Computing-Dienstes nur im Inland, einem Mitgliedsstaat der Europäischen Union oder einem der Mitgliedstaat der europäischen Union gleichgestellten Staat wie der Schweiz und Mitgliedstaaten des europäischen Wirtschaftsraumes erfolgen darf. Alle anderen Staaten gelten als Drittstaaten müssen in einem sogenannten Angemessenheitsbeschluss für die Übermittlung personenbezogener Daten erst genehmigt werden. \parencite[§384-§395, Kap.~12]{SGBV1988}
 
 Derzeit sind folgende Staaten als Drittstaat durch einen Angemesseheitsbeschluss zugelassen:
 \begin{itemize}
@@ -134,12 +149,19 @@ Demnach zählen folgende Anbieter aktuell in das A-Segment:
 \item[-] Avaya: Cloud-Kommunikation
 \end{itemize}
 
+\parencite{vergabVendorManage2022}
 
 \section{Zielsetzung}
 In der Zielsetzung werden im Rahmen der Arbeit die Anforderungen an den Lösungsansatz, der auf Basis der etablierten Grundlage aus der Einleitung und der Ausgangssituation entwickelt wird, definiert.
 
 \subsection{Analyse des Vendor-Lock-In-Riskos}
 \paragraph{Hauptziel der Arbeit}
+Das Ziel, auf das in dieser Arbeit schwerpunktmäßig hingearbeitet wird, ist die Analyse von führenden Cloud-Computing-Anbietern hinsichtlich ihrer Anbieterbindung oder dem Risiko für \glq Vendor-Lock-In \grq .
+\subparagraph{Ablauf der Analyse}
+Diese Analyse soll durch einen Vergleich der Ergebnisse verschiedener Anbieter und die anschließende Bewertung und Einordnung des Vergleich stattfinden.
+\subparagraph{Thematik Anbieterbindung}
+Gegenstand der Analyse, also des Vergleichs ist die das Thema der Anbieterbindung. Die Herausforderung liegt darin, das Thema messbar zu machen.
+\subparagraph{Herstellung der Vergleichbarkeit}
 \paragraph{Verwendung von technischen Kriterien}
 Vendor-Lockin ist ein primär technisches Problem für den Käufer eines Produktes be\-ziehungs\-weise konkret eins Cloud-Computing-Anbieters.
 
@@ -148,7 +170,6 @@ Technische Kriterien sind Eigenschaften eines Produktes im Kontext von Cloud-Com
 
 \subsection{Abgeleitete Etappenziele}
 \paragraph{Ableitung von Etappen aus dem Hauptziel}
-
 
 \subsection{Zielsetzung der Analyse}
 Das Analyseverfahren soll einen Ausgabewert liefern, der beschreibt wie hoch das Risiko eines Vendor-Lock-Ins ist. Kurz der Faktor Vendor-Lock-In soll quantifiziert werden.
