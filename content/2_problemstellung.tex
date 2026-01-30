@@ -102,7 +102,7 @@ Derzeit sind folgende Staaten als Drittstaat durch einen Angemesseheitsbeschluss
 
 \parencite{AngembeschlEU}
 
-Darüberhinaus wird im Absatz 3 des §393 festgelegt, dass eine Verarbeitung nur zulässig ist, wenn technische und organisatorische Maßnahmen, die dem Stand der Technik entsprechen, zur Gewährleistung der Informationssicherheit ergriffen worden sind. Zudem muss ein Sicherheitszertifikat der datenverarbeitenden Stelle, also des Cloud-Anbieters, vorliegen und zusätzlich die Kriterien für Kunden, die im Prüfungsbericht des Testats enthalten sind, umgesetzt wurden. \parencite{SGBV12}
+Darüberhinaus wird im Absatz 3 des §393 festgelegt, dass eine Verarbeitung nur zulässig ist, wenn technische und organisatorische Maßnahmen, die dem Stand der Technik entsprechen, zur Gewährleistung der Informationssicherheit ergriffen worden sind. Zudem muss ein Sicherheitszertifikat der datenverarbeitenden Stelle, also des Cloud-Anbieters, vorliegen und zusätzlich die Kriterien für Kunden, die im Prüfungsbericht des Testats enthalten sind, umgesetzt wurden. \parencite[Kap.~12]{SGBV1988}
 
 Das geforderte Testat muss den Anbieter insofern zertifizieren, dass Sicherheitsvorkehrungen mit dem Niveau des C5-Typ2-Testats oder höher getroffen wurden.
 
@@ -156,66 +156,82 @@ In der Zielsetzung werden im Rahmen der Arbeit die Anforderungen an den Lösungs
 
 \subsection{Analyse des Vendor-Lock-In-Riskos}
 \paragraph{Hauptziel der Arbeit}
-Das Ziel, auf das in dieser Arbeit schwerpunktmäßig hingearbeitet wird, ist die Analyse von führenden Cloud-Computing-Anbietern hinsichtlich ihrer Anbieterbindung oder dem Risiko für \glq Vendor-Lock-In \grq .
+Das Ziel, auf das in dieser Arbeit hingearbeitet wird, ist die Analyse von führenden Cloud-Computing-Anbietern 
+hinsichtlich ihrer Anbieterbindung oder dem Risiko für \glq Vendor-Lock-In \grq.
+
 \subparagraph{Ablauf der Analyse}
-Diese Analyse soll durch einen Vergleich der Ergebnisse verschiedener Anbieter und die anschließende Bewertung und Einordnung des Vergleich stattfinden.
+Für die Analyse ist zunächst die Entwicklung einer Metrik zur Gegenüberstellung von Anbietern hinsichtlich der Anbieterbindung notwendig.
+Daraufhin wird die Bewertung der als führend ermittelten Anbieter stattfinden.
+Nach der Bewertung werden die Ergebnisse dargestellt und mit verglichen.
+Aus den Ergebnissen und der Gegenüberstellung wird eine Interpretation der aktuellen Situation gefolgert.
+
 \subparagraph{Thematik Anbieterbindung}
 Gegenstand der Analyse, also des Vergleichs ist die das Thema der Anbieterbindung. Die Herausforderung liegt darin, das Thema messbar zu machen.
+Dabei wird es versucht eine Verbindung zwischen technischen Kriterien und dem Risiko für Anbieterbindung zu ermitteln.
+Dies geschieht entgegen der Annahme, das Anbieterbindung ein rein organisatorisches Problem ist. (vergleiche Abschnitt \ref{anbieterbindung})
+
 \subparagraph{Herstellung der Vergleichbarkeit}
-\paragraph{Verwendung von technischen Kriterien}
-Vendor-Lockin ist ein primär technisches Problem für den Käufer eines Produktes be\-ziehungs\-weise konkret eins Cloud-Computing-Anbieters.
-
-Daher wird untersucht welche technischen Kriterien zu diesem technischen Problem führen.
-Technische Kriterien sind Eigenschaften eines Produktes im Kontext von Cloud-Computing, die sich auf die inherente Struktur und die Bestandteile des Produktes beziehen.
-
-\subsection{Abgeleitete Etappenziele}
-\paragraph{Ableitung von Etappen aus dem Hauptziel}
-
-\subsection{Zielsetzung der Analyse}
-Das Analyseverfahren soll einen Ausgabewert liefern, der beschreibt wie hoch das Risiko eines Vendor-Lock-Ins ist. Kurz der Faktor Vendor-Lock-In soll quantifiziert werden.
-
-Damit lässt sich die dieser Punkt besser in künftigen Vergabeverfahren berücksichtigen,
-wo auch wirtschaftliche, strategische und inhaltliche Faktoren eine Rolle spielen.
-
-Diese Riskobewertung wird zunächst als Prozentzahl angeben. Nachgelagert werden Bestehungsgrenzen beziehungsweise Schranken zur Ablehnung oder Akzeptierung eines Anbieter diskutiert.
-
-Die Gesamtbewertung des Risikos soll als Werkzeug zur fairen Gegenüberstellen verschiedener Anbieter dienen.
+Die führenden Cloud-Computing-Anbieter weisen umfangreise Produktkataloge auf. Einzelne Produkte existieren bei nur einem Anbieter als Alleinstellungsmerkmal.
+Das entwickelte Bewertungsschema soll die Vergleichbarkeit mit möglichst universell präsenten SaaS-Produkten herstellen.
 
 \subsection{Verifizierbarkeit der Ergebnisse}
-Nachdem ein Prozess entwickelt wurde, der eine Bewertung des Vendor-Lock-In-Riskos liefert, muss im Anschluss diese Bewertung geprüft werden.
+Nachdem ein Prozess entwickelt wurde, der eine Bewertung des Vendor-Lock-In-Riskos liefert, muss im Anschluss diese Bewertung selbst geprüft werden.
 
+\paragraph{Vorstellung von Verifizerungsoptionen}
 Vor der Entwicklung des Prozesses werden daher direkt Methoden der Verifikation vorgestellt.
-Die Verifizierbarkeit lässt sich durch drei Methoden abbilden.
+Die Argumentation dieser Arbeit läuft darauf hinaus, dass die Verifizierbarkeit sich durch drei Methoden abbilden.
 Es ist einerseits möglich die Bewertung des Modells mit der Einschätzung eins Experten im Cloud-Bereich zu vergleichen und andererseits bestehende Analysen als Messlatte zu wählen.
 
-Darüberhinaus lassen sich die Ergebnisse auch durch das Messen des Aufwands der Migration testen.
+Darüberhinaus lassen sich die Ergebnisse auch durch das praktische Messen des Aufwands der Migration testen.
 Eine Metrik für den Aufwand wäre die benötigte Arbeitzeit, die Kosten der Migration oder der Anteil der Anwendungen, die umgestellt werden müssen.
 
+Es lassen sich für alle drei Ansätze Probleme identifizieren.
+
+\paragraph{Herausforderungen von Experimenten}
 Um die durch das Bewertungsmodell vorgeschlagene Bewertung per Experiment zu überprüfen, muss der Aufwand Emigration vom Anbieter betrachtet werden.
 Doch auch das Ziel des gesamten Migrationsprozesses ist hierbei relevant und hat einen Einfluss auf den gesamten Aufwand.
-Generell werben Anbieter mit Angeboten und Werkzeugen, die bei der Migration unterstützen.
+Generell werben Anbieter mit Geldprämien, Expertiese und Werkzeugen, die bei der Immigration unterstützen. Beispielhaft dafür steht der Cloud-Computing-Anbieter Amazon mit dem \glq AWS Migration Acceleration Program \grq ,
+welches unter Anderem aus einer \glqq flexiblen Migrationsmethode, 
+die bewährte Frameworks nutzt\grqq , \glqq Tools, die helfen, 
+Kosten zu reduzieren\grqq\ und \glqq AWS-Investitionen in Form von AWS-Service-Guthaben oder Partnerinvestitionen\grqq besteht. \parencite{AWSMAP2026}
+Zumindest Migrationswerkzeuge als angebotene Plattform innerhalb des Katalogs der Cloud-Computing-Dienstleister werden ein Kriterium des Bewertungsschemas.
+Jedoch sind diese Unterstützungsangebote eine Einbahnstraße und die Anbieter werben meist ausdrücklich nur für die Hilfe beim Umzug der Daten auf die eigenen Systeme.
 
-Damit die Experimente verschiedener Anbieter vergleichbar sind,
-sollte jedoch der Anteil des Aufwands,
-der auf die Immigration zurückzuführen ist,
-minimiert werden.
-Dazu zählt auch die Erleichterung der Migration durch eventuelle Dienstleistungen des Ziel-Anbieters.
+Insgesamt ist jedoch für diese Arbeit die Durchführung von realistischen expirmentellen Migrationen nicht umsetzbar, 
+da hierfür tatsächliche Geschäftsbeziehung zu den Anbietern zustande kommen müsste.
+Alternativ wäre eine Rechnung und Schätzung der Aufwände für eine Migration in der Theorie.
+Diese Herangehensweise würde jedoch weitere Annahmen und Ungewissheiten mit sich bringen.
+Daher wird argumentiert, dass die Aussagekraft dieser theoretischen Experimente nicht gegeben wäre.
 
-Zur Bewerk\-stelligung hiervon kann die Im\-migration
-in ein niederes Liefer\-modell gewählt werden.
-So kann beispielsweise der Wechsel verschiedener Anbieter im Liefermodell Software-as-a-Service zu einem Anbieter mit dem Liefermodell Platform-as-a-Service betrachtet werden.
+\paragraph{Probleme mit der Einschätzung von Branchenexperten}
+Es wird angenommen, dass ein befragter Experte entweder auf Basis von Erfahrungswerten oder Fachliteratur Bewertungen treffen würde. Problematisch ist hier, dass, 
+wenn die Bewertung des Experten ohnehin auf diesem bekannten Fällen und Literatur basiert,
+auch unmittelbar dieses Wissen zur Verifizierung der Ergebnisse herangezogen werden kann.
+Erschwerend kommt hinzu, dass das Ergebnis des Lösungsansatzes, dessen Aussagekraft bewiesen werden soll ein Zahlenwert ist.
 
-Obwohl der Trend zu umfangreicheren Liefermodellen geht und solche Migrationen generell eher aufwendig sind, hat diese Methode Relevanz,
-um die Bewertung der Anbieter generell zu überpüfen.
-Da solche Migrationen aufwendig sind,
-ist anzunehmen, dass die Aufwandsunterschiede der einzelen Anbieter in Relation zum Gesamtaufwand niedrig sind.
+Es wird angenommen, dass ein interviewter Experte keinen solchen Zahlenwert, sondern 
+aus dem Stegreif eine Rangordnung zur Anbieterbindung bei führenden Anbietern aufstellen könnte.
 
-Auch mit der Migration innerhalb eines Liefermodells kann experimentiert werden.
-Im Gegensatz zur vorherigen Methode ist anzunehmen,
-dass die Aufwandsunterschiede zwischen Anbietern innerhalb eines Liefermodells in Relation zum Gesamtaufwand drastischer sind. 
-Wichtig ist jedoch für einen fairen Vergleich,
-dass die Vendor-Lock-In-Risikobewertung vom Wechselziel besser ist als die beste Bewertung der zu untersuchenden Menge an Anbietern.
+Auf Basis dieser Argumentationsführung, wird eine Experteneinschätzung abgelehnt.
 
-Der Grund für diese Einschränkung ist einerseits die Notwendigkeit einer Verbesserung,
-denn obwohl es beispielsweise wirtschaftliche Argumente für einen Anbieter mit einer höheren Anbieterbindung geben kann, ist im Kontext dieser Arbeit ein Wechsel in eine stärkere Anbieterbindung generell nicht sinnvoll. 
-Andererseits sorgt eine bessere Bewertung implizit für eine höhere Kompatibilität zwischen zwei Anbietern.
+\paragraph{Diskussion der Option der Recherche}
+In Relation zu den anderen Verifizierungsansätzen steht die Rechere bisherige Erkenntnisse zur Anbieterbidung als praktikabelste Lösung dar, die zugleich wenige Annahmen und Ungenauigkeiten einführt.
+Aus diesem Grund wird die Effiktivtät des Lösungsansatz durch die Recherche gemessen.
+Konkret werden hierfür dokumentierte Migrationen und deren Aufwand betrachtet und den Ergebnissen gegenübergestellt.
+
+\paragraph{Herausforderungen bei der Recherche}
+Dabei ist jedoch zu beachten, dass auf die Neutralität des Autors der Literatur zu achten ist.
+Erfolgreiche und reibungslose Migrationen werden häufig als Werbung auf den Produktseiten der Cloud-Computing-Anbieter veröffentlicht.
+Darüberhinaus wird angenommen, dass die Normalisierung der Daten in der Literatur eine Herausforderung ist,
+denn der Aufwand einer Migration kann durch unterschiedliche Metriken ausgedrücket werden.
+So muss herausgearbeitet werden, wie sich beispielsweise die Dauer einer Migration in die Gesamtkosten umrechnen lassen, wenn eine Quelle nur ersteres liefert. 
+Zuletzt annehmbar ist, dass über generell mehr Migrationen berichtet wird, die erfolgreich sind.
+Auch Unternehmen, die aufgrund einer Anbieterbindung eine Migration aufschieben, berichten nicht über Migrationen.  Diese Voreingenommenheit zum Erfolg, also, dass die Realität gegenenfalls nicht neutral durch die Recherche wiedergegeben wird, ist zu beachten.
+Dieser Umstand kann mit dem \glq Überlebensirrtum\grq\ (englisch: Survivorship Bias) beschrieben werden.
+\parencite{Survivorship2026}
+
+\paragraph{Abschließende Einordnung der Verifizierbarkeit}
+Die Variablen innerhalb eines Unternehmens wie die Verfügbarkeit von befähigtem Personal zur erfolgreichen Durchführung einer Migration wie das konkrete Ziel und der Ursprung einer Migration erschweren einen sauberen Vergleich.
+Dazu kommen Unbekannte durch die Verifizierungsmethode wie die klare Neutralität der Autoren von Literatur zu dem Thema.
+Diese Punkte sind bei der Betrachtung der Verifizierbarkeit zu berücksichtigen.
+
