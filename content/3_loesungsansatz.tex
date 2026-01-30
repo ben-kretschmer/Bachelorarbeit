@@ -165,7 +165,7 @@ Es wird untersucht welche Containiersierungtechnologien zum Einsatz kommen.
 \paragraph{Grundlagen}
 Zur Ermittlung dieser Gesamtbewertung (G) des Risikos wird ein gewichtetes Scoring-Modell entwickelt. Es wird ein Katalog (K) mit Kriterien (k) aufgestellt:
 \begin{eqnarray}
-K \in \{k_{1},k_{2},...,k_{n-1},k_{n}\},\ n \in \mathbb{N}
+K = \{k_{1},k_{2},...,k_{n-1},k_{n}\},\ n \in \mathbb{N}
 \end{eqnarray} 
 
 Ein Kriterium kann entweder erfüllt oder nicht erfüllt sein. Zunächst ist die einzige Komponente für ein erfülltes Kriterium die Existenz eines Produktes von Seiten des Anbieters. Dadurch ist die Variable $x$ (kurz für: Existenz) mit zwei Zuständen versehen:
@@ -175,19 +175,19 @@ x_{k} \in \{0,1\}
 
 Die Gesamtbewertung (G) wird aus dem Verhältnis aller erfüllten Kriterien zu der maximal möglichen Punktzahl errechnet. Das Ergebnis wird in Prozent angegeben. Generell gilt: Je höher das Ergebnis, desto niedriger das Risko für Anbieterbindung.
 \begin{eqnarray}
-G_{ungewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} x_{k}}{|K|}
+G_{ungewichtet} = \frac{\displaystyle\sum_{k \in K} ^{} x_{k}}{|K|}\cdot 100
 \end{eqnarray}
 
 \paragraph{Hintergrund der Gewichtungen}
-Individuell zu jedem Kriterium wird ein Gewicht zugeordnet. Das Gewicht (w,englisch: weight) kann prinzipiell eine beliebige rationale Zahl sein:
+Individuell zu jedem Kriterium wird ein Gewicht zugeordnet. Das Gewicht (w,englisch: weight) kann prinzipiell eine beliebige reele positive Zahl oder Null sein. Es wird gefordert, dass die Summe aller Gewicht 1 ist (Normierung der Gewichte), was die spätere Errechnung Gesamtwertes vereinfacht:
 \begin{eqnarray}
-w_{k} \in \mathbb{Q}
+w_{k} \in \mathbb{R}^{+}_{0} mit \displaystyle\sum_{k \in K} ^{} w_{k} = 1
 \end{eqnarray}
 Für die Gewichtung wurde der englische Anfangsbuchstabe verwendet, um Verwechslung mit der Gesamtbewertung zu verhindern.
 
 Standardmäßig sind alle Kriterien mit einfacher Gewichtung konfiguriert. Das Teilergebnis (g) für ein für ein gewichtetes Kriterium errechnet sich aus:
 \begin{eqnarray}
-g_{k} = w_{k}  * x_{k} 
+g_{k} = w_{k}  \cdot x_{k} 
 \end{eqnarray}
 
 \paragraph{Feinjustierung durch Anwender}
@@ -198,9 +198,9 @@ Je nach Fokus und Bedürftnissen des Anwenders können die einzelnen Kriterien a
 
 Dadurch kann das breite Spektrum der Kategorien und Kriterien nach Bedarf reduziert werden.
 
-Durch Anwenden der Gewichte ergibt sich die Berechnung der Gesamtbewertung:
+Durch Anwenden der normierten Gewichte ergibt sich die Berechnung der Gesamtbewertung in Prozent als:
 \begin{eqnarray}
-G_{gewichtet} = \frac{\displaystyle\sum_{n=1} ^{|K|} w_{k}*x_{k}}{\displaystyle\sum_{n=1} ^{|K|} w_{k}*1}
+G_{gewichtet} = \displaystyle\sum_{k \in K} ^{} w_{k}\cdot x_{k}\cdot 100
 \end{eqnarray}
 
 \paragraph{Erweiterung der Kriterienkomponenten}
@@ -241,27 +241,36 @@ g'_{k} = d_{k} + t_{k}
 
 Wenn kein Produkt zum Kriterium existiert, soll das Ergebis immer null Punkte ergeben, daher gilt insgesamt:
 \begin{eqnarray}
-g_{k} = w_{k}*x_{k}*(d_{k} + t_{k})
+g_{k} = w_{k}*x_{k}*(g'_{k})
 \end{eqnarray}
 
 \paragraph{Effekt auf die minimalem Risiko}
-Um die Höchstprozentzahl zu berechnen, müsste für $g'_{k}$ (von \ref{s-strich-von-k}) das Maximum gewählt werden, was drei entspricht. 
-Die maximale Prozentzahl würde also der Produktkatalog eines Cloud-Anbieters bekommen,
-der ausschließlich frei zugängliche Software mit zusätzlicher Dokumentation anbietet.
-Angenommen der vollständige Katalog umfasst 100 Kriterien,
-so ist die maximal mögliche absoulte Punktzahl bei einheitlich einfacher Gewichtung 300 oder relativ 100%:
+Um die beste Bewertung beziehungsweise des niedrigste Risiko für Anbieterbindung zu berechnen,
+muss für $g'_{k}$ (von \ref{s-strich-von-k}) das Maximum gewählt werden, was drei entspricht. 
+Die beste Bewertung wird also der Produktkatalog eines Cloud-Computing-Anbieters bekommen,
+der alle Kriterien mit ausschließlich frei zugänglicher Software ($t_{k} = 2$) und zusätzlicher Dokumentation ($d_{k} = 1$) anbietet.
+Angenommen der vollständige Katalog umfasst beispielsweise 100 Kriterien,
+so ist die maximal mögliche absoulte Bewertung bei einheitlicher normierter Gewichtung 3:
 
 \begin{eqnarray}
-G_{Maximal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(1+2) = 100 * 3 = 300
+G_{Maximal100} = \displaystyle\sum_{k\in K} ^{} w_{k}\cdot x_{k}\cdot (d_{k} + t_{k}) = 
+\displaystyle\sum_{k \in K} ^{} w_{k}\cdot 1\cdot (1+2) = 
+1 \cdot  3 = 3
+\end{eqnarray}
+
+Dieses konkrete Beispiel lässt sich allgemein schreiben und es wird gezeigt sich, dass die maximale Bewertung unabhängig von der Kriterienzahl immer drei ist:
+
+\begin{eqnarray}
+G_{Maximal} = \displaystyle\sum_{k\in K} ^{} w_{k}\cdot x_{k}\cdot (d_{k} + t_{k}) = 
+\displaystyle\sum_{k\in K} ^{} w_{k}\cdot 1\cdot (1 + 2) = 3 \cdot \displaystyle\sum_{k\in K} ^{} w_{k} = 3
 \end{eqnarray}
 
 \paragraph{Charakterisirung eines Anbieters mit maximalem Risko}
-
-Ein Cloud-Anbieter,
+Ein Cloud-Computing-Anbieter,
 der keine Open-Source- oder Standard-Software anbietet erhält bei einheitlich einfacher Gewichtung und 100 Kriterien keine Punkte:
 
 \begin{eqnarray}
-G_{Minimal100} = \displaystyle\sum_{n=1} ^{100} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{n=1} ^{100} 1*1*(0) = 100 * 0 = 0
+G_{Minimal100} = \displaystyle\sum_{k \in K} ^{} w_{k}*x_{k}*(d_{k} + t_{k}) = \displaystyle\sum_{k \in K} ^{} 1*1*(0) = 100 * 0 = 0
 \label{Minimal100}
 \end{eqnarray}
 
@@ -302,3 +311,35 @@ Daher haben auch die indirekten Kritieren eine große Relavanz.
 Analog zu dem vorherigen Paragraph, 
 kann entweder ein alleinige Analyse oder schwerpunktmäßige Berücksichtigung 
 durch eine entsprechende Konfiguration der Kriterien erfolgen.
+
+
+\subsection{Implementierung in einer Tabellenkalkulationssoftware}
+\paragraph{Auswahl der Software}
+Die Implementierung des Lösungsansatzes kann prinzipiell in einer beliebigen Software für Tabellenkalkulation erfolgen.
+Aufgrund der Tatsache, dass der IT-Dienstleister das Office-Software-Paket von \glq Microsoft\grq  verwendet, wurde das Programm \glq Microsoft Excel\grq\ ausgewählt.
+
+\paragraph{Aufbau der Datei}
+Es wurde eine leere Vorlage für anstehende Anbieter-Untersuchungen erstellt.
+Die Implementierung des Bewertungsmodells besteht aus vier Bausteinen:
+\begin{enumerate}
+\item[-] Kopf mit Informationen über die aktuelle Analyse
+\item[-] Kriterienkatalog mit Kontrollkästchen (englisch: Checkboxes) und Auswahllisten (englisch: Dropdown-Lists)
+\item[-] Ergebnisbereich mit verschiedenen Metrik und der Gesamtbewertung in Prozent
+\item[-] Hinweise zu Abkürzungen und Erklärungen
+\end{enumerate}
+
+Die leere Vorlage ist im Anhang dieser Arbeit.
+
+\paragraph{Änderungen und Anpassungen}
+Die Gesamtbewertung in Prozent wurde zur intuitiveren Ablesung von 100% abgezogen.
+Ein Punkt des Zieles war eine Metrik zur Abbildung des Vendor-Lock-In-Risikos.
+Jedoch fordern die Kriterien des Katalogs Merkmale, die sich, laut der Argumentation der Arbeit, negativ auf die Anbieterbindung auswirken. Eine höhere Abdeckung dieser Kriterien ist als die Bewertung für niedrigeres Risko zum Vendor-Lock-In.
+
+Zusammenfassend wurde die Gesamtbewertung invertiert, um näher an die Formulierung des Ziels zu kommen. Dieses Umdrehen des Ergebnisses ist eine gestalterische Entscheidung.
+
+Die praktischen Demonstrationen und Experimente mit dem Bewertungsmodell unterstreichen die theoretische Funktionsweise.
+
+\paragraph{Erstellen von vergleichenden Analysen}
+Aus dem Ergebnissbereich werden die Werte automatisch über die Abruf-Funktion von \glq Microsoft Excel\grq extrahiert und in einer anderen Tabellen-Datei eingefügt.
+Hier werden Diagramme zur Gegenüberstellung der unterschiedlichen Cloud-Computing-Anbieter angefertigt.
+ 
