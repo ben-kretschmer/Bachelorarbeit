@@ -202,7 +202,7 @@ Die Cloud-Computing-Modelle stehen im Vergleich zur On-Premise-Lösung, wo von A
 
 \subparagraph{Public und Private Cloud}
 Neben der Auslagerung von Bausteinen der IT-Infrastruktur, wird auch in Public und Private Cloud unterschieden.
-Dabei ist besonders hervorzuheben, dass Informationen, die in die Public Cloud abgelegt werden, nicht automatisch öffentlich sind.
+Dabei ist besonders hervorzuheben, dass Informationen, die in die Public Cloud abgelegt werden, nicht öffentlich zugänglich sind.
 Stattdessen hat der Cloud-Kunde bei der Verwendung der Public Cloud den Zugriff auf einen öffentlichen Vorrat aus Rechenressourcen. \parencite{Cloud1012026}
 
 Im Gegensatz hierzu wird der Umfang der Rechenressourcen bei der Private Cloud festgelegt und dann für den Kunden fest zugeordnet. Spätere Erweiterungen der Rechenressourcen sind hier trotzdem möglich.
@@ -388,31 +388,55 @@ Problematisch ist im Kontext auch der Verlust von Fachwissen, wobei anzumerken i
 Im Zusammenhang mit dem Vorteil \glq Kosteneinsparung\grq\ lässt sich argumentieren, 
 dass der Wegfall von hochqualifiziertem Fachpersonal und dem dazugehörigen Wissen ein Teil der versprochenen Kosteneinsparungen sind. 
 Inwiefern diese Einsparungen sich langfristig rechnen, wenn kompliziertere Anpassungen oder Migrationen notwendig werden, soll in dieser Arbeit nicht diskutiert werden.
+Neben Verlust von Fachwissen kann auch die Abwesenheit von Fachwissen im Bezug auf Cloud-Computing problematisch werden. Diese Sichtweise wird von Conosco als weitere Herausforderung herausgearbeitet. Qualifizierte Fachkräfte für die Auswahl des richtigen Anbieters zu finden, ist laut der Veröffentlichung der Firma schwierig. \parencite[Abs.~6 Technical Knowledge]{Conosco2020}
+
 
 Ausfälle der Dienste von CC-Anbietern sind gleichermaßen möglich wie der Ausfall von \glq On-Premise\grq -Infrastruktur. Ausfälle können sowohl unabsichtlich als auch absichtlich entstehen.
-Zu beachten ist jedoch der Kontrollverlust auf Unternehmensseite und das höhere Schadensrisiko. 
+Zu beachten ist jedoch der Kontrollverlust auf Unternehmensseite und das höhere Schadensrisiko (vergleiche \parencite[Abs.~4 Downtime]{Conosco2020})
 Bei Ausfällen von Cloud-Computing-Rechenzentren sind, im Gegensatz zu unternehmenseigenen Rechenzentren, viele Unternehmen betroffen.
 Der Schaden durch einen einzelnen Vorfall steigt.
 Dieses größere bekanntere Ziel in Kombination mit dem höheren Schaden, kann zu erhöhtem Interesse bei Angreifern führen (vergleiche absichtliche Ausfälle und Herausforderung: Sicherheit).
 
+\paragraph{Einordnung der Quellen für Vor- und Nachteile}
+Bei der Recherche vom richtigen Umgang mit der Migration zu Cloud-Computing-Anbietern ist es elementar zu beachten, 
+dass viele Quellen Herausforderungen und Chancen auf Basis von Erfahrungen und vor dem Hintergrund veröffentlichen, 
+dass diese auch kostenpflichtige Schulungs- und Beratungsdienste für die Migration anbieten.
+Die Aussagen verschiedener Quellen sind im Wesentlichen übereinstimmend, wodurch sich die notwendige Seriösität für diese Arbeit nachweisen lässt.
+
 \subsection{Detailbetrachtung der Anbieterbindung}
 \label{anbieterbindung}
 \paragraph{Definitionen von Anbieterbindung}
-Vendor-Lock-In (dt. Anbieterbindung) ist ein Umstand in der Beziehung zu einem Anbieter aus Kundensicht. 
-Dieser Umstand wird beim Beenden der Beziehung problematisch.
-Wenn ein Unternehmen den Cloud-Computing-Anbieter wechseln möchte,
-so ist eine Anbietermigration nötig.
+Einführend in die Betrachtung der Herausforderung werden Erklärungen und Definitionen des Phänomens aus der Literatur betrachtet. 
+\begin{quote}
+Zu den meistgenannten Risiken zählen Fragen der Abhängigkeit von einem Anbieter, die im Worst Case zu einem klassischen Vendor-Lock-in führen können.
+Auch besondere IT-Konfigurationen einer Cloud können zu einem faktischen Lock-in führen, wenn diese Konfiguration von keinem anderen Anbieter oder nur mit erheblichem wirtschaftlichem Aufwand bereitgestellt werden kann.
+Eine Abhängigkeit kann auch im Bezug auf die Verfügbarkeit der IT-Ressourcen bestehen, insbesondere bei einem Ausfall und nicht vorhander Redundanzkonzepte. 
+Die Qualität der Datenanbindung und die Bandbreite der Leitungswege (Netzanbindung bzw.\ Connectivity) kann dies ebenfalls betreffen. Gleiches gilt für allgemeine Fragen der Interoperabilität, insbesondere beim Einsatz von Cloud-Infrastrukturen mehrer Anbieter im Rahmen von Multi-Cloud-Szenarien.
+\parencite[Kap.~2.4,S.~33f]{Hennrich2023}
+\end{quote}
 
-Grundsätzlich ist die Migration von einem Anbieter zu einem Konkurrenten immer mit Aufwand verbunden,
-wenn beispielsweise die Daten einer CRM-Anwendung des einen Anbieters zum Anderen gesendet werden müssen.
-Problematisch wird es dann,
-wenn die Daten in unterschiedlichen Formaten abgespeichert sind. 
-Hilfreich sind dann Werkzeuge zur Migration,
-welche bei branchenüblichen CRM-Anwendungen leicht erhältlich sind. 
-Waren beim ursprünglichen Anbieter jedoch Anbieter-eigene Lösungen im Einsatz,
-steigert sich der Migrationsaufwand über das zu erwartende Pensum hinaus.
+Ergänzend dazu steht die Erklärung \glqq [Anbieterbindung] tritt auf, wenn eine Organisation, die ein Cloud-Computing-Produkt oder -Dienstleistung nutzt, nicht einfach zu einem konkurrierenden Anbieter wechseln kann.\grqq\ \parencite[S.~82]{Mezzio2023}
 
-Ein besonders schwerwiegender Vendor-Lock-In liegt vor, wenn Bausteine des Produkts gar nicht vom neuen Anbieter abgebildet werden können.
+Der IT-Sicherheitsexperte Conosco vergleicht Cloud-Computing-Anbieterbindung im gewerblichen Kontext für Unternehmen mit der Bindung, 
+die Endkonsumenten im privaten Kontext bei Technologie-Unternehmen wie Apple, 
+die \glqq Anwendungen, Alleinstellungsmerkmale (Features) und Geräte, 
+die nur mit anderen Apple Produkten kompatibel sind, 
+auf den Markt bringen\grqq .
+Gleichermaßen \glqq fällt es schwer Anwendungen von einem Cloud-Computing-Anbieter zu übertragen, wenn das notwendig wird.\grqq \parencite[Frei aus dem Englischen übersetzt, Abs.~5]{Conosco2020}.
+
+\paragraph{Folgerungen aus den Definitionen}
+Vendor-Lock-In (Anbieterbindung) hat drei wesentliche Komponenten.
+\begin{itemize}
+\item[-] Technische Ursachen
+\item[-] Organisatorische Verstärkung
+\item[-] Finanzielle Verstärkung
+\end{itemize}
+Für den Rahmen dieser Arbeit wird argumentiert, dass die Anbieterbindung ihre Wurzeln im Fehlen von technischer Interoperabilität hat. 
+Die fehlende Kompatibilität wird durch organisatorische Probleme wie beispielsweise SLAs, 
+die nicht mit passender Exit-Strategie verhandelt wurden, verstärkt. Gleichermaßen verstärkt die Abwesenheit von finanziellem Spielraum für Migrationen, 
+wenn die notwendig werden, den Vendor-Lock-In.
+
+Es wird argumentiert, dass die Lösung oder das Umgehen von Anbieterbindungen bei den technischen Ursachen beginnt und eine die Minimierung technischer Abhängigkeiten das Fundament für eine minimale Anbieterbindung ist.
 
 \paragraph{Technische Ursache für Anbieterbindung}
 Die Abbildung \ref{fig:technUr_Anbieterbindung} skizziert, wie das Paradigma Cloud-Computing und im Detail das SaaS-Service-Modell Anbieterbindung hervorbringt.
@@ -428,17 +452,7 @@ In der Abbildung befinden sich die vier Kernelemente Kunde (1), Anbieter (2), Re
 \end{figure}
 
 \paragraph{Anfällige Cloud-Produkte}
-In niedrigeren Liefermodellen wie Platform as a Service,
-wo die Anwendungen und Daten in der Hand des Kunden liegen, ist Anbieterbindung generell kein Problem.
-Dadurch,
-dass die Anwendungen bei allen Anbietern gleichermaßen durch den Kunden gewählt und betrieben werden,
-können diese Anwendungen zum neuen Anbieter einfach migriert werden.
-
-Dies ist ebenfalls aufwendig, vor allem wenn die Umgebung beim neuen Anbieter anders ist. Jedoch ist eine Migration pauschal immer möglich.
-
-Die Kunden habe dazu das technische Fachwissen im Hause,
-um die Anwendungen entsprechen zu modifzieren oder umzukonfigurieren,
-damit diese in der neuen Umgebung funktionieren.
+Da 
 
 %\paragraph{Einordnung der Kritikalität des Problems}
 %TODO optional
