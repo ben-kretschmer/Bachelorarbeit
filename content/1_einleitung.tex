@@ -174,9 +174,10 @@ richten sich die Kosten für den Kunden prinzipiell nach der Anzahl der genutzen
 \begin{tabular}{l l}
 Bezeichnung & Prinzip \\
 \glq as a Service\grq & Produkt mit Abonnement \\
-\glq on Demand \grq & Produktkatalog mit Abonnement \\
-\glq Pay per Use \grq & Festgelegter Preis / Einheit \\
+\glq on Demand\grq & Produktkatalog mit Abonnement \\
+\glq Pay per Use\grq & Festgelegter Preis / Einheit \\
 \end{tabular}
+\\
 \parencite[Kap.~1.2]{Hennrich2023}
 
 \paragraph{Funktionsweise und gängige Architekturen}
@@ -382,7 +383,7 @@ dass die Dienstleistungen und die Software der Cloud-Computing-Anbieter keine ge
 In diesem Fall kann durch zusätzliche Anpassungen an der alten Anwendung, 
 die Ablöse durch einen Dienst des CC-Anbieters oder die Neuentwicklung der alten Anwendung in kompatibler Art und Weise die Probleme lösen.
 Inkompatible bestehende Anwendungen sorgen jedenfalls jedoch durch notwendige Anpassungen für zusätzliche Aufwände bei der Migration.
-Der meist starre Leistungskatalog der Anbieter, der die ununterbrochene Weiternutzung von alten Anwendungen durch individuelle Untersützung durch den Anbieter nicht vorsieht, wird auch in der Literatur angesprochen (vergleiche \parencite[S.~40f]{Hennrich2023})
+Der meist starre Leistungskatalog der Anbieter, der die ununterbrochene Weiternutzung von alten Anwendungen durch individuelle Untersützung durch den Anbieter nicht vorsieht, wird auch in der Literatur angesprochen. (vergleiche \parencite[S.~40f]{Hennrich2023})
 
 Problematisch ist im Kontext auch der Verlust von Fachwissen, wobei anzumerken ist, dass die Unternehmen dadurch auch Personalkosten einsparen können.
 Im Zusammenhang mit dem Vorteil \glq Kosteneinsparung\grq\ lässt sich argumentieren, 
@@ -440,9 +441,16 @@ Es wird argumentiert, dass die Lösung oder das Umgehen von Anbieterbindungen be
 
 \paragraph{Technische Ursache für Anbieterbindung}
 Die Abbildung \ref{fig:technUr_Anbieterbindung} skizziert, wie das Paradigma Cloud-Computing und im Detail das SaaS-Service-Modell Anbieterbindung hervorbringt.
-Es werden Abhängigkeiten in der CC-Umgebung schematisch dargestellt,um zu visualisieren welche Verbindungen bei einem Anbieterwechsel neu geknüpft werden müssten.
+Es werden Abhängigkeiten in der CC-Umgebung schematisch dargestellt,um zu visualisieren, welche Verbindungen bei einem Anbieterwechsel neu geknüpft werden müssten.
 
 In der Abbildung befinden sich die vier Kernelemente Kunde (1), Anbieter (2), Rechenressourcen (3) und Daten (ohne Nummerierung). Im Zentrum steht dabei der Anbieter, vertreten durch seine Programme.
+
+Die eigene Darstellung soll zudem verdeutlichen, an welchen Stellen Kompatibilität zwischen Anbietern aus Sicht des Kunden wichtig wird. Die entsprechenden Punkte sind rot hinterlegt.
+Es wird argumentiert, dass generell die Schnittstellen zwischen dem Anbieter und dem Personal (GUI) oder den Programmen (API) des Unternehmens kritische Punkte sind. 
+An diesen Stellen ist eine Kompatibilität zum neuen Anbieter notwendig, 
+damit ein Wechsel möglichst geringe Aufwände mit sich bringt. 
+Zudem Relevant sind die vom Anbieter produzierten Daten,  beispielsweise von unternehmensbezogenen Auswertungen, 
+die nach einem Wechsel mit den Anwendungen des neuen Anbieter funktionieren müssen.
 
 \begin{figure}
 \begin{center}
@@ -451,30 +459,6 @@ In der Abbildung befinden sich die vier Kernelemente Kunde (1), Anbieter (2), Re
 \label{fig:technUr_Anbieterbindung}\caption{Eigene Skizze der Beziehung zwischen Cloud-Computing-Kunde, CC-Anbieter und den Rechenressourcen}
 \end{figure}
 
-\paragraph{Anfällige Cloud-Produkte}
-Da 
-
-%\paragraph{Einordnung der Kritikalität des Problems}
-%TODO optional
-%\paragraph{Erkennung von betroffenen Cloud-Produkten}
-
-\paragraph{Werkzeuge zur Messung von Anbieterbindung}
-Zudem lassen sich Vorteile wie der Kostenpunkt leicht quantifizieren und damit vergleichen.
-Auch die Skalierbarkeit lässt sich durch die Zeit messen, die es benötigt zusätzliche Hardware einzubinden, wenn beispielsweise hoher Verkehr es fordert.
-Ferner lassen sich auch andere Eigenschaften der verschieden Cloud-Produkte wie die Anzahl der Backups oder die Anzahl von Datenlecks gegenüberstellen.
-
-
-%\subsection{Beenden von Anbieterbeziehungen}
-
-%\subsection{Überblick über führende Cloud-Computing-Anbieter}
-\label{lead-cc-A}
-%\subsection{Überblick über Cloud-Produkte}
-%\label{produkt-übersicht-saas}
-%TODO wichtig
-%\paragraph{Kernelemente der Produktkataloge von Anbietern}
-
-%\paragraph{Navigieren von Produktkatalogen}
-
 \section{Motiviation}
 
 Die Motivation unterstreicht im Kontext der Arbeit die Notwendigkeit zur Erfüllung der Ziele und umreißt kurz die Gründe für die Themenwahl.
@@ -482,7 +466,12 @@ Die Motivation unterstreicht im Kontext der Arbeit die Notwendigkeit zur Erfüll
 \subsection{Besonderheiten des Themas}
 
 \paragraph{Unterschiede zu anderen Herausforderungen der Cloud}
-Da darüberhinaus die Anbieterbindung nicht während der Lebenszeit einer Anbieterbeziehung sondern am Ende ins Gewicht fällt, ist die Auseinandersetztung nicht so allgegenwärtig wie andere Cloud-Themen.
+Im Vergleich zu Kostenanalyse oder Gegenüberstellung der Besonderheiten von unterschiedlichen Cloud-Computing-Anbietern, 
+sind die technischen Ursachen der Anbieterbindung weniger greifbar und schlechter quantifizierbar.
+Damit das Thema für Kunden von CC-Dienstleistern greifbar ist, 
+müsste bei jedem Produkt die Kompatibiltät zu alternativen Produkten auf dem Markt aufgelistet werden,
+wie beispielsweise auch die Preislisten in branchenüblichen Mengenangaben aufgeführt werden. So wären direkte unkomplizierte Vergleiche möglich, die Auflistung existiert allerdings nicht (vergleiche Abschnitt \ref{produkt-übersicht-saas}).
+Aufgrunddessen ist die Entwicklung einer Analysemethode besonders interessant.
 
 \subsection{Bedarf einer Analyse von Anbieterbindung}
 
@@ -524,22 +513,48 @@ Zur Verdeutlichung wird also beispielsweise nicht untersucht, ob die These, dass
 %\subsection{Fokus auf öffentliche Cloud}
 %TODO
 \subsection{Eingrenzung der zu analysierenden Anbieter}
+\label{lead-cc-A}
+\paragraph{Herangehensweise}
+Über verschiedene Kennzahlen wie dem Marktanteil lassen sich die führenden Cloud-Computing-Anbieter ermitteln. Aus der Auswertung von Canalys im Rahmen des Statista Berichtes über Cloud-Computing ergibt sich, dass rund 65\% des Marktes im Besitz von nur drei Anbietern sind.
+\begin{quote}
+Microsoft Azure erzielte im Cloud-Markt für Infrastruktur-Services im 2. Quartal 2025 einen Umsatzanteil von rund 22 Prozent. 
+Marktführer ist Amazon Web Services (AWS) mit einem Marktanteil von über 30 Prozent. 
+Der weltweite Umsatz im 2. Quartal 2025 betrug laut Quelle 95,3 Milliarden US-Dollar. 
+Im Gesamtjahr 2024 belief sich der weltweite Umsatz mit Cloud Computing auf rund 596 Milliarden US-Dollar – Tendenz steigend. 
+Von der wachsenden Nachfrage profitieren insbesondere die führenden Anbieter Microsoft, Amazon und Google.
+\parencite[S.~7]{StatistaReport2025}
+\end{quote}
+Die übrigen Anteile des Marktes beinhalten ebenfalls große internationale Unternehmen.
+Darunter zählen IBM und Alibaba mit jeweils 4\% der Anteile des PaaS-Marktes oder Oracle mit 5\% des PaaS-Marktes im Jahr 2023. \parencite[S.~22]{StatistaReport2025}
 
-\paragraph{Kennzahlen für Cloud-Anbieter}
+Diese Arbeit fokussiert sich schwerpunktmäßig auf die größten Anbieter, wobei auch kleinere Anbieter erwähnt werden. Dabei wird auf Basis der Analyseergebnisse diskutiert, welche Bedeutung die Position auf dem Markt für die Anbieterbindung hat.
 
-\paragraph{Einblick in die Marktanteile in Deutschland}
-Bei der Auswahl der Anbieter wurden sowohl solche berücksichtigt, die die kubus IT bereits verwendete, als auch solche die vermeintlich interessante Ergebnisse liefern sollten.
-Aktuell sind folgende Cloud-Computing-Anbieter bereits in Benutzung.
-\begin{itemize}
-\item[-] Arvato
-\item[-] Microsoft Azure
-\end{itemize}
-Darüberhinaus werden folgende Anbieter aufgrund ihrer Relevanz auf dem internationalen Markt, ihrer besonderen Größe oder ihrer Relevanz für deutsche Firmen berücksichtigt.
-\begin{itemize}
-\item[-] Amazon Warehoue Services (Vereinigte Staaten)
-\item[-] Google Cloud Plattform (Vereinigte Staaten)
-\item[-] Alibaba Cloud (China)
-\item[-] IONOS Cloud (Deutschland)
-\end{itemize}
+\paragraph{Kernelemente der Produktkataloge von Anbietern}
+Die erarbeiteten Kernelemente basieren auf den Produktkatalogen der Anbieter Microsoft, Google und Alibaba. (vergleiche \parencite{AzureKat2026,GoogleKat2026,AlibabaKat2026})
 
+\subparagraph{versteckte Duplikate}
+Die Anbieter nutzen eine Vielzahl von Kategorien und Produkten. Teils wiederholen sich Produkte in verschiedenen Kategorien.
+Dies gilt beispielsweise für das Produkt \glq Azure DevOps\grq\ , welches in der Kategorie \glq Entwicklertools\grq\ und \glq DevOps\grq\ vorhanden ist oder dem Produkt \glq Azure Data Lake Storage\grq\ , 
+welches sowohl in der Kategorie \glq Speicher\grq\ ,als auch in der Kategorie \glq Analysen\grq\ zu finden ist. \parencite{AzureKat2026}
+Für die generelle nutzerfreundliche Navigation und auch im Kontext dieser Arbeit ist dieser Umstand ungünstig.
 
+\subparagraph{unklare Beziehungen}
+Unter den Produkten der Anbieter befinden sich im Katalog einerseits ganze Plattformen und andererseits Produktbausteine.
+Exemplarisch dafür steht die Kategorie \glq Sicherheit\grq\ , die bei allen Anbietern eine große Menge von Sicherheits-Produkt beinhaltet. Aus fachlicher Sicht, lässt sich jedoch annehmen, dass eine Plattform zur Verteidigung der Systeme gegen Bedrohungen mit entsprechenden Werkzeugen zur Verwaltung von diveren Sicherheitsmaßnahmen (wie (Web-Application-) Firewalls, IDS und Proxies) ausgestattet ist.
+Gegen diese Annahme werden solche Produkte jedoch seperat aufgeführt.\parencite{GoogleKat2026}
+
+\paragraph{aufwendige Navigation}
+Die Produktkataloge lassen sich wegen dem Umfang, den Duplikaten und der generellen Listenstruktur aufwendig navigieren. 
+Beim gezielten Suchen stört der komplexe Aufbau der Internetseiten mit unübersichtlichen Bannern, Auswahllisten.
+Illustriert wird dies durch die Produktseiten von Google Cloud, die zwei linksbündige und zwei rechtsbündige Kopfzeilen und eine Seitenleiste besitzen. 
+Der eigentliche Inhalt, die Produktinformationen sind in verschiedene Boxen und Seitenabschnitte verstreut.
+\parencite[Produkt:~Security-Command-Center]{GoogleKat2026}
+Redundante Informationen wie übergreifende und produktunabhängige Daten blähen die Unterseiten auf. 
+Dies zeigt sich besonders bei dem Aufbau der Produktseiten von Microsoft Azure. 
+Diese sind unter Anderem gefüllt mit wenigen generischen Fotografien, die sich über den gesamten Katalog wiederholen.
+\parencite[Produkt:~API-Management]{AmazonKat2026}
+
+\paragraph{Relevanz für die Untersuchung}
+Der kurze Überblick über die Produktkatalog ist ein Exkurs, der Herausforderungen bei der Umsetzung der Arbeit einleiten soll.
+Außerdem ist es Gegenstand der Arbeit auf Basis von Produktkatalogen Rückschlüsse zu ziehen. 
+Daher ist die Beschäftigung mit der Informationswiedergabe im Rahmen dieser Arbeit interessant.
