@@ -339,11 +339,43 @@ Die Herausvorderungen und Nachteile der Cloud werden im späteren Kapitel 3.6 \g
 \item[-] (Verlust von) technischem Fachwissen
 \end{itemize}
 Die Auf\-zählung wurde aus dem Eng\-lischen über\-setzt und es wurde Kon\-text er\-gänzt.
-\parencite{Mezzio2023}
+\parencite[Kap.~3.6, S.~26]{Mezzio2023}
 Die konkreten Punkte stammen aus einem Blog-Artikel der IT-Sicherheits\-firma Conosco.
 \parencite{Conosco2020}
-Der Fokus dieser Arbeit ist die Anbieterbindung.
-Eine tatsächliche Anbieterbindung ist nur auf der Ebene Software as a Service möglich.
+
+\subparagraph{Sicherheit}
+Laut einem auf der Seite von Conosco aufgeführten Studie gaben drei Viertel der befragten Unternehmen 2020 an, 
+dass sie starke oder enorme Bedenken bezülich der Sicherheit von Public-Cloud-Computing haben.
+Strenge Gesetzesauflagen zum Thema Datenschutz und Sicherheit (vergleiche Abschnitt \ref{legal}) steigern diese Verunsicherung,
+wird in der Veröffentlichung der IT-Sicherheitsfirma weiter erklärt. \parencite[Abs.~1]{Conosco2020}
+
+Zusätzliche Hintergründe liefert der Report aus dem Jahr 2025 von Statista nach dem 72\% angaben, dass \glqq Vertrauen in Sicherheit und Compliance des Cloud-Providers\grqq\ zentral bei der Auswahl des Anbieters sind. \parencite[S.~35]{StatistaReport2025}
+
+Dabei hervorzuheben ist jedoch, dass es einen Unterschied zwischen dem Aufkommen von Sicherheitsbedenken in der Auswertung bei Conosco und dem Auswahlkriterium, das in dem Statista Report gefordert wird.
+
+Es lässt sich argumentieren, dass es eine Gruppe von Unternehmen gibt, die tatsächliche Sicherheitsbedenken haben und eine andere Gruppe, die ein gewissen Level von Sicherheitszertifizierung fordern. Die beiden Gruppen sind nicht zwangsläufig deckungsgleich.
+
+Die Anbieter versuchen Sicherheit auszustrahlen und werben mit dedizierten Sicherheitsmitarbeitenden und Zertifizierungen.
+Deutlich wird dies beispielsweise am Werbebanner, 
+das bei vielen Produktseiten eingebaut ist (vergleiche \parencite[Produkt:~Azure~Backup, Abs.~Eingebettete Sicherheit und Compliance]{AzureKat2026}). 
+An welche Zielgruppe diese Werbung gerichtet ist, 
+ist fragwürdig, 
+da aus technisch-fachlicher Sicht konkrete kryptographische Algorithmen, Statistiken über Angriffsabwehr und konkrete Zertifizierungen aussagekräftiger als kontextfreie Zahlen wie die absolute Anzahl der Zertifizerungen. 
+Eine tiefere Beschäftigung mit \glq Security Assurance \grq oder Sicherheit der Cloud-Computing-Dienstleister ist nicht Gegenstand dieser Arbeit. (vergleiche \parencite{SecAssurance2026})
+
+\subparagraph{Kostenregulierung}
+Neben der Sicherheit ist auch der gewisse Kontrollverlust über die Kosten eine Herausforderung beim Übergang zu Cloud-Computing-Dienstleistern. 
+Die integrierte automatische Skalierung von Ressourcen am aktuellen Bedarf muss insofern einschränkt werden, 
+dass bei zufällig oder absichtlich herbeigeführten Lastspitzen keine unerwartet hohen Kosten entstehen.
+Es lässt sich anschaulich argumentieren, 
+dass ein Onlineshop ein Interesse an der automatischen Skalierung der Ressourcen hat, 
+wenn mehr Käufer als üblich die Seite besuchen (beispielsweise im der Weihnachtszeit) \parencite[S.~17]{Hennrich2023}.
+Die Konkretisierung der technische Umsetzung der Skalierung und die konkret notwendigen Ressourcen sind hierfür nicht relevant. 
+Stattdessen ist hervorzuheben, 
+dass die Ressourcen mit einem gewissen Preis pro Einheit versehen sind (vergleiche Abschnitt \ref{abrechnungsmodelle}).
+Im Gegensatz hierzu ist es denkbar, dass es illegitime Situationen wie DDoS-Angriffe gibt, in denen die Ressourcen nicht mit den absichtlichen und bösartigen Lastspitzen provoziert werden, um wirtschaftlichen Schaden durch Aussetzen der Verfügbarkeit für legitime Zugriffe oder unkontrollierte Skalierung der Ressorucen herbeizuführen.
+
+\subparagraph{Integration von Alt-Anwendungen}
 
 \subsection{Detailbetrachtung der Anbieterbindung}
 \label{anbieterbindung}
