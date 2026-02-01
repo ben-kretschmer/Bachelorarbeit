@@ -43,10 +43,17 @@ Die erzielten Ergebnisse sind sich im Verhältnis zueinander sehr ähnlich, vor 
 \subsection{Bedeutung der Ergebnisse}
 \paragraph{Niedrigste Anbieterbindung}
 Es lässt sich den Ergebnissen entnehmen, dass, auf Basis der angewendeten Methodik, \glq Microsoft's Azure\grq\ die niedrigste Anbieterbindung erzeugt.
-Das Ergbnis des Anbieters liegt jedoch trotzdem über 50\%.
-Diese Zahl sagt aus, dass, aus technischer Sicht, etwa halb so viel Aufwand betrieben werden muss, 
-um den Anbieter zu wechseln, als bei einer Migration, 
-wo für jedes Produkt eine Alternative gefunden werden muss.
+
+Die konkrete Bedeutung der Bewertung muss näher ausgearbeitet werden.
+Hierfür wird ein fiktiver Worst-Case-Anbieter, der die Bewertung 100\% bekommt und ein fiktiver Best-Case-Anbieter, der die Bewertung 0\% erhält interpoliert.
+
+Für konkrete Kosten- oder Zeitprognosen könnten die beiden Extremfälle ermittelt werden.
+Im Anschluss ließen sich daraus konkrete Werte für die gefunden Ergebnisse errechnen.
+Die Umrechnung ist nicht Gegenstand der Arbeit.
+
+Unter der Annahme, dass eine lineare Beziehung zwischen dem Worst- und dem Best-Case besteht und sich die Zwischenwerte durch lineare Interpolation errechnen lassen, sind Aussagen über das Kosten- und Zeitverhältnis zwischen den Anbietern möglich.
+Mit dieser Argumentation lässt sich prognostizieren, dass die Migrationskosten von Microsoft zu einem anderen Anbieter rund 15\% vorteilhafter sind als die Kosten, die bei IBM anfallen würden.
+Dies steht unter der Annahme, dass das Modell die Realität korrekt abbildet.
 
 \subsection{Aussagekraft des Modells}
 Die Ergebnisse fundieren auf der Annahme, dass eine Migration erleichtert wird, 
@@ -55,8 +62,35 @@ Des Weiteren wird angenommen,
 dass eine Dokumentation der Architektur und der Schnittstellen einer Anwendung nicht nur die Entwicklung und Arbeit während der Verwendung eines Cloud-Computing-Anbieters erleichtern,
 sondern auch bei einer Migration.
 
+In einer Untersuchung zur \glq Vorhersage von Cloud Vendor Lock-In \grq aus dem Jahr 2024 wird die Thematik in feinere Unterpunkte eingeteilt, als im Rahmen dieser Arbeit. In der Untersuchung wir Vendor-Lock-In als Problem beschrieben, dass durch sieben Komponenten bedingt wird:
+\begin{itemize}
+\item[-] Technischer Lock-In (Datenbank-Lösung, APIs, Service-Funktionen)
+\item[-] Datenbezogener Lock-In (Datenformate und Datenmigration)
+\item[-] Service Lock-In (Anbietereigene Dienste)
+\item[-] Zertifikats Lock-In (Abhängig von Zertifizierungen)
+\item[-] Vertraglicher Lock-In (Kündigungsgebühren oder Migrationsgebühren)
+\item[-] Wirtschaftlicher Lock-In (Versenkte Kosten in spezielles Training und Geschäftsprozesse)
+\item[-] Netzwerkbezogener Lock-In (Struktur des Netwerks ist auf einen Anbieter feinjustiert)
+\end{itemize}
+\parencite[Kap.~2]{math12030387}
+
+In der Arbeit werden neben der Abhängigkeit (Anbieterbindung) auch Kosten verglichen, was nicht Gegenstand dieser Arbeit war.
+Die Abhängikeit jedoch wird in dem Ansatz der Untersuchung mit Formel \ref{different-approach} ermittelt, welche Ähnlichkeiten zu der Formel dieser Arbeit. (vergleiche \ref{Finale-Formel})
+\begin{eqnarray}
+Dependency Score = \displaystyle\sum_{i=1} ^{n} (w_{i}\cdot f_{i})
+\label{different-approach}
+\end{eqnarray}
+Dabei ist $n$ die Zahl der Faktoren (vergleiche Kriterienkatalog), die berücksichtigt werden. Außerdem ist $w_{i}$ das normalisierte Gewicht des Faktoren (Gewicht eines Kriterium) und $f_{i}$ ist eine normalisierte Bewertung eines Faktors.
+
+Es lässt sich argumentieren, dass die Paralellen zu diesem alternativen Ansatz die grundlegende Methodik dieser Arbeit bestätigen.
+
 \subsection{Diskussion der Methodik}
 Bei dieser Herangehensweise werden Punkte wie die finanziellen Möglichkeiten des Unternehmens zum Zeitpunkt der Migration und die geschaffenene Rahmenbedingungen durch organisatorische Punkte wie SLAs ignoriert.
-Dies wurde getan, weil das Thema Anbieterbindung vom Zeitpunkt der Anbieterwahl betrachtet werden sollte. 
+
+Jene Punkte werden teilweise in anderen Arbeiten aufgenommen. (vergleiche \parencite{math12030387})
+
+Nach der Argumentation der Arbeit wurde dies getan, weil das Thema Anbieterbindung vom Zeitpunkt der Anbieterwahl betrachtet werden sollte. 
 Die anderen Komponenten der Anbieterbindung werden bei der Gründung einer Beziehung zwischen Cloud-Computing-Anbieter und Kunde relevant und, 
 wenn der Wunsch zum Wechsel eines Anbieter feststeht.
+
+Bei der Formel zur Berechnung der Bewertungen wurden außerdem die Einzelbewertungen nicht gleichermaßen normiert wie die Gewichte, was die Errechnung und Handhabung der Ergebnisse vereinfacht hätte. 

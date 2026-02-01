@@ -196,7 +196,7 @@ G_{gewichtet} = \displaystyle\sum_{k \in K} ^{} w_{k}\cdot x_{k}\cdot 100
 
 \paragraph{Erweiterung der Kriterienkomponenten}
 \label{erw-kriterien-komponenten}
-Über die reine Existenz eines Produktes hinaus, kann auf die Beschaffenheit des Produktes einberechnet werden, was jedoch nicht bei allen Kriterien praktikabel ist (vergleiche Abschnitt \ref{kat-direkt-lockin}). Die Erweiterung der Kriterienkomponenten, sind also nicht universell für beliebige Kriterien konzipiert, sondern nur für solche, die sich auf ein konkretes Produkt beziehen (vergleiche Abschnitt \ref{kat-indirekt-lockin}).
+Über die reine Existenz eines Produktes hinaus, kann auf die Beschaffenheit des Produktes einberechnet werden-
 
 Wenn das Modell nur zählt wie viele Kriterien erfüllt werden, ist die Bewertung mehr ein Indikator für die Vielfältigkeit und die Diversität des Produktkatalogs des Anbieters.
 Es ist wichtig, dass ein Anbieter alle erforderlichen Produkte in der SaaS-Cloud anbietet, jedoch sind weitere Faktoren entscheidend:
@@ -230,9 +230,14 @@ g'_{k} = d_{k} + t_{k}
 \label{s-strich-von-k}
 \end{eqnarray}
 
-Wenn kein Produkt zum Kriterium existiert, soll das Ergebis immer null Punkte ergeben, daher gilt insgesamt:
+Wenn kein Produkt zum Kriterium existiert, soll das Ergebis immer null Punkte ergeben, daher gilt für ein Kriterium:
 \begin{eqnarray}
-g_{k} = w_{k}*x_{k}*(g'_{k})
+g_{k} = w_{k}\cdot x_{k}\cdot(g'_{k})
+\end{eqnarray}
+Die gesamte Formel zur Errechnung der Bewertung lautet folglich:
+\begin{eqnarray}
+G_{gewichtet} = \displaystyle\sum_{k \in K} ^{} (w_{k}\cdot x_{k}\cdot(g'_{k}))\cdot 100
+\label{Finale-Formel}
 \end{eqnarray}
 
 \paragraph{Effekt auf die minimalem Risiko}
