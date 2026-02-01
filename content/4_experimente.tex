@@ -2,36 +2,61 @@
 In diesem Kapitel der Arbeit wird der Lösungsansatz gestestet, indem Cloud-Computing-Anbieter getestet und die Ergebnisse anschließend eingeordnet werden.
 \label{krit-kat-experimente}
 \section{Modell-Prüfung}
-Die Ergebnisse der Prüfung mit dem Formular, das in Microsoft-Excel erstellt wurde, sind im Anhang der Arbeit aufgeführt.
+Die detailierten Ergebnisse der Prüfung mit dem Formular, das in Microsoft-Excel erstellt wurde, sind im Anhang der Arbeit aufgeführt.
 \subsection{Einheitliche Gewichtung}
-Im Kontext dieser Arbeit wird zunächst eine gleiche Gewichtung aller Kriterien im Katalog konfiguriert.
+Im Kontext dieser Arbeit wird eine gleiche Gewichtung aller Kriterien im Katalog konfiguriert.
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.5\linewidth]{figures/Gegen-der-VLI-Bewertungen}
+\includegraphics[width=0.75\linewidth]{figures/Gegen-der-VLI-Bewertungen}
 \caption{Resultate im Hinblick auf die Gesamtbewertung}
+\label{vendor-lock-in-score}
 \end{center}
 \end{figure}
+\paragraph{Beschreibung der Bewertungen}
+Die Abbildung \ref{vendor-lock-in-score} zeigt fünf Säulen in einem Säulendiagramm mit der Überschrift \glq Gegenüberstellung der Vendor-Lock-In-Bewertungen\grq .
+An der x-Achse sind die untersuchten Anbieter aufgelistet,
+ wobei es sich bei Google Plattform, AWS und Azure um die führenden Anbieter im Cloud-Computing-Bereich handelt.
+Die übrigen Anbieter sind IBM und Alibaba, die deutlich kleinere, aber dennoch signifikante Anteile des restlichen Marktes besitzen. 
+(vergleiche \ref{lead-cc-A})
+An die y-Achse markiert den erreichten Vendor-Lock-In-Score, wobei in dieser Form ein niedriger Score (Bewertung) für ein geringeres Risiko zur Anbieterbindung steht.
+Die Anbieter bewegen sich alle im Bereich zwischen 60\% und 80\%, 
+wobei die größte Differenz zwischen \glq IBM's Cloud\grq\ und \glq Microsoft's Azure\grq herrscht. 
+In diesem Vergleich ist die Bewertung von Microsoft 15\% besser als die Bewertung von IBM.
+\paragraph{Beschreibung weiterer Ergebnisse}
+Die Abbildung \ref{oss-score} zeigt, wie auch die Gegenüberstellung der Gesamtbewertungen, fünf Säulen und die fünf verglichenenen Anbieter.
+In dieser Abbildung ist jedoch auf der y-Achse der Anteil der Anwendungen aufgezeichnet, 
+die auf der Basis von Open-Source-Technologie gebaut wurden oder selbst als Open-Source-Anwendung vom Cloud-Computing-Anbieter angeboten werden.
+Die Anbieter liegen im Bereich zwischen 4\% und 15\%, wobei \glq Google’s Cloud\grq\ 11\% weniger Open-Source-Anwendungen aufweißt als \grq Microsoft's Azure\grq .
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.5\linewidth]{figures/Gegen-der-OSS-Scores}
-
+\includegraphics[width=0.75\linewidth]{figures/Gegen-der-OSS-Scores}
+\label{oss-score}
 \caption{Ergänzende Ergebnisse im Hinblick auf Open-Source-Nutzung bei den Produkten}
 \end{center}
 \end{figure}
 
-
-
 \section{Interpretation}
+\paragraph{Fokus auf die Gesamtbewertung}
+Die erzielten Ergebnisse sind sich im Verhältnis zueinander sehr ähnlich, vor allem Google, Alibaba und AWS haben nahezu das gleiche Ergebnis erzielt.
 
 \subsection{Bedeutung der Ergebnisse}
-[…]
+\paragraph{Niedrigste Anbieterbindung}
+Es lässt sich den Ergebnissen entnehmen, dass, auf Basis der angewendeten Methodik, \glq Microsoft's Azure\grq\ die niedrigste Anbieterbindung erzeugt.
+Das Ergbnis des Anbieters liegt jedoch trotzdem über 50\%.
+Diese Zahl sagt aus, dass, aus technischer Sicht, etwa halb so viel Aufwand betrieben werden muss, 
+um den Anbieter zu wechseln, als bei einer Migration, 
+wo für jedes Produkt eine Alternative gefunden werden muss.
 
 \subsection{Aussagekraft des Modells}
-[…]
-
-\section{Diskussion der Ergebnisse}
-
-\subsection{Relevanz der Ergebnisse}
+Die Ergebnisse fundieren auf der Annahme, dass eine Migration erleichtert wird, 
+wenn das Migrationsziel und der -Ursprung die gleiche Technologie für die Anwendungen nutzen.
+Des Weiteren wird angenommen, 
+dass eine Dokumentation der Architektur und der Schnittstellen einer Anwendung nicht nur die Entwicklung und Arbeit während der Verwendung eines Cloud-Computing-Anbieters erleichtern,
+sondern auch bei einer Migration.
 
 \subsection{Diskussion der Methodik}
+Bei dieser Herangehensweise werden Punkte wie die finanziellen Möglichkeiten des Unternehmens zum Zeitpunkt der Migration und die geschaffenene Rahmenbedingungen durch organisatorische Punkte wie SLAs ignoriert.
+Dies wurde getan, weil das Thema Anbieterbindung vom Zeitpunkt der Anbieterwahl betrachtet werden sollte. 
+Die anderen Komponenten der Anbieterbindung werden bei der Gründung einer Beziehung zwischen Cloud-Computing-Anbieter und Kunde relevant und, 
+wenn der Wunsch zum Wechsel eines Anbieter feststeht.

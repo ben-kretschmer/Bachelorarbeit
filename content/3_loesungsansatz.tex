@@ -6,7 +6,7 @@ Das Bewertungsmodell stellt im Hinblick auf die Zielsetzung dieser Arbeit die pr
 \subsection{Struktur des Kriterienkatalogs}
 \paragraph{Überblick über die Struktur}
 Die einzelnen Kriterien werden in Bewertungskategorien gegliedert.
-Zudem hat der gesamte Katalog zwei Hauptbestandteile: Kategorien mit indirektem und Kategorien mit direktem Einfluss auf die Anbieterbindung.
+Zudem hat der gesamte Katalog zwei Hauptbestandteile: Kategorien mit Kriterien (\gls{SaaS}-Produkte) mit indirektem und Kategorien mit direktem Einfluss auf die Anbieterbindung.
 Aus diesem Ansatz ergibt sich die Hierachie aus Abbildung \ref{bewertungs-kat-tree}
 
 \begin{figure}[h]
@@ -41,8 +41,8 @@ Für die Anwendung ist der Katalog zudem so konzipiert, dass die Kriterien der T
 Die im ersten Teil aufgelisteten Kriterien mit indirektem Einfluss lassen sich vom Anwender des Katalogs anhand der Informationen des Anbieter-Seite ausfüllen.
 Das liegt daran, dass der Inhalt dieser Kriterien auch auf Basis von aktuellen Produktkatalogen erarbeitet wurde.
 
-Wie im Abschnitt \ref{produkt-übersicht-saas} aufglistet, haben sich 
-gängige Produkte etabliert und führende Anbieter bieten üblicherweise alle diese Produkte an.
+%Wie im Abschnitt \ref{produkt-übersicht-saas} aufglistet, 
+Es haben sich gängige Produkte etabliert und führende Anbieter bieten üblicherweise alle diese Produkte an.
 Generell ist die Frage mit einem Blick auf die Produktkataloge der führenden und größten Anbieter eher wie genau die Kriterien umgesetzt wurden und nicht,
 ob die Kriterien überfüllt wurden.
 Der definierte Lösungsansatz bevorzugt stark Anbieter, die weniger Produkte mit besseren Migrationsvorraussetzungen anbieten. Eindeutig wird das, durch die Rechnung \ref{Minimal100}.
@@ -63,7 +63,6 @@ Wie in Abschnitt \ref{entw-bewertungs-kat} beschrieben wurde folgende SaaS-Cloud
 \item[-] Alibaba Cloud
 \item[-] Amazon Azure
 \item[-] Google Cloud Plattform
-\item[-] IONOS Cloud
 \end{itemize}
 
 \paragraph{Handhabung der Bepunktung}
@@ -83,10 +82,10 @@ Der benötigte Umfang der Menge der Anbieter, die als Quelle für den Kriterienk
 Für diese Arbeit wurde mit vier Anbietern als Grundlage entwickelt, um die Zeit für die Recherche auf den Seiten der Anbieter im Vergleich zu allen anderen Recherchen und der tatsächlichen Ausarbeitung der Lösung zu reduzieren. Gleichermaßen wäre die Verwendung einer größeren Anbietermenge möglich gewesen.
  
 \subparagraph{Gründe gegen eine größere Basismenge}
-In Relation zu den im Kapitel \ref{lead-cc-A} aufgeführten Cloud-Anbietern, entspricht die Stichprobengröße von 4 rund 20\% der Gesamtzahl der größten Anbieter.
+In Relation zu den im Kapitel \ref{lead-cc-A} aufgeführten Cloud-Anbietern, entspricht die Stichprobengröße von 4 rund 15\% der Gesamtzahl der größten Anbieter.
 
 \begin{eqnarray}
-a_{Seed} = \{Alibaba, Amazon, Google, Ionos\}, |a| = 4
+a_{Seed} = \{Alibaba, Amazon, Google\}, |a| = 3
 \end{eqnarray}
 \begin{eqnarray}
 A_{Gesamtanbietermenge} = \{...\}, |A| = 20
@@ -98,7 +97,7 @@ a \subset A
 R_{Gesamtanbieterzahl} = \frac{|a|}{|A|}
 \end{eqnarray}
 \begin{eqnarray}
-R_{Gesamtanbieterzahl} = \frac{4}{20} = 0,2 = 20%
+R_{Gesamtanbieterzahl} = \frac{3}{20} = 0,15 = 15%
 \end{eqnarray}
 
 Es werden zusätzliche Anbieter der Gesamtanbietermenge (vergleiche \ref{lead-cc-A}) für die Experimente mit der erarbeiteten Lösung benötigt,
@@ -138,18 +137,9 @@ Darüberhinaus gibt es teilweise auch Produkte zum Auswerten von beispielsweise 
 Betrifft Produkte eines Anbieters, die zum Betrieb und zur Überwachung von virtuellen Desktops und allgemeiner Endgeräten wie beispielsweise auch Smartphones notwendig sind. 
 
 \subsection{Kriterien mit direktem Einfluss}
-\label{kat-direkt-lockin}
-\begin{itemize}
-\item[-] Gematik GmbH
-\item[-] Sozialgesetzbuch
-\item[-] ISO-Norm 27001 und 50001
-\item[-] C5-Standard
-\end{itemize}
 
 \subparagraph{Interoperabilität}
 In dieser Kategorie werden Kriterien gesammelt, die zur generellen Interoperabilität beitragen und sich keiner anderen Kategorie unterordnen lassen.
-Unter Interoperabilität versteht man...
-%TODO
 
 Das Konzept kann sowohl im Sinne der Zusammenarbeit zwischen mehreren aktiven Cloud-Anbietern innerhalb eines Unternehmen, der Zusammenarbeit von eigenen Rechenzentren und Cloud-Infrastruktur und auch im Sinne der Zusammenarbeit zwischen einem neuen und einem ehemaligen Anbieter verstanden werden.
 Diese Bereiche werden alle durch Kriterien dieser Kategorie abgedeckt.
