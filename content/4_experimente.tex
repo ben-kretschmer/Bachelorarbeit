@@ -1,8 +1,8 @@
 \chapter{Experimente}\label{ch:experimente}
-In diesem Kapitel der Arbeit wird der Lösungsansatz gestestet, indem Cloud-Computing-Anbieter getestet und die Ergebnisse anschließend eingeordnet werden.
+In diesem Kapitel der Arbeit wird der Lösungsansatz getestet, indem Cloud-Computing-Anbieter getestet und die Ergebnisse anschließend eingeordnet werden.
 \label{krit-kat-experimente}
 \section{Modell-Prüfung}
-Die detailierten Ergebnisse der Prüfung mit dem Formular, das in Microsoft-Excel erstellt wurde, sind im Anhang der Arbeit aufgeführt.
+Die detaillierten Ergebnisse der Prüfung mit dem Formular, das in Microsoft-Excel erstellt wurde, sind im Anhang der Arbeit aufgeführt.
 \subsection{Einheitliche Gewichtung}
 Im Kontext dieser Arbeit wird eine gleiche Gewichtung aller Kriterien im Katalog konfiguriert.
 \begin{figure}
@@ -23,10 +23,10 @@ Die Anbieter bewegen sich alle im Bereich zwischen 60\% und 80\%,
 wobei die größte Differenz zwischen \glq IBM's Cloud\grq\ und \glq Microsoft's Azure\grq herrscht. 
 In diesem Vergleich ist die Bewertung von Microsoft 15\% besser als die Bewertung von IBM.
 \paragraph{Beschreibung weiterer Ergebnisse}
-Die Abbildung \ref{oss-score} zeigt, wie auch die Gegenüberstellung der Gesamtbewertungen, fünf Säulen und die fünf verglichenenen Anbieter.
+Die Abbildung \ref{oss-score} zeigt, wie auch die Gegenüberstellung der Gesamtbewertungen, fünf Säulen und die fünf verglichenen Anbieter.
 In dieser Abbildung ist jedoch auf der y-Achse der Anteil der Anwendungen aufgezeichnet, 
 die auf der Basis von Open-Source-Technologie gebaut wurden oder selbst als Open-Source-Anwendung vom Cloud-Computing-Anbieter angeboten werden.
-Die Anbieter liegen im Bereich zwischen 4\% und 15\%, wobei \glq Google’s Cloud\grq\ 11\% weniger Open-Source-Anwendungen aufweißt als \grq Microsoft's Azure\grq .
+Die Anbieter liegen im Bereich zwischen 4\% und 15\%, wobei \glq Google’s Cloud\grq\ 11\% weniger Open-Source-Anwendungen aufweist als \grq Microsoft's Azure\grq .
 
 \begin{figure}
 \begin{center}
@@ -65,32 +65,37 @@ sondern auch bei einer Migration.
 In einer Untersuchung zur \glq Vorhersage von Cloud Vendor Lock-In \grq aus dem Jahr 2024 wird die Thematik in feinere Unterpunkte eingeteilt, als im Rahmen dieser Arbeit. In der Untersuchung wir Vendor-Lock-In als Problem beschrieben, dass durch sieben Komponenten bedingt wird:
 \begin{itemize}
 \item[-] Technischer Lock-In (Datenbank-Lösung, APIs, Service-Funktionen)
-\item[-] Datenbezogener Lock-In (Datenformate und Datenmigration)
-\item[-] Service Lock-In (Anbietereigene Dienste)
+\item[-] Daten-bezogener Lock-In (Datenformate und Datenmigration)
+\item[-] Service Lock-In (Anbieter-eigene Dienste)
 \item[-] Zertifikats Lock-In (Abhängig von Zertifizierungen)
 \item[-] Vertraglicher Lock-In (Kündigungsgebühren oder Migrationsgebühren)
 \item[-] Wirtschaftlicher Lock-In (Versenkte Kosten in spezielles Training und Geschäftsprozesse)
-\item[-] Netzwerkbezogener Lock-In (Struktur des Netwerks ist auf einen Anbieter feinjustiert)
+\item[-] Netzwerk-bezogener Lock-In (Struktur des Netzwerks ist auf einen Anbieter feinjustiert)
 \end{itemize}
 \parencite[Kap.~2]{math12030387}
 
 In der Arbeit werden neben der Abhängigkeit (Anbieterbindung) auch Kosten verglichen, was nicht Gegenstand dieser Arbeit war.
-Die Abhängikeit jedoch wird in dem Ansatz der Untersuchung mit Formel \ref{different-approach} ermittelt, welche Ähnlichkeiten zu der Formel dieser Arbeit. (vergleiche \ref{Finale-Formel})
+Die Abhängigkeit jedoch wird in dem Ansatz der Untersuchung mit Formel \ref{different-approach} ermittelt, welche Ähnlichkeiten zu der Formel dieser Arbeit. (vergleiche \ref{Finale-Formel})
 \begin{eqnarray}
 Dependency Score = \displaystyle\sum_{i=1} ^{n} (w_{i}\cdot f_{i})
 \label{different-approach}
 \end{eqnarray}
 Dabei ist $n$ die Zahl der Faktoren (vergleiche Kriterienkatalog), die berücksichtigt werden. Außerdem ist $w_{i}$ das normalisierte Gewicht des Faktoren (Gewicht eines Kriterium) und $f_{i}$ ist eine normalisierte Bewertung eines Faktors.
 
-Es lässt sich argumentieren, dass die Paralellen zu diesem alternativen Ansatz die grundlegende Methodik dieser Arbeit bestätigen.
+Es lässt sich argumentieren, dass die Parallelen zu diesem alternativen Ansatz die grundlegende Methodik dieser Arbeit bestätigen.
 
 \subsection{Diskussion der Methodik}
-Bei dieser Herangehensweise werden Punkte wie die finanziellen Möglichkeiten des Unternehmens zum Zeitpunkt der Migration und die geschaffenene Rahmenbedingungen durch organisatorische Punkte wie SLAs ignoriert.
+Bei dieser Herangehensweise werden Punkte wie die finanziellen Möglichkeiten des Unternehmens zum Zeitpunkt der Migration und die geschaffenen Rahmenbedingungen durch organisatorische Punkte wie SLAs ignoriert.
 
 Jene Punkte werden teilweise in anderen Arbeiten aufgenommen. (vergleiche \parencite{math12030387})
 
-Nach der Argumentation der Arbeit wurde dies getan, weil das Thema Anbieterbindung vom Zeitpunkt der Anbieterwahl betrachtet werden sollte. 
+Nach der Argumentation der Arbeit wurde dies getan, weil das Thema Anbieterbindung vom Zeitpunkt der Anbieter-Wahl betrachtet werden sollte. 
 Die anderen Komponenten der Anbieterbindung werden bei der Gründung einer Beziehung zwischen Cloud-Computing-Anbieter und Kunde relevant und, 
 wenn der Wunsch zum Wechsel eines Anbieter feststeht.
 
 Bei der Formel zur Berechnung der Bewertungen wurden außerdem die Einzelbewertungen nicht gleichermaßen normiert wie die Gewichte, was die Errechnung und Handhabung der Ergebnisse vereinfacht hätte. 
+
+\subsection{Überprüfung der Ziele}
+Diese Arbeit sollte die Anbieterbindung in einem einfachen Prozess quantifizieren. 
+Bei den Untersuchungen wurde mit die Dauer der Bearbeitung jeweils im Bewertungsformular dokumentiert.
+Der gesamte Prozess der Ausfüllung mit Hilfe der Tabellenkalkulationssoftware dauerte zwischen zwei und vier Stunden.
