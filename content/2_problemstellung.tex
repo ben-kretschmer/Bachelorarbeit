@@ -100,7 +100,7 @@ Derzeit sind folgende Staaten als Drittstaat durch einen Angemessenheitsbeschlus
 \item[-] Vereinigtes Königreich
 \item[-] Vereinigte Staaten von Amerika
 \end{itemize}
-
+\label{geduldete-Länder}
 \parencite{AngembeschlEU}
 
 Darüber hinaus wird im Absatz 3 des §393 festgelegt, dass eine Verarbeitung nur zulässig ist, wenn technische und organisatorische Maßnahmen, die dem Stand der Technik entsprechen, zur Gewährleistung der Informationssicherheit ergriffen worden sind. Zudem muss ein Sicherheitszertifikat der datenverarbeitenden Stelle, also des Cloud-Anbieters, vorliegen und zusätzlich die Kriterien für Kunden, die im Prüfungsbericht des Testats enthalten sind, umgesetzt wurden. \parencite[Kap.~12]{SGBV1988}
@@ -108,6 +108,10 @@ Darüber hinaus wird im Absatz 3 des §393 festgelegt, dass eine Verarbeitung nu
 Das geforderte Testat muss den Anbieter insofern zertifizieren, dass Sicherheitsvorkehrungen mit dem Niveau des C5-Typ2-Testats oder höher getroffen wurden.
 
 Auf Basis dieser Gesetzte wird eine übergreifend gültige Strategie vom \gls{AOK} Bundesverband veröffentlicht.
+
+\paragraph{Schlussfolgerungen für die Anbieterwahl}
+Auf Grundlage dieser Gesetze werden Anbieter nach der Analyse aussortiert.
+Die Analyse der ungeeigneten Anbieter wird zur Vollständigkeit trotzdem durchgeführt.
 
 \subsection{Cloud-Architektur in der kubus IT}
 Die Cloud-Architektur der kubus IT basiert auf den Vorgaben des AOK Bundesverbandes.
@@ -130,6 +134,7 @@ Dieses Produkt ist unter Anderem so attraktiv, weil die Integration mit der Micr
 Außerdem bietet Azure DevOps viele Werkzeuge zur Umsetzung sauberer Entwicklungs- und Betriebsprozesse.
 
 \subsection{Vendor-Management in der kubus IT}
+\paragraph{Vorstellung der Abteilung Einkauf}
 Der Abteilung Einkauf ist die Abteilung Vendor-Management zur Orchestrierung der Beziehungen zwischen der kubus IT und Anbietern untergeordnet.
 
 Die Anbieter werden in drei Kategorien segmentiert.
@@ -151,6 +156,9 @@ Demnach zählen folgende Anbieter aktuell in das A-Segment:
 \end{itemize}
 
 \parencite{vergabVendorManage2022}
+
+\paragraph{Relevanz für die Arbeit}
+Das Vendoren-Management ist verantwortlich für die Vergabe von Aufträgen an externe Dienstleister und folglich auch für die Wahl der Cloud-Computing-Anbieter. Daher werden diese Verantwortlichen im Kontext der Arbeit hier kurz vorgestellt.
 
 \section{Zielsetzung}
 In der Zielsetzung werden im Rahmen der Arbeit die Anforderungen an den Lösungsansatz, der auf Basis der etablierten Grundlage aus der Einleitung und der Ausgangssituation entwickelt wird, definiert.
@@ -181,8 +189,8 @@ Das entwickelte Bewertungsschema soll die Vergleichbarkeit mit möglichst univer
 Im Abschnitt \ref{komponenten-anbieterbindung} werden die Komponenten der Anbieterbindung nach der Argumentation der Arbeit aufgezeigt.
 Der letztliche Effekt, der durch die Herstellung der Vergleichbarkeit erzielt werden soll, ist die Wahl eines Anbieters mit Berücksichtigung der Interoperabilität zur Vorbeugung von Anbieterbindung.
 Dieser Umstand wird durch eine eigene Darstellung unterstrichen (vergleiche Abbildung \ref{fig:drei-komponenten}).
-Die Grafik hat zwei Element. 
-Auf der linken Seite befindet sich eine Skala der Farbgebung für Situationen mit geringer bis zu hoher Anbieterbindung.
+Die Grafik hat zwei Elemente. 
+Auf der linken Seite befindet sich eine Skala der Farbgebung für Einordnung des Risikos mit einem Verlauf von geringer bis zu hoher Anbieterbindung.
 Diese Farbtöne werden in der rechten Seite aufgegriffen.
 Das rechte Element der Grafik zeigt ein Dreieck, wobei die Ecken mit \glq technische Interoperabilität(1)\grq , \glq organisatorischer Rahmen (2)\grq\ und \glq finanziellem Spielraum (3)\grq\ beschriftet sind. 
 Gemeint sind die Komponenten der Anbieterbindung. Im Zentrum befindet sich ein tief-rot gefärbtes Kreuz, 
@@ -204,11 +212,11 @@ Die Grafik enthält keine Skala und dient nur zur visuellen Untermauerung der Ar
 \label{fig:drei-komponenten}
 \end{figure}
 \subsection{Verifizierbarkeit der Ergebnisse}
-Nachdem ein Prozess entwickelt wurde, der eine Bewertung des Vendor-Lock-In-Riskos liefert, muss im Anschluss diese Bewertung selbst geprüft werden.
+Nachdem ein Prozess entwickelt wurde, der eine Bewertung des Vendor-Lock-In-Riskos liefert, folgt die Prüfung des Lösungsansatzes.
 
 \paragraph{Vorstellung von Verifizerungsoptionen}
 Vor der Entwicklung des Prozesses werden daher direkt Methoden der Verifikation vorgestellt.
-Die Argumentation dieser Arbeit läuft darauf hinaus, dass die Verifizierbarkeit sich durch drei Methoden abbilden.
+Die Argumentation dieser Arbeit läuft darauf hinaus, dass die Verifizierbarkeit sich durch drei Methoden abbilden lässt.
 Es ist einerseits möglich die Bewertung des Modells mit der Einschätzung eins Experten im Cloud-Bereich zu vergleichen und andererseits bestehende Analysen als Messlatte zu wählen.
 
 Darüber hinaus lassen sich die Ergebnisse auch durch das praktische Messen des Aufwands der Migration testen.
@@ -219,15 +227,17 @@ Es lassen sich für alle drei Ansätze Probleme identifizieren.
 \paragraph{Herausforderungen von Experimenten}
 Um die durch das Bewertungsmodell vorgeschlagene Bewertung per Experiment zu überprüfen, muss der Aufwand Emigration vom Anbieter betrachtet werden.
 Doch auch das Ziel des gesamten Migrationsprozesses ist hierbei relevant und hat einen Einfluss auf den gesamten Aufwand.
-Generell werben Anbieter mit Geldprämien, Expertise und Werkzeugen, die bei der Immigration unterstützen. Beispielhaft dafür steht der Cloud-Computing-Anbieter Amazon mit dem \glq AWS Migration Acceleration Program \grq ,
+Generell werben Anbieter mit Geldprämien, Expertise und Werkzeugen, die bei der Immigration unterstützen. Beispielhaft dafür steht der Cloud-Computing-Anbieter Amazon mit dem \glq AWS Migration Acceleration Program\grq ,
 welches unter Anderem aus einer \glqq flexiblen Migrationsmethode, 
 die bewährte Frameworks nutzt\grqq , \glqq Tools, die helfen, 
-Kosten zu reduzieren\grqq\ und \glqq AWS-Investitionen in Form von AWS-Service-Guthaben oder Partnerinvestitionen\grqq besteht. \parencite{AWSMAP2026}
-Zumindest Migrationswerkzeuge als angebotene Plattform innerhalb des Katalogs der Cloud-Computing-Dienstleister werden ein Kriterium des Bewertungsschemas.
-Jedoch sind diese Unterstützungsangebote eine Einbahnstraße und die Anbieter werben meist ausdrücklich nur für die Hilfe beim Umzug der Daten auf die eigenen Systeme.
+Kosten zu reduzieren\grqq\ und \glqq AWS-Investitionen in Form von AWS-Service-Guthaben oder Partnerinvestitionen\grqq\ besteht. \parencite[AWS Migration Acceleration Program]{AWSMAP2026
 
-Insgesamt ist jedoch für diese Arbeit die Durchführung von realistischen experimentelle Migrationen nicht umsetzbar, 
-da hierfür tatsächliche Geschäftsbeziehung zu den Anbietern zustande kommen müsste.
+Migrationswerkzeuge als angebotene Plattform innerhalb des Produkt-Katalogs der Cloud-Computing-Dienstleister ist ein Kriterium des Bewertungsschemas.
+Jedoch sind diese Unterstützungsangebote eine Einbahnstraße und die Anbieter werben meist ausdrücklich nur für die Hilfe beim Umzug der Daten auf die eigenen Systeme. Aus diesem Grund eignet sich der Vergleich der Unterstützungsangebote nicht, um eine zweite vergleichende Rangordnung aufzustellen und das entwickelte Modell zu prüfen.
+
+Des Weiteren ist für diese Arbeit die Durchführung von realistischen experimentelle Migrationen nicht umsetzbar, 
+da hierfür tatsächliche Geschäftsbeziehung zu den Anbietern zustande kommen müssten und sich eine tiefschichtige Anbieterbindung erst über eine längere Dauer der Beziehung entwickelt. (vergleiche Abbildung \ref{fig:technUr_Anbieterbindung})
+
 Alternativ wäre eine Rechnung und Schätzung der Aufwände für eine Migration in der Theorie.
 Diese Herangehensweise würde jedoch weitere Annahmen und Ungewissheiten mit sich bringen.
 Daher wird argumentiert, dass die Aussagekraft dieser theoretischen Experimente nicht gegeben wäre.
@@ -236,21 +246,21 @@ Daher wird argumentiert, dass die Aussagekraft dieser theoretischen Experimente 
 Es wird angenommen, dass ein befragter Experte entweder auf Basis von Erfahrungswerten oder Fachliteratur Bewertungen treffen würde. Problematisch ist hier, dass, 
 wenn die Bewertung des Experten ohnehin auf diesem bekannten Fällen und Literatur basiert,
 auch unmittelbar dieses Wissen zur Verifizierung der Ergebnisse herangezogen werden kann.
-Erschwerend kommt hinzu, dass das Ergebnis des Lösungsansatzes, dessen Aussagekraft bewiesen werden soll ein Zahlenwert ist.
+Erschwerend kommt hinzu, dass das Ergebnis des Lösungsansatzes konkrete Zahlenwerte sind.
 
-Es wird angenommen, dass ein interviewter Experte keinen solchen Zahlenwert, sondern 
-aus dem Stegreif eine Rangordnung zur Anbieterbindung bei führenden Anbietern aufstellen könnte.
+Es wird angenommen, dass ein interviewter Experte keinen solchen Zahlenwert, sondern aus dem Stegreif vermutlich eine Rangordnung zur Anbieterbindung bei führenden Anbietern aufstellen könnte.
 
 Auf Basis dieser Argumentationsführung, wird eine Experteneinschätzung abgelehnt.
 
 \paragraph{Diskussion der Option der Recherche}
 In Relation zu den anderen Verifizierungsansätzen steht die Recherche bisherige Erkenntnisse zur Anbieterbindung als praktikabelste Lösung dar, die zugleich wenige Annahmen und Ungenauigkeiten einführt.
 Aus diesem Grund wird die Effektivität des Lösungsansatz durch die Recherche gemessen.
-Konkret werden hierfür dokumentierte Migrationen und deren Aufwand betrachtet und den Ergebnissen gegenübergestellt.
+Konkret wird hierfür die Methodik einer anderen Untersuchung mit dem Lösungsansatz der Arbeit verglichen.
 
-\paragraph{Herausforderungen bei der Recherche}
+\paragraph{Herausforderungen bei der Recherche konkreter Migrationen}
 Dabei ist jedoch zu beachten, dass auf die Neutralität des Autors der Literatur zu achten ist.
 Erfolgreiche und reibungslose Migrationen werden häufig als Werbung auf den Produktseiten der Cloud-Computing-Anbieter veröffentlicht.
+
 Darüber hinaus wird angenommen, dass die Normalisierung der Daten in der Literatur eine Herausforderung ist,
 denn der Aufwand einer Migration kann durch unterschiedliche Metriken ausgedrückt werden.
 So muss herausgearbeitet werden, wie sich beispielsweise die Dauer einer Migration in die Gesamtkosten umrechnen lassen, wenn eine Quelle nur ersteres liefert. 
@@ -259,8 +269,9 @@ Auch Unternehmen, die aufgrund einer Anbieterbindung eine Migration aufschieben,
 Dieser Umstand kann mit dem \glq Überlebensirrtum\grq\ (englisch: Survivorship Bias) beschrieben werden.
 \parencite{Survivorship2026}
 
+Daher wird im Rahmen dieser Arbeit nur die Methodik einer anderen Untersuchung mit der Herangehensweise und dem Lösungsansatz verglichen.
 \paragraph{Abschließende Einordnung der Verifizierbarkeit}
-Die Variablen innerhalb eines Unternehmens wie die Verfügbarkeit von befähigtem Personal zur erfolgreichen Durchführung einer Migration wie das konkrete Ziel und der Ursprung einer Migration erschweren einen sauberen Vergleich.
-Dazu kommen Unbekannte durch die Verifizierungsmethode wie die klare Neutralität der Autoren von Literatur zu dem Thema.
-Diese Punkte sind bei der Betrachtung der Verifizierbarkeit zu berücksichtigen.
+Alleine die Variablen innerhalb eines Unternehmens, wie die Verfügbarkeit von befähigtem Personal zur erfolgreichen Durchführung einer Migration, wie das konkrete Ziel und der Ursprung einer Migration, erschweren einen sauberen Vergleich.
+Dazu kommen Unbekannte durch die Verifizierungsmethode, wie die Neutralität der Autoren von der Literatur.
 
+Diese Punkte sind bei der Betrachtung der Verifizierbarkeit zu berücksichtigen.
